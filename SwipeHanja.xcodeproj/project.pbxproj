@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		624D1A792483496B5B4668C4 /* Pods_SwipeHanja.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A397CDFC841960F13E66ED82 /* Pods_SwipeHanja.framework */; };
 		6AA332022BD14E0200996EC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA332012BD14E0200996EC5 /* AppDelegate.swift */; };
 		6AA332042BD14E0200996EC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA332032BD14E0200996EC5 /* SceneDelegate.swift */; };
 		6AA332062BD14E0200996EC5 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA332052BD14E0200996EC5 /* MainVC.swift */; };
@@ -32,6 +33,9 @@
 		6AA332182BD14F8C00996EC5 /* SwipeCardVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwipeCardVC.xib; sourceTree = "<group>"; };
 		6AA3321C2BD1532000996EC5 /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
 		6AA3321F2BD1579B00996EC5 /* CommonUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtility.swift; sourceTree = "<group>"; };
+		A397CDFC841960F13E66ED82 /* Pods_SwipeHanja.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeHanja.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0728D89E1AC90644C319403 /* Pods-SwipeHanja.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeHanja.release.xcconfig"; path = "Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja.release.xcconfig"; sourceTree = "<group>"; };
+		F958AC50E06E7F9C0D057A41 /* Pods-SwipeHanja.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeHanja.debug.xcconfig"; path = "Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +43,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				624D1A792483496B5B4668C4 /* Pods_SwipeHanja.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68CEB7AEF3D59C4AD917EBCE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F958AC50E06E7F9C0D057A41 /* Pods-SwipeHanja.debug.xcconfig */,
+				E0728D89E1AC90644C319403 /* Pods-SwipeHanja.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		6AA331F52BD14E0100996EC5 = {
 			isa = PBXGroup;
 			children = (
 				6AA332002BD14E0200996EC5 /* SwipeHanja */,
 				6AA331FF2BD14E0200996EC5 /* Products */,
+				68CEB7AEF3D59C4AD917EBCE /* Pods */,
+				806E586A8DDD8728D0D1EE7C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +128,14 @@
 			path = MainScene;
 			sourceTree = "<group>";
 		};
+		806E586A8DDD8728D0D1EE7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A397CDFC841960F13E66ED82 /* Pods_SwipeHanja.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +143,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6AA332122BD14E0200996EC5 /* Build configuration list for PBXNativeTarget "SwipeHanja" */;
 			buildPhases = (
+				535EEDD8DBE6F6D40405E520 /* [CP] Check Pods Manifest.lock */,
 				6AA331FA2BD14E0200996EC5 /* Sources */,
 				6AA331FB2BD14E0200996EC5 /* Frameworks */,
 				6AA331FC2BD14E0200996EC5 /* Resources */,
+				441FD8A6D240FA347650EC27 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,6 +204,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		441FD8A6D240FA347650EC27 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		535EEDD8DBE6F6D40405E520 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwipeHanja-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6AA331FA2BD14E0200996EC5 /* Sources */ = {
@@ -335,6 +404,7 @@
 		};
 		6AA332132BD14E0200996EC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F958AC50E06E7F9C0D057A41 /* Pods-SwipeHanja.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -364,6 +434,7 @@
 		};
 		6AA332142BD14E0200996EC5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0728D89E1AC90644C319403 /* Pods-SwipeHanja.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
