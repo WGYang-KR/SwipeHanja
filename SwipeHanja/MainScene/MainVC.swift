@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,5 +15,10 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func didTapMoveBtn(_ sender: Any) {
+        let vc = SwipeCardVC()
+        presentFull(vc, animated: true)
+    }
+    
 }
 
