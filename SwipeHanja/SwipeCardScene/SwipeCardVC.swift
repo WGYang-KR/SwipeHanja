@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Koloda
 
 let sampleData: [CardItem] = [CardItem(id: 0, frontWord: "One", backWord: "일"),
                               CardItem(id: 1, frontWord: "Two", backWord: "이"),

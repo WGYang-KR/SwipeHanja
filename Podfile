@@ -6,7 +6,5 @@ target 'SwipeHanja' do
   use_frameworks!
 
   # Pods for SwipeHanja
-
-  pod "Koloda"
-
+  pod "pop"
 end

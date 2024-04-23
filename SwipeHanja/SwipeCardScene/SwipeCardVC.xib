@@ -71,7 +71,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jaV-UJ-8w2">
                             <rect key="frame" x="0.0" y="48" width="393" height="711"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYa-7L-kQD" customClass="KolodaView" customModule="Koloda">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYa-7L-kQD" customClass="KolodaView" customModule="SwipeHanja" customModuleProvider="target">
                                     <rect key="frame" x="32" y="100" width="329" height="511"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 </view>
