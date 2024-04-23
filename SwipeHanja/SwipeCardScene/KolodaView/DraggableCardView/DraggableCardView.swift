@@ -61,7 +61,9 @@ public class DraggableCardView: UIView, UIGestureRecognizerDelegate {
     internal var dragBegin = false
     
     private var overlayView: OverlayView?
-    public private(set) var contentView: UIView?
+    public private(set) var frontContentView: UIView?
+    public private(set) var backContentView: UIView?
+    private(set) var cardPosition: CardPosition = .front
     
     private var panGestureRecognizer: UIPanGestureRecognizer!
     private var tapGestureRecognizer: UITapGestureRecognizer!
@@ -111,22 +113,27 @@ public class DraggableCardView: UIView, UIGestureRecognizerDelegate {
     }
     
     //MARK: Configurations
-    func configure(_ view: UIView, overlayView: OverlayView?) {
+    func configure(_ frontContentView: UIView, backContentView: UIView, overlayView: OverlayView?, defaultPosition: CardPosition) {
+        self.cardPosition = defaultPosition
         self.overlayView?.removeFromSuperview()
-        self.contentView?.removeFromSuperview()
+        self.frontContentView?.removeFromSuperview()
+        self.backContentView?.removeFromSuperview()
         
         if let overlay = overlayView {
             self.overlayView = overlay
             overlay.alpha = 0;
             self.addSubview(overlay)
             configureOverlayView()
-            self.insertSubview(view, belowSubview: overlay)
+            self.insertSubview(frontContentView, belowSubview: overlay)
+            self.insertSubview(backContentView,  belowSubview: overlay)
         } else {
-            self.addSubview(view)
+            self.addSubview(frontContentView)
+            self.addSubview(backContentView)
         }
 
-        self.contentView = view
-        configureContentView()
+        self.frontContentView = frontContentView
+        self.backContentView = backContentView
+        configureContentViews()
     }
 
     private func configureOverlayView() {
@@ -169,44 +176,50 @@ public class DraggableCardView: UIView, UIGestureRecognizerDelegate {
         }
     }
     
-    private func configureContentView() {
-        if let contentView = self.contentView {
-            contentView.translatesAutoresizingMaskIntoConstraints = false
-            
-            let width = NSLayoutConstraint(
-                item: contentView,
-                attribute: .width,
-                relatedBy: .equal,
-                toItem: self,
-                attribute: .width,
-                multiplier: 1.0,
-                constant: 0)
-            let height = NSLayoutConstraint(
-                item: contentView,
-                attribute: .height,
-                relatedBy: .equal,
-                toItem: self,
-                attribute: .height,
-                multiplier: 1.0,
-                constant: 0)
-            let top = NSLayoutConstraint (
-                item: contentView,
-                attribute: .top,
-                relatedBy: .equal,
-                toItem: self,
-                attribute: .top,
-                multiplier: 1.0,
-                constant: 0)
-            let leading = NSLayoutConstraint (
-                item: contentView,
-                attribute: .leading,
-                relatedBy: .equal,
-                toItem: self,
-                attribute: .leading,
-                multiplier: 1.0,
-                constant: 0)
-            
-            addConstraints([width,height,top,leading])
+    private func configureContentViews() {
+        configure(contentView: self.frontContentView)
+        configure(contentView: self.backContentView)
+        flipCard(self.cardPosition, animated: false)
+
+        func configure(contentView: UIView?) {
+            if let contentView {
+                contentView.translatesAutoresizingMaskIntoConstraints = false
+                
+                let width = NSLayoutConstraint(
+                    item: contentView,
+                    attribute: .width,
+                    relatedBy: .equal,
+                    toItem: self,
+                    attribute: .width,
+                    multiplier: 1.0,
+                    constant: 0)
+                let height = NSLayoutConstraint(
+                    item: contentView,
+                    attribute: .height,
+                    relatedBy: .equal,
+                    toItem: self,
+                    attribute: .height,
+                    multiplier: 1.0,
+                    constant: 0)
+                let top = NSLayoutConstraint (
+                    item: contentView,
+                    attribute: .top,
+                    relatedBy: .equal,
+                    toItem: self,
+                    attribute: .top,
+                    multiplier: 1.0,
+                    constant: 0)
+                let leading = NSLayoutConstraint (
+                    item: contentView,
+                    attribute: .leading,
+                    relatedBy: .equal,
+                    toItem: self,
+                    attribute: .leading,
+                    multiplier: 1.0,
+                    constant: 0)
+                
+                addConstraints([width,height,top,leading])
+            }
         }
     }
     
@@ -285,6 +298,9 @@ public class DraggableCardView: UIView, UIGestureRecognizerDelegate {
     }
     
     @objc func tapRecognized(_ recogznier: UITapGestureRecognizer) {
+        //TODO: front <-> back 뷰 전환
+        let toPostion = self.cardPosition.reversed
+        flipCard(toPostion, animated: true)
         delegate?.card(cardWasTapped: self)
     }
     
@@ -386,6 +402,22 @@ public class DraggableCardView: UIView, UIGestureRecognizerDelegate {
             self.removeFromSuperview()
         }
         layer.pop_add(translationAnimation, forKey: "swipeTranslationAnimation")
+    }
+    
+    private func flipCard(_ toPostion: CardPosition, animated: Bool) {
+        self.cardPosition = toPostion
+        
+        switch cardPosition {
+        case .front:
+            self.frontContentView?.alpha = 1.0
+            self.backContentView?.alpha = 0.0
+        case .back:
+            self.frontContentView?.alpha = 0.0
+            self.backContentView?.alpha = 1.0
+        }
+        if animated {
+            UIView.transition(with: self, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+        }
     }
     
     private func resetViewPositionAndTransformations() {

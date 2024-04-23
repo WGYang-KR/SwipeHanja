@@ -33,6 +33,7 @@ public protocol KolodaViewDataSource: AnyObject {
     func kolodaNumberOfCards(_ koloda: KolodaView) -> Int
     func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView
+    func koloda(_ koloda: KolodaView, backViewForCardAt index: Int) -> UIView
     func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView?
 }
 
@@ -651,9 +652,17 @@ open class KolodaView: UIView, DraggableCardDelegate {
         reloadData()
     }
     
-    public func viewForCard(at index: Int) -> UIView? {
+    public func frontViewForCard(at index: Int) -> UIView? {
         if visibleCards.count + currentCardIndex > index && index >= currentCardIndex {
-            return visibleCards[index - currentCardIndex].contentView
+            return visibleCards[index - currentCardIndex].frontContentView
+        } else {
+            return nil
+        }
+    }
+    
+    public func backViewForCard(at index: Int) -> UIView? {
+        if visibleCards.count + currentCardIndex > index && index >= currentCardIndex {
+            return visibleCards[index - currentCardIndex].backContentView
         } else {
             return nil
         }

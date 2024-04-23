@@ -83,6 +83,10 @@ extension SwipeCardVC: KolodaViewDataSource {
         return  CardItemView(text: dataSource[index].frontWord)
     }
     
+    func koloda(_ koloda: KolodaView, backViewForCardAt index: Int) -> UIView {
+        return  CardItemView(text: dataSource[index].backWord)
+    }
+    
     func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
         return Bundle.main.loadNibNamed("OverlayView", owner: self, options: nil)?[0] as? OverlayView
     }
