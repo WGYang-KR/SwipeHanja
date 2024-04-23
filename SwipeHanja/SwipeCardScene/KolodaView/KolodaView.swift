@@ -60,6 +60,7 @@ public protocol KolodaViewDelegate: AnyObject {
     func kolodaShouldTransparentizeNextCard(_ koloda: KolodaView) -> Bool
     func koloda(_ koloda: KolodaView, draggedCardWithPercentage finishPercentage: CGFloat, in direction: SwipeResultDirection)
     func kolodaDidResetCard(_ koloda: KolodaView)
+    ///카드가 몇퍼센트 밖으로 나가야 쓸어넘긴 것으로 인식할 지 정해준다. 0.0 ~ 1.0(100%) 값으로 반환해야한다.
     func kolodaSwipeThresholdRatioMargin(_ koloda: KolodaView) -> CGFloat?
     func koloda(_ koloda: KolodaView, didShowCardAt index: Int)
     func koloda(_ koloda: KolodaView, didRewindTo index: Int)
