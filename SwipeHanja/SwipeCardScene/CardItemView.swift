@@ -9,6 +9,7 @@ import UIKit
 
 class CardItemView: UIView {
     
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var label: UILabel!
     
     convenience init(text: String) {
@@ -33,6 +34,9 @@ class CardItemView: UIView {
             view.frame = self.bounds
             addSubview(view)
         }
+        
+        containerView.layer.borderWidth = 2
+        containerView.layer.borderColor = UIColor.colorGrey01.cgColor
     }
 
 }

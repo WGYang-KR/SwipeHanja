@@ -19,7 +19,10 @@ class SwipeCardVC: UIViewController {
     var dataSource: [CardItem] = sampleData
     
     @IBOutlet weak var kolodaView: KolodaView!
-    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var countLeftLabel: UILabel!
+    @IBOutlet weak var countRightLabel: UILabel!
+    @IBOutlet weak var countMiddleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
