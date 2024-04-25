@@ -7,16 +7,10 @@
 
 import UIKit
 
-let sampleData: [CardItem] = [CardItem(id: 0, frontWord: "One", backWord: "일"),
-                              CardItem(id: 1, frontWord: "Two", backWord: "이"),
-                              CardItem(id: 2, frontWord: "Three", backWord: "삼"),
-                              CardItem(id: 3, frontWord: "Four", backWord: "사"),
-                              CardItem(id: 4, frontWord: "Five", backWord: "오")]
-
 class SwipeCardVC: UIViewController {
 
-    
-    var dataSource: [CardItem] = sampleData
+    var vm: SwipeCardVM!
+    var dataSource: [CardItem] { vm.cardList }
     
     @IBOutlet weak var kolodaView: KolodaView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -24,13 +18,21 @@ class SwipeCardVC: UIViewController {
     @IBOutlet weak var countRightLabel: UILabel!
     @IBOutlet weak var countMiddleLabel: UILabel!
     
+    func configure(cardPack: CardPack) {
+        self.vm = SwipeCardVM(cardPack: cardPack)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        vm.prepareCardList()
         
         kolodaView.dataSource = self
         kolodaView.delegate = self
         
-        self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
+        self.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+        
+        
     }
     // MARK: IBActions
 
@@ -43,7 +45,11 @@ class SwipeCardVC: UIViewController {
     }
     
     @IBAction func undoButtonTapped() {
+        if (kolodaView?.currentCardIndex ?? 0)  > 0 {
+            vm.revertCardStatus(at: kolodaView.currentCardIndex)
+        }
         kolodaView?.revertAction()
+            
     }
     
     @IBAction func topBackBtnTapped(_ sender: Any) {
@@ -57,11 +63,13 @@ class SwipeCardVC: UIViewController {
 extension SwipeCardVC: KolodaViewDelegate {
     
     func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
-        let position = kolodaView.currentCardIndex
-        let increasingNumber = sampleData.count
-        dataSource += sampleData
-
-        kolodaView.insertCardAtIndexRange(position..<position + increasingNumber, animated: true)
+//        let position = kolodaView.currentCardIndex
+//        let increasingNumber = sampleData.count
+//        dataSource += sampleData
+//
+//        kolodaView.insertCardAtIndexRange(position..<position + increasingNumber, animated: true)
+        vm.prepareCardList()
+        kolodaView.resetCurrentCardIndex()
     }
     
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
@@ -71,6 +79,11 @@ extension SwipeCardVC: KolodaViewDelegate {
     func kolodaSwipeThresholdRatioMargin(_ koloda: KolodaView) -> CGFloat? {
         return 0.5
     }
+    
+    func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
+        vm.markMemorized(at: index, direction == .right ? true : false)
+    }
+    
 }
 
 // MARK: KolodaViewDataSource
