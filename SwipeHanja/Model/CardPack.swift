@@ -6,17 +6,11 @@
 //
 
 import Foundation
+import RealmSwift
 
-class CardPack: Codable {
-    
-    let id: Int
-    let title: String
-    let cardList: [CardItem]
-    
-    init(id: Int, title: String, cardList: [CardItem]) {
-        self.id = id
-        self.title = title
-        self.cardList = cardList
-    }
+class CardPack: Object {
+    @Persisted(primaryKey: true) var _id: Int
+    @Persisted var title: String //한자 9급
+    @Persisted var cardList: List<CardItem> // = List<CardItem>()
 }
 

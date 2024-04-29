@@ -6,20 +6,14 @@
 //
 
 import Foundation
+import RealmSwift
 
-class CardItem: Codable {
+class CardItem: Object {
    
-    let id: Int
-    let frontWord: String
-    let backWord: String
-    var hasShown: Bool
-    var hasMemorized: Bool
-    
-    internal init(id: Int, frontWord: String, backWord: String, hasShown: Bool = false, hasMemorized: Bool = false) {
-        self.id = id
-        self.frontWord = frontWord
-        self.backWord = backWord
-        self.hasShown = hasShown
-        self.hasMemorized = hasMemorized
-    }
+    @Persisted(primaryKey: true) var _id: Int
+    @Persisted var frontWord: String
+    @Persisted var backWord: String
+    @Persisted var hasShown: Bool
+    @Persisted var hasMemorized: Bool
+
 }
