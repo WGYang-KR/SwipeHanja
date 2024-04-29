@@ -7,4 +7,5 @@ target 'SwipeHanja' do
 
   # Pods for SwipeHanja
   pod "pop"
+  pod 'RealmSwift', '~>10'
 end
