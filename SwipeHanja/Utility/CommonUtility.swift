@@ -20,6 +20,26 @@ public func shLog(_ message: String?, file: String = #file, functionName: String
     os_log("%@",type:.default ,"<\(className)> \(functionName) [#\(line)] \(message ?? "")")
 }
 
+//MARK: - JSON 로드
+
+extension JSONSerialization {
+    
+    // JSON 파일을 번들에서 로드하는 함수
+    static func loadJSONFromFile<T: Decodable>(filename: String, type: T.Type) throws -> T {
+        guard let path = Bundle.main.path(forResource: filename, ofType: "json") else {
+            throw NSError(domain: "BundleError", code: 404, userInfo: [NSLocalizedDescriptionKey: "Failed to load JSON file from bundle."])
+        }
+        
+        do {
+            let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+            let decodedData = try JSONDecoder().decode(T.self, from: data)
+            return decodedData
+        } catch {
+            throw error // 내부 디코딩 오류를 그대로 전달
+        }
+    }
+    
+}
 
 //MARK: - 화면 전환
 extension UIViewController {
