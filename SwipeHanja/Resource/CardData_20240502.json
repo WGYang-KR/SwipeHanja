@@ -1,0 +1,1216 @@
+[
+    {
+        "index": 1,
+        "title": "Level 9",
+        "level": 9,
+        "cardList": [
+            {
+                "index": 1,
+                "level": 9,
+                "frontWord": "工",
+                "backWord": "장인 공",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 2,
+                "level": 9,
+                "frontWord": "夫",
+                "backWord": "지아비 부",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 3,
+                "level": 9,
+                "frontWord": "自",
+                "backWord": "스스로 자",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 4,
+                "level": 9,
+                "frontWord": "足",
+                "backWord": "발 족",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 5,
+                "level": 9,
+                "frontWord": "手",
+                "backWord": "손 수",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 6,
+                "level": 9,
+                "frontWord": "人",
+                "backWord": "사람 인",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 7,
+                "level": 9,
+                "frontWord": "力",
+                "backWord": "힘 력",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 8,
+                "level": 9,
+                "frontWord": "車",
+                "backWord": "수레 차, 수레 거",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 9,
+                "level": 9,
+                "frontWord": "心",
+                "backWord": "마음 심",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 10,
+                "level": 9,
+                "frontWord": "身",
+                "backWord": "몸 신",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 11,
+                "level": 9,
+                "frontWord": "天",
+                "backWord": "하늘 천",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 12,
+                "level": 9,
+                "frontWord": "雨",
+                "backWord": "비 우",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 13,
+                "level": 9,
+                "frontWord": "衣",
+                "backWord": "옷 의",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 14,
+                "level": 9,
+                "frontWord": "面",
+                "backWord": "낯 면",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 15,
+                "level": 9,
+                "frontWord": "目",
+                "backWord": "눈 목",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 16,
+                "level": 9,
+                "frontWord": "口",
+                "backWord": "입 구",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 17,
+                "level": 9,
+                "frontWord": "高",
+                "backWord": "높을 고",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 18,
+                "level": 9,
+                "frontWord": "大",
+                "backWord": "클 대",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 19,
+                "level": 9,
+                "frontWord": "門",
+                "backWord": "문 문",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 20,
+                "level": 9,
+                "frontWord": "父",
+                "backWord": "아비 부",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 21,
+                "level": 9,
+                "frontWord": "母",
+                "backWord": "어미 모",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 22,
+                "level": 9,
+                "frontWord": "子",
+                "backWord": "아들 자",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 23,
+                "level": 9,
+                "frontWord": "女",
+                "backWord": "여자 녀",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 24,
+                "level": 9,
+                "frontWord": "玉",
+                "backWord": "구슬 옥",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 25,
+                "level": 9,
+                "frontWord": "石",
+                "backWord": "돌 석",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 26,
+                "level": 9,
+                "frontWord": "萬",
+                "backWord": "일만 만",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 27,
+                "level": 9,
+                "frontWord": "行",
+                "backWord": "다닐 행",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 28,
+                "level": 9,
+                "frontWord": "王",
+                "backWord": "임금 왕",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 29,
+                "level": 9,
+                "frontWord": "主",
+                "backWord": "주인 주",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 30,
+                "level": 9,
+                "frontWord": "田",
+                "backWord": "밭 전",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 31,
+                "level": 9,
+                "frontWord": "果",
+                "backWord": "열매 과",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 32,
+                "level": 9,
+                "frontWord": "文",
+                "backWord": "글월 문",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 33,
+                "level": 9,
+                "frontWord": "交",
+                "backWord": "사귈 교",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 34,
+                "level": 9,
+                "frontWord": "老",
+                "backWord": "늙을 로",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 35,
+                "level": 9,
+                "frontWord": "兒",
+                "backWord": "아이 아",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 36,
+                "level": 9,
+                "frontWord": "立",
+                "backWord": "설 립",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 37,
+                "level": 9,
+                "frontWord": "長",
+                "backWord": "길 장",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 38,
+                "level": 9,
+                "frontWord": "羊",
+                "backWord": "양 양",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 39,
+                "level": 9,
+                "frontWord": "魚",
+                "backWord": "물고기 어",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 40,
+                "level": 9,
+                "frontWord": "牛",
+                "backWord": "소 우",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 41,
+                "level": 9,
+                "frontWord": "馬",
+                "backWord": "말 마",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 42,
+                "level": 9,
+                "frontWord": "夕",
+                "backWord": "저녁 석",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 43,
+                "level": 9,
+                "frontWord": "月",
+                "backWord": "달 월",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 44,
+                "level": 9,
+                "frontWord": "火",
+                "backWord": "불 화",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 45,
+                "level": 9,
+                "frontWord": "水",
+                "backWord": "물 수",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 46,
+                "level": 9,
+                "frontWord": "川",
+                "backWord": "내 천",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 47,
+                "level": 9,
+                "frontWord": "山",
+                "backWord": "뫼 산",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 48,
+                "level": 9,
+                "frontWord": "木",
+                "backWord": "나무 목",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 49,
+                "level": 9,
+                "frontWord": "土",
+                "backWord": "흙 토",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 50,
+                "level": 9,
+                "frontWord": "日",
+                "backWord": "날 일",
+                "hasShown": false,
+                "hasMemorized": false
+            }
+        ]
+    },
+    {
+        "index": 2,
+        "title": "Level 8",
+        "level": 8,
+        "cardList": [
+            {
+                "index": 1,
+                "level": 8,
+                "frontWord": "回",
+                "backWord": "돌아올 회",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 2,
+                "level": 8,
+                "frontWord": "次",
+                "backWord": "버금 차",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 3,
+                "level": 8,
+                "frontWord": "世",
+                "backWord": "인간 세, 대 세",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 4,
+                "level": 8,
+                "frontWord": "上",
+                "backWord": "윗 상",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 5,
+                "level": 8,
+                "frontWord": "元",
+                "backWord": "으뜸 원",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 6,
+                "level": 8,
+                "frontWord": "午",
+                "backWord": "낮 오",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 7,
+                "level": 8,
+                "frontWord": "中",
+                "backWord": "가운데 중",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 8,
+                "level": 8,
+                "frontWord": "下",
+                "backWord": "아래 하",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 9,
+                "level": 8,
+                "frontWord": "失",
+                "backWord": "잃을 실",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 10,
+                "level": 8,
+                "frontWord": "業",
+                "backWord": "업 업",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 11,
+                "level": 8,
+                "frontWord": "商",
+                "backWord": "장사 상",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 12,
+                "level": 8,
+                "frontWord": "表",
+                "backWord": "겉 표",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 13,
+                "level": 8,
+                "frontWord": "示",
+                "backWord": "보일 시",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 14,
+                "level": 8,
+                "frontWord": "太",
+                "backWord": "클 태",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 15,
+                "level": 8,
+                "frontWord": "初",
+                "backWord": "처음 초",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 16,
+                "level": 8,
+                "frontWord": "建",
+                "backWord": "세울 건",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 17,
+                "level": 8,
+                "frontWord": "軍",
+                "backWord": "군사 군",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 18,
+                "level": 8,
+                "frontWord": "士",
+                "backWord": "선비 사",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 19,
+                "level": 8,
+                "frontWord": "兵",
+                "backWord": "군사 병",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 20,
+                "level": 8,
+                "frontWord": "今",
+                "backWord": "이제 금",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 21,
+                "level": 8,
+                "frontWord": "年",
+                "backWord": "해 년",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 22,
+                "level": 8,
+                "frontWord": "來",
+                "backWord": "올 래",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 23,
+                "level": 8,
+                "frontWord": "法",
+                "backWord": "법 법",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 24,
+                "level": 8,
+                "frontWord": "則",
+                "backWord": "법칙 칙",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 25,
+                "level": 8,
+                "frontWord": "令",
+                "backWord": "하여금 령",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 26,
+                "level": 8,
+                "frontWord": "史",
+                "backWord": "역사 사",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 27,
+                "level": 8,
+                "frontWord": "書",
+                "backWord": "글 서",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 28,
+                "level": 8,
+                "frontWord": "家",
+                "backWord": "집 가",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 29,
+                "level": 8,
+                "frontWord": "光",
+                "backWord": "빛 광",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 30,
+                "level": 8,
+                "frontWord": "角",
+                "backWord": "뿔 각",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 31,
+                "level": 8,
+                "frontWord": "見",
+                "backWord": "볼 견, 뵐 현",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 32,
+                "level": 8,
+                "frontWord": "本",
+                "backWord": "근본 본",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 33,
+                "level": 8,
+                "frontWord": "不",
+                "backWord": "아닐 부, 아닐 불",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 34,
+                "level": 8,
+                "frontWord": "利",
+                "backWord": "이로울 리",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 35,
+                "level": 8,
+                "frontWord": "有",
+                "backWord": "있을 유",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 36,
+                "level": 8,
+                "frontWord": "用",
+                "backWord": "쓸 용",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 37,
+                "level": 8,
+                "frontWord": "無",
+                "backWord": "없을 무",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 38,
+                "level": 8,
+                "frontWord": "名",
+                "backWord": "이름 명",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 39,
+                "level": 8,
+                "frontWord": "能",
+                "backWord": "능할 능",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 40,
+                "level": 8,
+                "frontWord": "眞",
+                "backWord": "참 진",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 41,
+                "level": 8,
+                "frontWord": "言",
+                "backWord": "말씀 언",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 42,
+                "level": 8,
+                "frontWord": "生",
+                "backWord": "날 생",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 43,
+                "level": 8,
+                "frontWord": "食",
+                "backWord": "먹을 식",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 44,
+                "level": 8,
+                "frontWord": "肉",
+                "backWord": "고기 육",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 45,
+                "level": 8,
+                "frontWord": "市",
+                "backWord": "저자 시",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 46,
+                "level": 8,
+                "frontWord": "民",
+                "backWord": "백성 민",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 47,
+                "level": 8,
+                "frontWord": "邑",
+                "backWord": "고을 읍",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 48,
+                "level": 8,
+                "frontWord": "原",
+                "backWord": "언덕 원, 근원 원",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 49,
+                "level": 8,
+                "frontWord": "因",
+                "backWord": "인할 인",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 50,
+                "level": 8,
+                "frontWord": "金",
+                "backWord": "쇠 금",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 51,
+                "level": 8,
+                "frontWord": "合",
+                "backWord": "합할 합",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 52,
+                "level": 8,
+                "frontWord": "同",
+                "backWord": "한가지 동",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 53,
+                "level": 8,
+                "frontWord": "兄",
+                "backWord": "형 형",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 54,
+                "level": 8,
+                "frontWord": "毛",
+                "backWord": "털 모",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 55,
+                "level": 8,
+                "frontWord": "弟",
+                "backWord": "아우 제",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 56,
+                "level": 8,
+                "frontWord": "百",
+                "backWord": "일백 백",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 57,
+                "level": 8,
+                "frontWord": "千",
+                "backWord": "일천 천",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 58,
+                "level": 8,
+                "frontWord": "曲",
+                "backWord": "굽을 곡",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 59,
+                "level": 8,
+                "frontWord": "己",
+                "backWord": "몸 기",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 60,
+                "level": 8,
+                "frontWord": "北",
+                "backWord": "북녘 북",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 61,
+                "level": 8,
+                "frontWord": "樂",
+                "backWord": "즐거울 락, 풍류 악, 좋아할 요",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 62,
+                "level": 8,
+                "frontWord": "入",
+                "backWord": "들 입",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 63,
+                "level": 8,
+                "frontWord": "七",
+                "backWord": "일곱 칠",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 64,
+                "level": 8,
+                "frontWord": "故",
+                "backWord": "연고 고",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 65,
+                "level": 8,
+                "frontWord": "九",
+                "backWord": "아홉 구",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 66,
+                "level": 8,
+                "frontWord": "季",
+                "backWord": "계절 계, 끝 계",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 67,
+                "level": 8,
+                "frontWord": "少",
+                "backWord": "적을 소",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 68,
+                "level": 8,
+                "frontWord": "二",
+                "backWord": "두 이",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 69,
+                "level": 8,
+                "frontWord": "色",
+                "backWord": "빛 색",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 70,
+                "level": 8,
+                "frontWord": "一",
+                "backWord": "한 일",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 71,
+                "level": 8,
+                "frontWord": "幸",
+                "backWord": "다행 행",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 72,
+                "level": 8,
+                "frontWord": "成",
+                "backWord": "이룰 성",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 73,
+                "level": 8,
+                "frontWord": "東",
+                "backWord": "동녘 동",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 74,
+                "level": 8,
+                "frontWord": "分",
+                "backWord": "나눌 분",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 75,
+                "level": 8,
+                "frontWord": "單",
+                "backWord": "홑 단",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 76,
+                "level": 8,
+                "frontWord": "音",
+                "backWord": "소리 음",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 77,
+                "level": 8,
+                "frontWord": "風",
+                "backWord": "바람 풍",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 78,
+                "level": 8,
+                "frontWord": "容",
+                "backWord": "얼굴 용",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 79,
+                "level": 8,
+                "frontWord": "事",
+                "backWord": "일 사",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 80,
+                "level": 8,
+                "frontWord": "者",
+                "backWord": "놈 자",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 81,
+                "level": 8,
+                "frontWord": "位",
+                "backWord": "자리 위",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 82,
+                "level": 8,
+                "frontWord": "八",
+                "backWord": "여덟 팔",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 83,
+                "level": 8,
+                "frontWord": "四",
+                "backWord": "넉 사",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 84,
+                "level": 8,
+                "frontWord": "白",
+                "backWord": "흰 백",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 85,
+                "level": 8,
+                "frontWord": "外",
+                "backWord": "바깥 외",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 86,
+                "level": 8,
+                "frontWord": "五",
+                "backWord": "다섯 오",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 87,
+                "level": 8,
+                "frontWord": "三",
+                "backWord": "석 삼",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 88,
+                "level": 8,
+                "frontWord": "南",
+                "backWord": "남녘 남",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 89,
+                "level": 8,
+                "frontWord": "全",
+                "backWord": "온전할 전",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 90,
+                "level": 8,
+                "frontWord": "六",
+                "backWord": "여섯 육",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 91,
+                "level": 8,
+                "frontWord": "內",
+                "backWord": "안 내",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 92,
+                "level": 8,
+                "frontWord": "臣",
+                "backWord": "신하 신",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 93,
+                "level": 8,
+                "frontWord": "科",
+                "backWord": "과목 과, 과정 과",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 94,
+                "level": 8,
+                "frontWord": "由",
+                "backWord": "말미암을 유",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 95,
+                "level": 8,
+                "frontWord": "古",
+                "backWord": "옛 고",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 96,
+                "level": 8,
+                "frontWord": "十",
+                "backWord": "열 십",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 97,
+                "level": 8,
+                "frontWord": "方",
+                "backWord": "모 방",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 98,
+                "level": 8,
+                "frontWord": "男",
+                "backWord": "사내 남",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 99,
+                "level": 8,
+                "frontWord": "西",
+                "backWord": "서녘 서",
+                "hasShown": false,
+                "hasMemorized": false
+            },
+            {
+                "index": 100,
+                "level": 8,
+                "frontWord": "小",
+                "backWord": "작을 소",
+                "hasShown": false,
+                "hasMemorized": false
+            }
+        ]
+    }
+]

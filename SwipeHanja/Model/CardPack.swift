@@ -49,6 +49,7 @@ final class CardPack: Object, Decodable{
         for item in cardArray {
             newCardList.append(item)
         }
+        cardList = newCardList
         
         notificationToken = nil
         

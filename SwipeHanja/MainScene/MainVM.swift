@@ -16,11 +16,12 @@ class MainVM {
     ///DB를 초기화한다.
     func initCardPackDBFromJson() {
         do {
-            let cardPackList = try JSONSerialization.loadJSONFromFile(filename: "CardData", type: [CardPack].self)
+            let cardPackList = try JSONSerialization.loadJSONFromFile(filename: "CardData_20240502", type: [CardPack].self)
             let realm = try Realm()
             try realm.write {
                 realm.add(cardPackList)
             }
+            shLog("카드데이터 JSON -> Realm 삽입 완료: \(cardPackList.count)개")
         } catch(let error) {
             shLog(error.localizedDescription)
         }
@@ -34,10 +35,10 @@ class MainVM {
             // YourObject 클래스에 해당하는 객체들을 쿼리하여 결과 확인
             let objects = realm.objects(CardPack.self)
             if objects.count > 0 {
-                print("Objects of type YourObject found in Realm")
+                shLog("카드데이터 있음")
                 return true
             } else {
-                print("No objects of type YourObject found in Realm")
+                shLog("카드데이터 없음")
                 return false
             }
             
@@ -56,6 +57,7 @@ class MainVM {
             for pack in cardPackList {
                 pack.setObserver()
             }
+            shLog("카드 데이터 준비 완료")
         } catch {
             shLog("Error retrieving data from Realm: \(error)")
             cardPackList = []
@@ -68,6 +70,7 @@ class MainVM {
             try realm.write {
                 realm.deleteAll()
             }
+            shLog("카드 데이터 모두 삭제 완료")
         } catch {
             shLog("Error deleting data from Realm: \(error)")
         }
