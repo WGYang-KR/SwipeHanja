@@ -24,7 +24,6 @@ final class CardItem: Object, Decodable {
     
     override init() {
         super.init()
-        setObserver()
     }
     
     deinit {

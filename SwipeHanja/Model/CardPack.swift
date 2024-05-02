@@ -21,7 +21,6 @@ final class CardPack: Object, Decodable{
     
     override init() {
         super.init()
-        setObserver()
     }
     
     deinit {

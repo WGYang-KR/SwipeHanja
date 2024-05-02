@@ -24,8 +24,11 @@ class MainVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         vm = MainVM()
-        vm.deleteAllDataFromRealm()
-        vm.initCardPackDBFromJson()
+        
+        if !vm.checkCardPackDBExists() {
+            vm.deleteAllDataFromRealm()
+            vm.initCardPackDBFromJson()
+        }
         vm.prepareCardPackList()
     }
 
