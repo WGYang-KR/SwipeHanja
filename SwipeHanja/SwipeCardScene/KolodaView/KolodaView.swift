@@ -504,6 +504,11 @@ open class KolodaView: UIView, DraggableCardDelegate {
         }
     }
     
+    ///현재 revert를 할 수 있는 상태인지 반환
+    public func canRevert() -> Bool {
+        return currentCardIndex > 0 && !animationSemaphore.isAnimating
+    }
+    
     public func revertAction(direction: SwipeResultDirection? = nil) {
         guard currentCardIndex > 0 && !animationSemaphore.isAnimating else {
             return

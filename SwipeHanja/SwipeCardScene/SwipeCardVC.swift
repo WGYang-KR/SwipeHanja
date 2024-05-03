@@ -49,14 +49,14 @@ class SwipeCardVC: UIViewController {
     }
     
     @IBAction func undoButtonTapped() {
-        guard let curIndex = kolodaView?.currentCardIndex else { return }
-        let beforeIndex = curIndex - 1
-        if beforeIndex >= 0 {
-            vm.revertCardStatus(at: beforeIndex)
-            kolodaView?.revertAction()
+        if let kolodaView, kolodaView.canRevert() {
+            vm.revertCardStatus(at: kolodaView.currentCardIndex - 1)
+            kolodaView.revertAction()
+        } else {
+            shLog("Revert 무시됨")
         }
-
-            
+        
+        
     }
     
     @IBAction func topBackBtnTapped(_ sender: Any) {
@@ -94,6 +94,7 @@ extension SwipeCardVC: KolodaViewDelegate {
 //
 //        kolodaView.insertCardAtIndexRange(position..<position + increasingNumber, animated: true)
         vm.prepareCardList()
+        kolodaView.resetCurrentCardIndex()
     
     }
     
