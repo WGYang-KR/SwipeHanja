@@ -61,6 +61,7 @@ final class CardItem: Object, Decodable {
             switch change {
             case .change:
                 // 변화가 감지되면 Realm에 자동으로 저장
+                shLog("CarItem 변경감지 됨")
                 do {
                     let realm = try Realm()
                     try realm.write {

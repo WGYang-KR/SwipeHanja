@@ -49,10 +49,13 @@ class SwipeCardVC: UIViewController {
     }
     
     @IBAction func undoButtonTapped() {
-        if (kolodaView?.currentCardIndex ?? 0)  > 0 {
-            vm.revertCardStatus(at: kolodaView.currentCardIndex)
+        guard let curIndex = kolodaView?.currentCardIndex else { return }
+        let beforeIndex = curIndex - 1
+        if beforeIndex >= 0 {
+            vm.revertCardStatus(at: beforeIndex)
+            kolodaView?.revertAction()
         }
-        kolodaView?.revertAction()
+
             
     }
     

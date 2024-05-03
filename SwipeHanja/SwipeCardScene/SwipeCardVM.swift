@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import RealmSwift
 
 class SwipeCardVM {
     
@@ -33,32 +34,38 @@ class SwipeCardVM {
     func prepareCardList() {
         cardList.send(cardPack.cardList.filter { !$0.hasMemorized || !$0.hasShown } )
         totalCardCount.send(cardList.value.count)
-        remainCardCount.send(0)
+        remainCardCount.send(cardList.value.count)
         yesCardCount.send(0)
         noCardCount.send(0)
     }
     
     ///모든 카드의 학습상태  정보를 삭제하고, 카드리스트를 다시 준비한다.
     func deleteStudyStatus() {
-        cardPack.cardList.forEach {
-            if $0.hasShown { $0.hasShown = false }
-            if $0.hasMemorized { $0.hasMemorized = false }
+        cardPack.cardList.forEach { item in
+            let realm = try! Realm()
+            try! realm.write {
+                if item.hasShown { item.hasShown = false }
+                if item.hasMemorized { item.hasMemorized = false }
+            }
         }
         
         prepareCardList()
         
     }
     
-    ///특정 카드의 학습상태를 되돌린다.
+    ///특정 카드의 학습상태를 되돌린다. index가 되돌려질 카드 인 것을 주의
     func revertCardStatus(at index: Int) {
-        guard index < cardList.value.count else { shLog("오류: 오버레인지"); return  }
+        guard index >= 0, index < cardList.value.count else { shLog("오류: 오버레인지"); return  }
         let item = cardList.value[index]
         
         item.hasMemorized ? (yesCardCount.send(yesCardCount.value - 1)) : (noCardCount.send(noCardCount.value - 1))
         remainCardCount.send(remainCardCount.value + 1)
         
-        item.hasShown = false
-        item.hasMemorized = false
+        let realm = try! Realm()
+        try! realm.write {
+            item.hasShown = false
+            item.hasMemorized = false
+        }
         
     }
     
@@ -70,8 +77,11 @@ class SwipeCardVM {
         isMemorized ? (yesCardCount.send(yesCardCount.value + 1)) : (noCardCount.send(noCardCount.value + 1))
         remainCardCount.send(remainCardCount.value - 1)
         
-        item.hasShown = true
-        item.hasMemorized = isMemorized
+        let realm = try! Realm()
+        try! realm.write {
+            item.hasShown = true
+            item.hasMemorized = isMemorized
+        }
    
     }
     
