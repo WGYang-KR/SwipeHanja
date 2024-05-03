@@ -22,6 +22,9 @@ class MainVC: UIViewController {
         titleLabel.text = "Swipe! 한자"
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
 
     @IBAction func didTapInfoBtn(_ sender: Any) {
         
