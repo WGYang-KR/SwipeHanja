@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import Combine
 
 class SwipeCardVC: UIViewController {
 
     var vm: SwipeCardVM!
-    var dataSource: [CardItem] { vm.cardList }
+    var dataSource: [CardItem] { vm.cardList.value }
+    
+    private var cancellables = Set<AnyCancellable>()
     
     @IBOutlet weak var kolodaView: KolodaView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -20,20 +23,21 @@ class SwipeCardVC: UIViewController {
     
     func configure(cardPack: CardPack) {
         self.vm = SwipeCardVM(cardPack: cardPack)
+        self.modalTransitionStyle = UIModalTransitionStyle.coverVertical
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        bindVM()
         vm.prepareCardList()
         
         kolodaView.dataSource = self
         kolodaView.delegate = self
         
-        self.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-        
-        
+        titleLabel.text = vm.cardPack.title
     }
+    
     // MARK: IBActions
 
     @IBAction func leftButtonTapped() {
@@ -56,6 +60,24 @@ class SwipeCardVC: UIViewController {
         self.moveBackVC(animated: true)
     }
     
+    //MARK: Bind ViewModel
+    func bindVM() {
+
+        vm.noCardCount.sink { [weak self] newValue in
+            self?.countLeftLabel.text = String(newValue)
+        }.store(in: &cancellables)
+        
+        vm.yesCardCount.sink { [weak self] newValue in
+            self?.countRightLabel.text = String(newValue)
+        }.store(in: &cancellables)
+        
+        vm.remainCardCount.combineLatest(vm.totalCardCount).sink { [weak self] remain, total in
+            self?.countMiddleLabel.text = "\(remain)/\(total)"
+        }.store(in: &cancellables)
+        
+    }
+    
+    
 }
 
 // MARK: KolodaViewDelegate
@@ -69,7 +91,7 @@ extension SwipeCardVC: KolodaViewDelegate {
 //
 //        kolodaView.insertCardAtIndexRange(position..<position + increasingNumber, animated: true)
         vm.prepareCardList()
-        kolodaView.resetCurrentCardIndex()
+    
     }
     
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
