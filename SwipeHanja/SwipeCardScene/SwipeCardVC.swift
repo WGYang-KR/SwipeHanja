@@ -19,8 +19,9 @@ class SwipeCardVC: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var countLeftLabel: UILabel!
     @IBOutlet weak var countRightLabel: UILabel!
-    @IBOutlet weak var countMiddleLabel: UILabel!
-    
+    @IBOutlet weak var remainCountLabel: UILabel!
+    @IBOutlet weak var totalCountLabel: UILabel!
+
     func configure(cardPack: CardPack) {
         self.vm = SwipeCardVM(cardPack: cardPack) 
         self.modalTransitionStyle = UIModalTransitionStyle.coverVertical
@@ -75,7 +76,8 @@ class SwipeCardVC: UIViewController {
         }.store(in: &cancellables)
         
         vm.remainCardCount.combineLatest(vm.totalCardCount).sink { [weak self] remain, total in
-            self?.countMiddleLabel.text = "\(remain)/\(total)"
+            self?.remainCountLabel.text = String(remain)
+            self?.totalCountLabel.text = String(total)
         }.store(in: &cancellables)
         
     }
@@ -88,11 +90,6 @@ class SwipeCardVC: UIViewController {
 extension SwipeCardVC: KolodaViewDelegate {
     
     func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
-//        let position = kolodaView.currentCardIndex
-//        let increasingNumber = sampleData.count
-//        dataSource += sampleData
-//
-//        kolodaView.insertCardAtIndexRange(position..<position + increasingNumber, animated: true)
         vm.prepareCardList()
         kolodaView.resetCurrentCardIndex()
     
