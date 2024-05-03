@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import RealmSwift
+import SwiftUI
 
 class MainVC: UIViewController {
     
@@ -26,20 +26,21 @@ class MainVC: UIViewController {
         tableView.reloadData()
     }
 
+    
     @IBAction func didTapInfoBtn(_ sender: Any) {
-        
+
+        let view = SettingsView(resetProgressClosure: { [weak self] in
+                self?.vm.initCardPackIfNeeded(always: true)
+        })
+        let vc = UIHostingController(rootView: view)
+        presentFull(vc, animated: true)
     }
     
     func initVM() {
         vm = MainVM()
         
         vm.deleteAllDataFromRealm() //테스트용으로 항상 지우고 시작.
-        
-        if !vm.checkCardPackDBExists() {
-            vm.deleteAllDataFromRealm()
-            vm.initCardPackDBFromJson()
-        }
-        
+        vm.initCardPackIfNeeded()
         vm.prepareCardPackList()
     }
     

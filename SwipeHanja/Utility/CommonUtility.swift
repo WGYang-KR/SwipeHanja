@@ -77,6 +77,29 @@ extension UIViewController {
         }
     }
     
+    //현재 보여지는 가장 Top VC를 찾아서 반환한다
+    static func getTopViewController() -> UIViewController? {
+        if let viewController = UIApplication.shared.windows.first?.rootViewController {
+            if let presentedViewController = viewController.presentedViewController {
+                // 현재 Modal로 표시되고 있는 뷰 컨트롤러
+                print("Presented view controller: \(presentedViewController)")
+                return presentedViewController
+            } else if let navigationController = viewController as? UINavigationController {
+                // Navigation Controller의 현재 뷰 컨트롤러
+                print("Top view controller in navigation stack: \(String(describing: navigationController.topViewController))")
+                return navigationController
+            } else {
+                // 현재 화면에 표시되고 있는 뷰 컨트롤러
+                print("Visible view controller: \(viewController)")
+                return viewController
+            }
+        } else {
+            print("No Visible view controller")
+            return nil
+        }
+    }
+    
+    
 }
 
 extension UINavigationController { //navigation controller completion 추가
@@ -111,4 +134,3 @@ extension UINavigationController { //navigation controller completion 추가
     
     
 }
-
