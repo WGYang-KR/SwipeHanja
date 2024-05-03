@@ -149,11 +149,11 @@
 		6AA332002BD14E0200996EC5 /* SwipeHanja */ = {
 			isa = PBXGroup;
 			children = (
-				6AFD0BED2BE3DF5D00F27BBE /* Resource */,
-				6AA3321E2BD1573800996EC5 /* Utility */,
 				6AA3321B2BD152DC00996EC5 /* Model */,
 				6AA332212BD15D3900996EC5 /* MainScene */,
 				6AA332162BD14F7B00996EC5 /* SwipeCardScene */,
+				6AA3321E2BD1573800996EC5 /* Utility */,
+				6AFD0BED2BE3DF5D00F27BBE /* Resource */,
 				6AA332012BD14E0200996EC5 /* AppDelegate.swift */,
 				6AA332032BD14E0200996EC5 /* SceneDelegate.swift */,
 				6AA332072BD14E0200996EC5 /* Main.storyboard */,

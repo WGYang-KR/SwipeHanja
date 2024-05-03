@@ -22,7 +22,7 @@ class SwipeCardVC: UIViewController {
     @IBOutlet weak var countMiddleLabel: UILabel!
     
     func configure(cardPack: CardPack) {
-        self.vm = SwipeCardVM(cardPack: cardPack)
+        self.vm = SwipeCardVM(cardPack: cardPack) 
         self.modalTransitionStyle = UIModalTransitionStyle.coverVertical
     }
     

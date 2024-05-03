@@ -78,6 +78,12 @@ final class CardPack: Object, Decodable{
                 shLog("Object deleted")
             }
         }
+        
+        // CardItem들에 대한 옵저버 설정
+        for cardItem in cardList {
+            cardItem.setObserver()
+        }
+        
     }
     
     func removeObserver() {

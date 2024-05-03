@@ -25,6 +25,8 @@ class MainVC: UIViewController {
         // Do any additional setup after loading the view.
         vm = MainVM()
         
+        vm.deleteAllDataFromRealm() //테스트용으로 항상 지우고 시작.
+        
         if !vm.checkCardPackDBExists() {
             vm.deleteAllDataFromRealm()
             vm.initCardPackDBFromJson()
