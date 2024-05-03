@@ -63,7 +63,8 @@ extension MainVC: UITableViewDataSource {
         let item = vm.cardPackList[indexPath.row]
         
         cell.titleLabel.text = item.title
-        cell.progressLabel.text = "\(item.remainCardCount)/\(item.totalCardCount)"
+        cell.remainCountLabel.text = String(item.remainCardCount)
+        cell.totalCountLabel.text = String(item.totalCardCount)
         
         return cell
         

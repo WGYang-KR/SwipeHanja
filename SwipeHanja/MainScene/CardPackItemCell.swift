@@ -11,8 +11,8 @@ class CardPackItemCell: UITableViewCell {
 
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var progressLabel: UILabel!
-    
+    @IBOutlet weak var remainCountLabel: UILabel!
+    @IBOutlet weak var totalCountLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
