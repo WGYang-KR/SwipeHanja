@@ -10,19 +10,24 @@ import RealmSwift
 
 class MainVC: UIViewController {
     
-//    let cardPack = CardPack(_id: ObjectId.generate(),
-//                            index: 0,
-//                            title: "상공회의소 9급",
-//                            cardList: List<CardItem>)  [CardItem(_id: ObjectId.generate(), index: 1, level: 9, frontWord: "One", backWord: "일"),
-//                                       CardItem(_id: ObjectId.generate(), index: 2, level: 9, frontWord: "Two", backWord: "이"),
-//                                       CardItem(_id: ObjectId.generate(), index: 3, level: 9, frontWord: "Three", backWord: "삼"),
-//                                       CardItem(_id: ObjectId.generate(), index: 4, level: 9, frontWord: "Four", backWord: "사"),
-//                                       CardItem(_id: ObjectId.generate(), index: 5, level: 9, frontWord: "Five", backWord: "오")])
     var vm: MainVM!
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        initVM()
+        initTableView()
+        titleLabel.text = "Swipe! 한자"
+    }
+
+
+    @IBAction func didTapInfoBtn(_ sender: Any) {
+        
+    }
+    
+    func initVM() {
         vm = MainVM()
         
         vm.deleteAllDataFromRealm() //테스트용으로 항상 지우고 시작.
@@ -31,17 +36,47 @@ class MainVC: UIViewController {
             vm.deleteAllDataFromRealm()
             vm.initCardPackDBFromJson()
         }
+        
         vm.prepareCardPackList()
     }
-
-
-    @IBAction func didTapMoveBtn(_ sender: Any) {
-        let vc = SwipeCardVC()
-        guard let cardPack = vm.cardPackList.first else { return }
-        vc.configure(cardPack: cardPack)
-        presentFull(vc, animated: true)
-    }
     
+    func initTableView() {
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(UINib(nibName: "\(CardPackItemCell.self)", bundle: nil), forCellReuseIdentifier: "\(CardPackItemCell.self)")
+        
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.separatorStyle = .none
+    }
     
 }
 
+extension MainVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return vm.cardPackList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView
+            .dequeueReusableCell(withIdentifier: "\(CardPackItemCell.self)", for: indexPath) as? CardPackItemCell
+        else { return UITableViewCell() }
+        let item = vm.cardPackList[indexPath.row]
+        
+        cell.titleLabel.text = item.title
+        cell.progressLabel.text = "\(item.remainCardCount)/\(item.totalCardCount)"
+        
+        return cell
+        
+    }
+}
+
+extension MainVC: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+        let vc = SwipeCardVC()
+        let item = vm.cardPackList[indexPath.row]
+        vc.configure(cardPack: item)
+        presentFull(vc, animated: true)
+    }
+}
