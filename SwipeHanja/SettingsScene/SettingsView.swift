@@ -11,13 +11,10 @@ struct SettingsView: View {
     
     @Environment(\.presentationMode) var presentationMode
 
-    ///학습 시작시에 항상 랜덤 섞기를 할지 여부
-    @State var randomMix: Bool
     ///진도 초기화를 실행할 클로저
     var resetProgressClosure: (()->Void)?
     
     init(resetProgressClosure: @escaping () -> Void) {
-        self.randomMix = AppSetting.randomMix
         self.resetProgressClosure = resetProgressClosure
         
     }
@@ -37,12 +34,7 @@ struct SettingsView: View {
             
             List {
                 Section {
-                    
-                    Toggle("학습 시작시에 항상 랜덤섞기", isOn: $randomMix)
-                        .onChange(of: randomMix) { newValue in
-                            AppSetting.randomMix = newValue
-                        }
-                    
+    
                     Button(action: {
                         resetProgressClosure?()
                     }, label: {
@@ -67,9 +59,7 @@ struct SettingsView: View {
                     }, label: {
                         Text("Help & Feedback")
                     })
-                }
                 
-                Section {
                     HStack(alignment: .center) {
                         Text("Version")
                         Spacer()

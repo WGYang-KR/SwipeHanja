@@ -53,11 +53,8 @@ class AppStatus {
         return model
     }
 
-    // 디바이스 모델명 조회
+    // 디바이스 모델 이름 변환
     static func getModelName() -> String {
-        var systemInfo = utsname()
-        uname(&systemInfo)
-        let machineMirror = Mirror(reflecting: systemInfo.machine)
         let model = getModel()
         
         switch model {

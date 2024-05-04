@@ -38,8 +38,9 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rJ2-y4-g3K">
                                             <rect key="frame" x="16" y="8" width="343" height="32"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BLo-RF-XnU">
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BLo-RF-XnU">
                                                     <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="32" id="JsI-FK-NIq"/>
                                                         <constraint firstAttribute="width" constant="32" id="RwF-Dd-yqv"/>
@@ -47,6 +48,7 @@
                                                     <color key="tintColor" name="colorTeal02"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" image="xmark" catalog="system">
+                                                        <color key="titleColor" name="colorTeal02"/>
                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
                                                     </state>
                                                     <connections>
@@ -192,36 +194,71 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYa-7L-kQD" customClass="KolodaView" customModule="SwipeHanja" customModuleProvider="target">
-                                    <rect key="frame" x="32" y="84" width="311" height="482"/>
+                                    <rect key="frame" x="32" y="84" width="311" height="468"/>
                                     <color key="backgroundColor" name="colorGrey02"/>
                                 </view>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOe-cO-pxg">
-                                    <rect key="frame" x="50" y="602" width="40" height="40"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AOo-ch-EAx">
+                                    <rect key="frame" x="50" y="588" width="275" height="40"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOe-cO-pxg">
+                                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="2JU-gj-vwf"/>
+                                                <constraint firstAttribute="height" constant="40" id="fXj-hc-XfC"/>
+                                            </constraints>
+                                            <color key="tintColor" name="colorTeal02"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="arrow.uturn.backward" catalog="system">
+                                                <color key="titleColor" name="colorTeal02"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="undoButtonTapped" destination="-1" eventType="touchUpInside" id="zzC-1v-tpQ"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgS-z7-kjz">
+                                            <rect key="frame" x="235" y="0.0" width="40" height="40"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="Ylg-of-nFI"/>
+                                                <constraint firstAttribute="width" constant="40" id="qLH-Kj-8TM"/>
+                                            </constraints>
+                                            <color key="tintColor" name="colorTeal02"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="shuffle" catalog="system">
+                                                <color key="titleColor" name="colorTeal02"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="shuffleButtonTapped:" destination="-1" eventType="touchUpInside" id="eSt-o5-W5L"/>
+                                                <action selector="undoButtonTapped" destination="-1" eventType="touchUpInside" id="Hvq-oZ-Nzf"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="40" id="2JU-gj-vwf"/>
-                                        <constraint firstAttribute="height" constant="40" id="fXj-hc-XfC"/>
+                                        <constraint firstItem="CgS-z7-kjz" firstAttribute="top" secondItem="AOo-ch-EAx" secondAttribute="top" id="3Zu-Tt-4Bt"/>
+                                        <constraint firstItem="VOe-cO-pxg" firstAttribute="top" secondItem="AOo-ch-EAx" secondAttribute="top" id="ENG-Dh-wVl"/>
+                                        <constraint firstAttribute="bottom" secondItem="CgS-z7-kjz" secondAttribute="bottom" id="R9o-sy-FdY"/>
+                                        <constraint firstItem="VOe-cO-pxg" firstAttribute="leading" secondItem="AOo-ch-EAx" secondAttribute="leading" id="VSH-B2-PIu"/>
+                                        <constraint firstAttribute="bottom" secondItem="VOe-cO-pxg" secondAttribute="bottom" id="cwD-i4-2BT"/>
+                                        <constraint firstAttribute="trailing" secondItem="CgS-z7-kjz" secondAttribute="trailing" id="pfq-mQ-r8E"/>
                                     </constraints>
-                                    <color key="tintColor" name="colorTeal02"/>
-                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" image="arrow.uturn.backward" catalog="system">
-                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="undoButtonTapped" destination="-1" eventType="touchUpInside" id="zzC-1v-tpQ"/>
-                                    </connections>
-                                </button>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="VOe-cO-pxg" secondAttribute="bottom" constant="36" id="6u1-Vc-wYK"/>
                                 <constraint firstItem="vYa-7L-kQD" firstAttribute="top" secondItem="z7X-cp-Vb8" secondAttribute="bottom" constant="36" id="AfW-oT-07r"/>
                                 <constraint firstAttribute="trailing" secondItem="z7X-cp-Vb8" secondAttribute="trailing" id="FFE-NX-4Lf"/>
                                 <constraint firstItem="z7X-cp-Vb8" firstAttribute="leading" secondItem="jaV-UJ-8w2" secondAttribute="leading" id="Huk-4y-GuB"/>
+                                <constraint firstAttribute="trailing" secondItem="AOo-ch-EAx" secondAttribute="trailing" constant="50" id="Js6-0W-lSH"/>
+                                <constraint firstItem="AOo-ch-EAx" firstAttribute="leading" secondItem="jaV-UJ-8w2" secondAttribute="leading" constant="50" id="QEX-BO-hFf"/>
                                 <constraint firstAttribute="trailing" secondItem="vYa-7L-kQD" secondAttribute="trailing" constant="32" id="T9G-Zb-VeP"/>
-                                <constraint firstItem="VOe-cO-pxg" firstAttribute="leading" secondItem="jaV-UJ-8w2" secondAttribute="leading" constant="50" id="YyP-KE-GCV"/>
-                                <constraint firstItem="VOe-cO-pxg" firstAttribute="top" secondItem="vYa-7L-kQD" secondAttribute="bottom" constant="36" id="g5e-ir-y5E"/>
                                 <constraint firstItem="z7X-cp-Vb8" firstAttribute="top" secondItem="jaV-UJ-8w2" secondAttribute="top" constant="12" id="hon-GT-Jse"/>
                                 <constraint firstItem="vYa-7L-kQD" firstAttribute="leading" secondItem="jaV-UJ-8w2" secondAttribute="leading" constant="32" id="iFr-78-iEA"/>
+                                <constraint firstItem="AOo-ch-EAx" firstAttribute="top" secondItem="vYa-7L-kQD" secondAttribute="bottom" constant="36" id="mIf-iM-ANR"/>
+                                <constraint firstAttribute="bottom" secondItem="AOo-ch-EAx" secondAttribute="bottom" constant="50" id="nNI-Or-gqY"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -245,11 +282,12 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7PL-9U-puu" secondAttribute="bottom" id="kho-lG-kJF"/>
                 <constraint firstItem="7PL-9U-puu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="pf0-Iu-hYU"/>
             </constraints>
-            <point key="canvasLocation" x="136.64122137404578" y="20.422535211267608"/>
+            <point key="canvasLocation" x="135.19999999999999" y="19.95073891625616"/>
         </view>
     </objects>
     <resources>
         <image name="arrow.uturn.backward" catalog="system" width="128" height="113"/>
+        <image name="shuffle" catalog="system" width="128" height="95"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="colorGrey02">
             <color red="0.82352941176470584" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

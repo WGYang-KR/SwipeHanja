@@ -27,7 +27,7 @@ class MainVC: UIViewController {
     }
 
     
-    @IBAction func didTapInfoBtn(_ sender: Any) {
+    @IBAction func infoButtonTapped(_ sender: Any) {
 
         let view = SettingsView(resetProgressClosure: { [weak self] in
                 self?.vm.initCardPackIfNeeded(always: true)

@@ -59,6 +59,8 @@ class SwipeCardVC: UIViewController {
         
         
     }
+    @IBAction func shuffleButtonTapped(_ sender: Any) {
+    }
     
     @IBAction func topBackBtnTapped(_ sender: Any) {
         self.moveBackVC(animated: true)
