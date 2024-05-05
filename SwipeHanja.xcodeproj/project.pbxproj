@@ -31,13 +31,13 @@
 		6AFD0BE52BDA855400F27BBE /* CardPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0BE42BDA855400F27BBE /* CardPack.swift */; };
 		6AFD0BE72BDA89CD00F27BBE /* SwipeCardVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0BE62BDA89CD00F27BBE /* SwipeCardVM.swift */; };
 		6AFD0BEA2BE24EA300F27BBE /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0BE92BE24EA300F27BBE /* MainVM.swift */; };
-		6AFD0BF12BE3DF9200F27BBE /* CardData_20240502.json in Resources */ = {isa = PBXBuildFile; fileRef = 6AFD0BF02BE3DF9200F27BBE /* CardData_20240502.json */; };
 		6AFD0BF42BE51BD800F27BBE /* CardPackItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0BF22BE51BD800F27BBE /* CardPackItemCell.swift */; };
 		6AFD0BF52BE51BD800F27BBE /* CardPackItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AFD0BF32BE51BD800F27BBE /* CardPackItemCell.xib */; };
 		6AFD0BF82BE5937E00F27BBE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0BF72BE5937E00F27BBE /* SettingsView.swift */; };
 		6AFD0BFB2BE5963000F27BBE /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0BFA2BE5963000F27BBE /* AppSetting.swift */; };
 		6AFD0BFD2BE5974F00F27BBE /* AppStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0BFC2BE5974F00F27BBE /* AppStatus.swift */; };
 		6AFD0BFF2BE5979200F27BBE /* EmailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0BFE2BE5979200F27BBE /* EmailHelper.swift */; };
+		6AFD0C012BE7415A00F27BBE /* CardPacks.json in Resources */ = {isa = PBXBuildFile; fileRef = 6AFD0C002BE7415A00F27BBE /* CardPacks.json */; };
 		A0B30CCB4701005DFB3F0B79 /* Pods_SwipeHanja.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CC7FF4B5428C0E41E71CA1 /* Pods_SwipeHanja.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,13 +69,13 @@
 		6AFD0BE42BDA855400F27BBE /* CardPack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPack.swift; sourceTree = "<group>"; };
 		6AFD0BE62BDA89CD00F27BBE /* SwipeCardVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCardVM.swift; sourceTree = "<group>"; };
 		6AFD0BE92BE24EA300F27BBE /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
-		6AFD0BF02BE3DF9200F27BBE /* CardData_20240502.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CardData_20240502.json; sourceTree = "<group>"; };
 		6AFD0BF22BE51BD800F27BBE /* CardPackItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPackItemCell.swift; sourceTree = "<group>"; };
 		6AFD0BF32BE51BD800F27BBE /* CardPackItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardPackItemCell.xib; sourceTree = "<group>"; };
 		6AFD0BF72BE5937E00F27BBE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		6AFD0BFA2BE5963000F27BBE /* AppSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSetting.swift; sourceTree = "<group>"; };
 		6AFD0BFC2BE5974F00F27BBE /* AppStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStatus.swift; sourceTree = "<group>"; };
 		6AFD0BFE2BE5979200F27BBE /* EmailHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailHelper.swift; sourceTree = "<group>"; };
+		6AFD0C002BE7415A00F27BBE /* CardPacks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CardPacks.json; sourceTree = "<group>"; };
 		B1AD6178E7CF99EF37CA7931 /* Pods-SwipeHanja.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeHanja.release.xcconfig"; path = "Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja.release.xcconfig"; sourceTree = "<group>"; };
 		C3436B0057D6212720791000 /* Pods-SwipeHanja.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeHanja.debug.xcconfig"; path = "Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -224,7 +224,7 @@
 		6AFD0BED2BE3DF5D00F27BBE /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				6AFD0BF02BE3DF9200F27BBE /* CardData_20240502.json */,
+				6AFD0C002BE7415A00F27BBE /* CardPacks.json */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -307,8 +307,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AA3320B2BD14E0200996EC5 /* Assets.xcassets in Resources */,
-				6AFD0BF12BE3DF9200F27BBE /* CardData_20240502.json in Resources */,
 				6A788E702BD180C800B7ABDA /* OverlayView.xib in Resources */,
+				6AFD0C012BE7415A00F27BBE /* CardPacks.json in Resources */,
 				6A788E4D2BD17EF800B7ABDA /* CardItemView.xib in Resources */,
 				6AA3320E2BD14E0200996EC5 /* Base in Resources */,
 				6AFD0BF52BE51BD800F27BBE /* CardPackItemCell.xib in Resources */,

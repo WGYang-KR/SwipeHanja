@@ -17,7 +17,19 @@ public func shLog(_ message: String?, file: String = #file, functionName: String
 #endif
     
     let className = (file as NSString).lastPathComponent
-    os_log("%@",type:.default ,"<\(className)> \(functionName) [#\(line)] \(message ?? "")")
+    os_log("%@",type:.default ,"\(Timestamp.timestamp())<\(className)> \(functionName) [#\(line)] \(message ?? "")")
+}
+
+class Timestamp {
+    static let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yy/MM/dd HH:mm:ss.SSS "
+        return formatter
+    }()
+
+    static func timestamp() -> String{
+        return dateFormatter.string(from: Date())
+    }
 }
 
 //MARK: - JSON 로드
