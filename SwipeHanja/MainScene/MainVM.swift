@@ -29,9 +29,6 @@ class MainVM {
             let realm = try Realm()
             let results = realm.objects(CardPack.self)
             cardPackList =  Array(results)
-            for pack in cardPackList {
-                pack.setObserver()
-            }
             shLog("카드 데이터 준비 완료")
         } catch {
             shLog("Error retrieving data from Realm: \(error)")
@@ -86,5 +83,9 @@ class MainVM {
         }
     }
     
+    func resetLearningStatus(at index: Int ) {
+        let item = cardPackList[index]
+        item.setLearningStatus(.notStarted)
+    }
 }
 

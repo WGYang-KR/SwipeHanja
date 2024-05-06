@@ -24,7 +24,7 @@ final class CardPack: Object, Decodable{
     }
     
     deinit {
-        removeObserver()
+        
     }
     
     
@@ -55,43 +55,6 @@ final class CardPack: Object, Decodable{
         
     }
     
-    //MARK: -
-    func setObserver() {
-        // Realm에 추가되었을 때의 변화를 감지하는 코드
-        notificationToken = self.observe { (change) in
-            switch change {
-            case .change:
-                // 변화가 감지되면 Realm에 자동으로 저장
-                shLog("CardPack 변경됨")
-                do {
-                    let realm = try Realm()
-                    try realm.write {
-                        realm.add(self, update: .modified)
-                    }
-                } catch {
-                    shLog("An error occurred: \(error)")
-                }
-            case .error(let error):
-                // 에러 처리
-                shLog("An error occurred: \(error)")
-            case .deleted:
-                // 객체가 삭제되면 추가 작업 수행
-                shLog("Object deleted")
-            }
-        }
-        
-        //CardItem들에 대한 옵저버 설정
-        for cardItem in cardList {
-            cardItem.setObserver()
-        }
-        
-    }
-    
-    func removeObserver() {
-        // 옵저버가 더 이상 필요하지 않을 때 메모리 해제
-        notificationToken?.invalidate()
-    }
-    
     //MARK: - 
     //샘플데이터용
     internal init(_id: ObjectId, index: Int, level: Int, title: String, cardList: List<CardItem>) {
@@ -115,4 +78,44 @@ extension CardPack {
     var remainCardCount: Int {
         return cardList.filter{!$0.hasMemorized}.count
     }
+    
+    var learningStatus: LearningStatus {
+        let remainCardCount = self.remainCardCount
+        let totalCardCount = self.totalCardCount
+        
+        if remainCardCount == 0 { return .completed }
+        else if  remainCardCount < totalCardCount {return .inProgress }
+        else { return .notStarted }
+    }
+    
+    ///학습정보 초기화
+    func setLearningStatus(_ status: LearningStatus) {
+        do {
+            let realm = try Realm()
+            switch status {
+            case .notStarted:
+                try realm.write {
+                    for item in cardList {
+                        item.hasShown = false
+                        item.hasMemorized = false
+                    }
+                    realm.add(self, update: .modified)
+                }
+            case .completed:
+                try realm.write {
+                    for item in cardList {
+                        item.hasShown = true
+                        item.hasMemorized = true
+                    }
+                    realm.add(self, update: .modified)
+                }
+            case .inProgress:
+                break;
+                
+            }
+        } catch {
+            shLog("\(error) \(error.localizedDescription)")
+        }
+    }
+    
 }

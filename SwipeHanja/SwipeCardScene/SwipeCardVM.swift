@@ -41,16 +41,7 @@ class SwipeCardVM {
     
     ///모든 카드의 학습상태  정보를 삭제하고, 카드리스트를 다시 준비한다.
     func deleteStudyStatus() {
-        cardPack.cardList.forEach { item in
-            let realm = try! Realm()
-            try! realm.write {
-                if item.hasShown { item.hasShown = false }
-                if item.hasMemorized { item.hasMemorized = false }
-            }
-        }
-        
-        prepareCardList()
-        
+        cardPack.setLearningStatus(.notStarted)
     }
     
     ///특정 카드의 학습상태를 되돌린다. index가 되돌려질 카드 인 것을 주의
@@ -62,9 +53,11 @@ class SwipeCardVM {
         remainCardCount.send(remainCardCount.value + 1)
         
         let realm = try! Realm()
+        
         try! realm.write {
             item.hasShown = false
             item.hasMemorized = false
+            realm.add(item, update: .modified)
         }
         
     }
@@ -81,6 +74,7 @@ class SwipeCardVM {
         try! realm.write {
             item.hasShown = true
             item.hasMemorized = isMemorized
+            realm.add(item, update: .modified)
         }
    
     }

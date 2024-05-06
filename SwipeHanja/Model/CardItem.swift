@@ -27,7 +27,6 @@ final class CardItem: Object, Decodable {
     }
     
     deinit {
-        removeObserver()
     }
     
     //MARK: - Decodable
@@ -52,37 +51,6 @@ final class CardItem: Object, Decodable {
         hasShown = try container.decodeIfPresent(Bool.self, forKey: .hasShown) ?? false
         hasMemorized = try container.decodeIfPresent(Bool.self, forKey: .hasMemorized) ?? false
     
-    }
-    
-    //MARK: -
-    func setObserver() {
-        // Realm에 추가되었을 때의 변화를 감지하는 코드
-        notificationToken = self.observe { (change) in
-            switch change {
-            case .change:
-                // 변화가 감지되면 Realm에 자동으로 저장
-                shLog("CarItem 변경감지 됨")
-                do {
-                    let realm = try Realm()
-                    try realm.write {
-                        realm.add(self, update: .modified)
-                    }
-                } catch {
-                    shLog("An error occurred: \(error)")
-                }
-            case .error(let error):
-                // 에러 처리
-                shLog("An error occurred: \(error)")
-            case .deleted:
-                // 객체가 삭제되면 추가 작업 수행
-                shLog("Object deleted")
-            }
-        }
-    }
-    
-    func removeObserver() {
-        // 옵저버가 더 이상 필요하지 않을 때 메모리 해제
-        notificationToken?.invalidate()
     }
     
     //MARK: -

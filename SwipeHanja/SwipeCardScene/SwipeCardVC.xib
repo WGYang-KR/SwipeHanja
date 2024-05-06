@@ -226,12 +226,12 @@
                                             </constraints>
                                             <color key="tintColor" name="colorTeal02"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <state key="normal" image="shuffle" catalog="system">
+                                            <state key="normal" image="list.bullet" catalog="system">
                                                 <color key="titleColor" name="colorTeal02"/>
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
                                             </state>
                                             <connections>
-                                                <action selector="shuffleButtonTapped:" destination="-1" eventType="touchUpInside" id="eSt-o5-W5L"/>
+                                                <action selector="listButtonTapped:" destination="-1" eventType="touchUpInside" id="eSt-o5-W5L"/>
                                                 <action selector="undoButtonTapped" destination="-1" eventType="touchUpInside" id="Hvq-oZ-Nzf"/>
                                             </connections>
                                         </button>
@@ -287,7 +287,7 @@
     </objects>
     <resources>
         <image name="arrow.uturn.backward" catalog="system" width="128" height="113"/>
-        <image name="shuffle" catalog="system" width="128" height="95"/>
+        <image name="list.bullet" catalog="system" width="128" height="87"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="colorGrey02">
             <color red="0.82352941176470584" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

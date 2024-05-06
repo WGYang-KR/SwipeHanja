@@ -53,6 +53,7 @@ class MainVC: UIViewController {
         tableView.separatorStyle = .none
     }
     
+
 }
 
 extension MainVC: UITableViewDataSource {
@@ -95,10 +96,22 @@ extension MainVC: UITableViewDataSource {
 extension MainVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
-        let vc = SwipeCardVC()
+        
         let item = vm.cardPackList[indexPath.row]
-        vc.configure(cardPack: item)
-        presentFull(vc, animated: true)
+        if item.learningStatus == .completed {
+            AlertHelper.alertConfirm(baseVC: self, title: "학습이 완료된 챕터예요.", message: "학습을 다시 진행할게요.") {[weak self] in
+                self?.vm.resetLearningStatus(at: indexPath.row)
+                moveSwipeCardVC()
+            }
+        } else {
+            moveSwipeCardVC()
+        }
+        
+        func moveSwipeCardVC() {
+            let vc = SwipeCardVC()
+            vc.configure(cardPack: item)
+            presentFull(vc, animated: true)
+        }
+        
     }
 }
