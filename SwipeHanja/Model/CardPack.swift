@@ -16,9 +16,6 @@ final class CardPack: Object, Decodable{
     @Persisted var title: String //한자 9급
     @Persisted var cardList: List<CardItem> // = List<CardItem>()
     
-    // Realm에 자동으로 업데이트되도록 변수를 관찰
-    private var notificationToken: NotificationToken?
-    
     override init() {
         super.init()
     }
@@ -50,9 +47,7 @@ final class CardPack: Object, Decodable{
             newCardList.append(item)
         }
         cardList = newCardList
-        
-        notificationToken = nil
-        
+       
     }
     
     //MARK: - 

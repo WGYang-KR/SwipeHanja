@@ -118,6 +118,7 @@ open class KolodaView: UIView, DraggableCardDelegate {
     public var visibleCardsDirection: VisibleCardsDirection = .bottom
     
     public var isLoop = false
+    var cardDefaultSide: CardSideType = .front
     
     private(set) public var currentCardIndex = 0
     private(set) public var countOfCards = 0
@@ -181,7 +182,7 @@ open class KolodaView: UIView, DraggableCardDelegate {
                 
                 for index in 0..<countOfNeededCards {
                     let actualIndex = index + currentCardIndex
-                    let nextCardView = createCard(at: actualIndex)
+                    let nextCardView = createCard(at: actualIndex, defaultSide: cardDefaultSide)
                     let isTop = index == 0
                     nextCardView.isUserInteractionEnabled = isTop
                     nextCardView.alpha = alphaValueOpaque
@@ -456,7 +457,7 @@ open class KolodaView: UIView, DraggableCardDelegate {
         if isLoop && indexToBeMake >= realCountOfCards {
             indexToBeMake = indexToBeMake % realCountOfCards
         }
-        let lastCard = createCard(at: indexToBeMake, frame: cardParameters.frame)
+        let lastCard = createCard(at: indexToBeMake, frame: cardParameters.frame, defaultSide:cardDefaultSide)
         
         let scale = cardParameters.scale
         lastCard.layer.transform = CATransform3DScale(CATransform3DIdentity, scale.width, scale.height, 1)
@@ -522,7 +523,7 @@ open class KolodaView: UIView, DraggableCardDelegate {
         currentCardIndex -= 1
         
         if dataSource != nil {
-            let firstCardView = createCard(at: currentCardIndex, frame: frameForTopCard())
+            let firstCardView = createCard(at: currentCardIndex, frame: frameForTopCard(), defaultSide: cardDefaultSide)
             
             if shouldTransparentizeNextCard {
                 firstCardView.alpha = alphaValueTransparent
@@ -574,7 +575,7 @@ open class KolodaView: UIView, DraggableCardDelegate {
             nextCardView.alpha = shouldTransparentizeNextCard ? alphaValueSemiTransparent : alphaValueOpaque
             
             visibleCards.append(nextCardView)
-            configureCard(nextCardView, at: currentCardIndex + index)
+            configureCard(nextCardView, at: currentCardIndex + index, defaultSide: cardDefaultSide)
             if index > 0 {
                 insertSubview(nextCardView, belowSubview: visibleCards[index - 1])
             } else {
@@ -590,7 +591,7 @@ open class KolodaView: UIView, DraggableCardDelegate {
                 if isLoop && actualIndex >= countOfCards {
                     actualIndex -= countOfCards
                 }
-                configureCard(card, at: actualIndex)
+                configureCard(card, at: actualIndex,defaultSide: cardDefaultSide)
             }
         }
     }
@@ -692,7 +693,7 @@ open class KolodaView: UIView, DraggableCardDelegate {
     private func insertVisibleCardsWithIndexes(_ visibleIndexes: [Int]) -> [DraggableCardView] {
         var insertedCards: [DraggableCardView] = []
         visibleIndexes.forEach { insertionIndex in
-            let card = createCard(at: insertionIndex)
+            let card = createCard(at: insertionIndex, defaultSide: cardDefaultSide)
             let visibleCardIndex = insertionIndex - currentCardIndex
             visibleCards.insert(card, at: visibleCardIndex)
             if visibleCardIndex == 0 {
@@ -815,7 +816,7 @@ open class KolodaView: UIView, DraggableCardDelegate {
             let visibleCardIndex = index - currentCardIndex
             if visibleCards.count > visibleCardIndex {
                 let card = visibleCards[visibleCardIndex]
-                configureCard(card, at: index)
+                configureCard(card, at: index, defaultSide: cardDefaultSide)
             }
         }
     }

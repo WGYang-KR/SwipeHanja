@@ -63,7 +63,7 @@ public class DraggableCardView: UIView, UIGestureRecognizerDelegate {
     private var overlayView: OverlayView?
     public private(set) var frontContentView: UIView?
     public private(set) var backContentView: UIView?
-    private(set) var cardPosition: CardPosition = .front
+    private(set) var cardSide: CardSideType = .front
     
     private var panGestureRecognizer: UIPanGestureRecognizer!
     private var tapGestureRecognizer: UITapGestureRecognizer!
@@ -113,8 +113,8 @@ public class DraggableCardView: UIView, UIGestureRecognizerDelegate {
     }
     
     //MARK: Configurations
-    func configure(_ frontContentView: UIView, backContentView: UIView, overlayView: OverlayView?, defaultPosition: CardPosition) {
-        self.cardPosition = defaultPosition
+    func configure(_ frontContentView: UIView, backContentView: UIView, overlayView: OverlayView?, defaultPosition: CardSideType) {
+        self.cardSide = defaultPosition
         self.overlayView?.removeFromSuperview()
         self.frontContentView?.removeFromSuperview()
         self.backContentView?.removeFromSuperview()
@@ -179,7 +179,7 @@ public class DraggableCardView: UIView, UIGestureRecognizerDelegate {
     private func configureContentViews() {
         configure(contentView: self.frontContentView)
         configure(contentView: self.backContentView)
-        flipCard(self.cardPosition, animated: false)
+        flipCard(self.cardSide, animated: false)
 
         func configure(contentView: UIView?) {
             if let contentView {
@@ -299,8 +299,8 @@ public class DraggableCardView: UIView, UIGestureRecognizerDelegate {
     
     @objc func tapRecognized(_ recogznier: UITapGestureRecognizer) {
         //TODO: front <-> back 뷰 전환
-        let toPostion = self.cardPosition.reversed
-        flipCard(toPostion, animated: true)
+        let toCardSide = self.cardSide.reversed
+        flipCard(toCardSide, animated: true)
         delegate?.card(cardWasTapped: self)
     }
     
@@ -404,10 +404,10 @@ public class DraggableCardView: UIView, UIGestureRecognizerDelegate {
         layer.pop_add(translationAnimation, forKey: "swipeTranslationAnimation")
     }
     
-    private func flipCard(_ toPostion: CardPosition, animated: Bool) {
-        self.cardPosition = toPostion
+    private func flipCard(_ toPostion: CardSideType, animated: Bool) {
+        self.cardSide = toPostion
         
-        switch cardPosition {
+        switch cardSide {
         case .front:
             self.frontContentView?.alpha = 1.0
             self.backContentView?.alpha = 0.0

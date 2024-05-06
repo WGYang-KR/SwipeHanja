@@ -19,9 +19,6 @@ final class CardItem: Object, Decodable {
     @Persisted var hasShown: Bool
     @Persisted var hasMemorized: Bool
 
-    // Realm에 자동으로 업데이트되도록 변수를 관찰
-    private var notificationToken: NotificationToken?
-    
     override init() {
         super.init()
     }

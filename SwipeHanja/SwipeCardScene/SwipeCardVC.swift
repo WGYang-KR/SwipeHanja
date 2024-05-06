@@ -22,6 +22,8 @@ class SwipeCardVC: UIViewController {
     @IBOutlet weak var remainCountLabel: UILabel!
     @IBOutlet weak var totalCountLabel: UILabel!
 
+    var cardDefaultSide: CardSideType = .front
+    
     func configure(cardPack: CardPack) {
         self.vm = SwipeCardVM(cardPack: cardPack) 
         self.modalTransitionStyle = UIModalTransitionStyle.coverVertical
@@ -30,6 +32,9 @@ class SwipeCardVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        cardDefaultSide = AppSetting.cardDefaultSide
+        kolodaView.cardDefaultSide = cardDefaultSide
+        
         bindVM()
         vm.prepareCardList()
         
@@ -37,6 +42,8 @@ class SwipeCardVC: UIViewController {
         kolodaView.delegate = self
         
         titleLabel.text = vm.cardPack.title
+    
+        
     }
     
     // MARK: IBActions
@@ -59,12 +66,22 @@ class SwipeCardVC: UIViewController {
         
         
     }
-    @IBAction func listButtonTapped(_ sender: Any) {
-    }
     
     @IBAction func topBackBtnTapped(_ sender: Any) {
         self.moveBackVC(animated: true)
     }
+    
+    @IBAction func toggleCardDefaultSideBtnTapped(_ sender: Any) {
+        cardDefaultSide = cardDefaultSide.reversed
+        AppSetting.cardDefaultSide = cardDefaultSide
+        kolodaView.cardDefaultSide = cardDefaultSide
+    }
+    
+    
+    @IBAction func listButtonTapped(_ sender: Any) {
+    }
+    
+   
     
     //MARK: Bind ViewModel
     func bindVM() {

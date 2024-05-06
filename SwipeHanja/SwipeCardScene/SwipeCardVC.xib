@@ -61,13 +61,22 @@
                                                     <color key="textColor" name="colorTeal02"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3m-n9-rir">
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVo-La-wRv">
                                                     <rect key="frame" x="311" y="0.0" width="32" height="32"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="32" id="7Nx-bA-Q4K"/>
-                                                        <constraint firstAttribute="width" constant="32" id="c55-Rg-P67"/>
+                                                        <constraint firstAttribute="height" constant="32" id="D8K-8W-MQq"/>
+                                                        <constraint firstAttribute="width" constant="32" id="TaR-jM-FfE"/>
                                                     </constraints>
+                                                    <color key="tintColor" name="colorTeal02"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="rectangle.portrait.righthalf.filled" catalog="system">
+                                                        <color key="titleColor" name="colorTeal02"/>
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="toggleCardDefaultSideBtnTapped:" destination="-1" eventType="touchUpInside" id="Zcv-GW-w1s"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
@@ -288,6 +297,7 @@
     <resources>
         <image name="arrow.uturn.backward" catalog="system" width="128" height="113"/>
         <image name="list.bullet" catalog="system" width="128" height="87"/>
+        <image name="rectangle.portrait.righthalf.filled" catalog="system" width="115" height="128"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="colorGrey02">
             <color red="0.82352941176470584" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

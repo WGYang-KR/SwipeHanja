@@ -1,14 +1,15 @@
 //
-//  CardPostion.swift
+//  CardSideType.swift
 //  SwipeHanja
 //
-//  Created by Anto-Yang on 4/23/24.
+//  Created by Anto-Yang on 5/6/24.
 //
 
 import Foundation
 
-enum CardPosition {
-    case front, back
+enum CardSideType: Int {
+    case front = 0
+    case back = 1
     
     var reversed: Self {
         return self == .front ? .back : .front
