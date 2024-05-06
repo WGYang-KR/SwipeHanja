@@ -154,7 +154,7 @@ extension SwipeCardVC: KolodaViewDataSource {
     }
     
     func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
-        return Bundle.main.loadNibNamed("OverlayView", owner: self, options: nil)?[0] as? OverlayView
+        return Bundle.main.loadNibNamed("\(SHOverlayView.self)", owner: self, options: nil)?[0] as? SHOverlayView
     }
 }
 

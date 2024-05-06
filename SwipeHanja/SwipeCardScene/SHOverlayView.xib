@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SHOverlayView" customModule="SwipeHanja" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XMg-dq-z2R">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sbm-GF-XtF">
+                            <rect key="frame" x="85.5" y="108" width="204" height="50.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="학습완료" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvj-av-tKR">
+                                    <rect key="frame" x="0.0" y="0.0" width="145.5" height="50.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="42"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nSH-Wk-A2T">
+                                    <rect key="frame" x="153.5" y="0.5" width="50.5" height="49.5"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="nSH-Wk-A2T" secondAttribute="height" multiplier="1:1" id="wdh-DU-nos"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" name="colorSwipeYes"/>
+                    <constraints>
+                        <constraint firstItem="sbm-GF-XtF" firstAttribute="centerX" secondItem="XMg-dq-z2R" secondAttribute="centerX" id="9Wq-Go-ZIK"/>
+                        <constraint firstItem="sbm-GF-XtF" firstAttribute="centerY" secondItem="XMg-dq-z2R" secondAttribute="centerY" multiplier="0.4" id="hNj-3R-MEt"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="XMg-dq-z2R" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="HyM-z9-Xg2"/>
+                <constraint firstItem="XMg-dq-z2R" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="VzM-Ff-7HK"/>
+                <constraint firstAttribute="bottom" secondItem="XMg-dq-z2R" secondAttribute="bottom" id="fyG-69-Ic2"/>
+                <constraint firstAttribute="trailing" secondItem="XMg-dq-z2R" secondAttribute="trailing" id="gOa-cS-ZZq"/>
+            </constraints>
+            <connections>
+                <outlet property="backgroundView" destination="XMg-dq-z2R" id="EAG-nW-Xvx"/>
+                <outlet property="overlayImageView" destination="nSH-Wk-A2T" id="O7M-iP-Gh9"/>
+                <outlet property="overlayLabel" destination="pvj-av-tKR" id="1Ak-Ab-eW4"/>
+            </connections>
+            <point key="canvasLocation" x="14" y="18"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="circle" catalog="system" width="128" height="123"/>
+        <namedColor name="colorSwipeYes">
+            <color red="0.18823529411764706" green="0.50588235294117645" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
