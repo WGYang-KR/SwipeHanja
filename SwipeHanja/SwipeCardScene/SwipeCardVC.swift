@@ -32,8 +32,7 @@ class SwipeCardVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        cardDefaultSide = AppSetting.cardDefaultSide
-        kolodaView.cardDefaultSide = cardDefaultSide
+        setCardDefaultSide(AppSetting.cardDefaultSide)
         
         bindVM()
         vm.prepareCardList()
@@ -72,13 +71,12 @@ class SwipeCardVC: UIViewController {
     }
     
     @IBAction func toggleCardDefaultSideBtnTapped(_ sender: Any) {
-        cardDefaultSide = cardDefaultSide.reversed
-        AppSetting.cardDefaultSide = cardDefaultSide
-        kolodaView.cardDefaultSide = cardDefaultSide
+        setCardDefaultSide(cardDefaultSide.reversed)
     }
     
     
     @IBAction func listButtonTapped(_ sender: Any) {
+        
     }
     
    
@@ -101,6 +99,13 @@ class SwipeCardVC: UIViewController {
         
     }
     
+    ///카드 전후면 설정을 업데이트한다
+    func setCardDefaultSide(_ side: CardSideType) {
+        cardDefaultSide = side
+        AppSetting.cardDefaultSide = side
+        kolodaView.cardDefaultSide = side
+        kolodaView.reconfigureCards()
+    }
     
 }
 

@@ -591,7 +591,7 @@ open class KolodaView: UIView, DraggableCardDelegate {
                 if isLoop && actualIndex >= countOfCards {
                     actualIndex -= countOfCards
                 }
-                configureCard(card, at: actualIndex,defaultSide: cardDefaultSide)
+                configureCard(card, at: actualIndex, defaultSide: cardDefaultSide)
             }
         }
     }
