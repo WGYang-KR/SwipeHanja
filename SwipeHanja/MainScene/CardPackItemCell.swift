@@ -14,6 +14,9 @@ class CardPackItemCell: UITableViewCell {
     @IBOutlet weak var remainCountLabel: UILabel!
     @IBOutlet weak var totalCountLabel: UILabel!
     
+    @IBOutlet weak var checkSealImageView: UIImageView!
+    @IBOutlet weak var chevronLeftImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
