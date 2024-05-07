@@ -146,11 +146,15 @@ extension SwipeCardVC: KolodaViewDataSource {
     }
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-        return  CardItemView(text: dataSource[index].frontWord)
+        let cardItemView = CardItemView(text: dataSource[index].frontWord)
+        cardItemView.label.font = .systemFont(ofSize: 56)
+        return cardItemView
     }
     
     func koloda(_ koloda: KolodaView, backViewForCardAt index: Int) -> UIView {
-        return  CardItemView(text: dataSource[index].backWord)
+        let cardItemView = CardItemView(text: dataSource[index].backWord)
+        cardItemView.label.font = .systemFont(ofSize: 40)
+        return  cardItemView
     }
     
     func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {

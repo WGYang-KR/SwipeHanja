@@ -23,9 +23,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s5X-Op-AVE">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="537"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qQ-XL-Vm9">
-                            <rect key="frame" x="158.66666666666666" y="249" width="76" height="39"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="漢子  한자" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qQ-XL-Vm9">
+                            <rect key="frame" x="103.33333333333333" y="240.00000000000003" width="186.66666666666669" height="57.333333333333343"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="48"/>
                             <color key="textColor" name="ColorTossBlack01"/>
                             <nil key="highlightedColor"/>
                         </label>
