@@ -18,6 +18,7 @@ class AlertHelper {
         
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.view.subviews.first?.subviews.first?.backgroundColor = .colorGrey02
         let confirmAction = UIAlertAction(title: "확인", style: .default) { (_) in
             confirmCompletion()
         }
@@ -27,7 +28,8 @@ class AlertHelper {
         
         alert.addAction(cancelAction)
         alert.addAction(confirmAction)
-        
+
+               
         baseVC.present(alert, animated: animated, completion: nil)
     }
     

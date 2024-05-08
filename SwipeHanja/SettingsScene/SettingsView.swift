@@ -10,7 +10,8 @@ import SwiftUI
 struct SettingsView: View {
     
     @Environment(\.presentationMode) var presentationMode
-
+    @State private var showingAlert = false
+    
     ///진도 초기화를 실행할 클로저
     var resetProgressClosure: (()->Void)?
     
@@ -40,13 +41,21 @@ struct SettingsView: View {
                 Section {
     
                     Button(action: {
-                        resetProgressClosure?()
+                        self.showingAlert = true
                     }, label: {
                         Text("학습 기록 초기화")
                             .fontWeight(.semibold)
                             .foregroundStyle(Color.colorTeal02)
                     })
-
+                    .alert(isPresented: $showingAlert) {
+                        Alert(
+                            title: Text("학습기록이 초기화 됩니다."),
+                            primaryButton: .default(Text("확인"), action: {
+                                resetProgressClosure?()
+                            }),
+                            secondaryButton: .cancel(Text("취소"))
+                        )
+                    }
                 }
                 
                 Section {

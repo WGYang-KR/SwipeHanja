@@ -28,9 +28,10 @@ class MainVC: UIViewController {
 
     
     @IBAction func infoButtonTapped(_ sender: Any) {
-
+        
         let view = SettingsView(resetProgressClosure: { [weak self] in
-                self?.vm.initCardPackIfNeeded(always: true)
+            self?.vm.initCardPackIfNeeded(always: true)
+            self?.vm.prepareCardPackList()
         })
         let vc = UIHostingController(rootView: view)
         presentFull(vc, animated: true)
