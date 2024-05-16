@@ -12,8 +12,8 @@ private let overlayRightImageName = "circle"
 private let overlayLeftImageName = "xmark"
 private let overlayRightColor = UIColor.colorSwipeYes
 private let overlayLeftColor = UIColor.colorSwipeNo
-private let overlayRightText = "학습완료"
-private let overlayLeftText = "학습중"
+private let overlayRightText = "알고있음"
+private let overlayLeftText = "학습필요"
 
 class SHOverlayView: OverlayView {
     
