@@ -76,7 +76,7 @@ class SwipeCardVC: UIViewController {
     
     
     @IBAction func listButtonTapped(_ sender: Any) {
-        
+    
     }
     
    
@@ -117,6 +117,13 @@ extension SwipeCardVC: KolodaViewDelegate {
         vm.prepareCardList()
         kolodaView.resetCurrentCardIndex()
     
+        if dataSource.count == 0 { // 학습완료시
+            let vc = SwipeCardCompletionPopUpVC()
+            vc.configure { [weak self] in
+                self?.moveBackVC(animated: true)
+            }
+            presentOverFull(vc, animated: false)
+        }
     }
     
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {

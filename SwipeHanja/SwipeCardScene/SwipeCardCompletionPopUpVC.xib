@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -13,6 +13,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SwipeCardCompletionPopUpVC" customModule="SwipeHanja" customModuleProvider="target">
             <connections>
                 <outlet property="bottomButton" destination="7iH-o2-7FQ" id="3FK-gO-JSH"/>
+                <outlet property="containerCenterYConstraint" destination="A7F-IO-dVP" id="Ub7-r1-FZY"/>
+                <outlet property="containerHidingBottomConstraint" destination="QaJ-kr-GWm" id="vGJ-Bj-MZk"/>
                 <outlet property="containerView" destination="vzq-Hs-9FW" id="7lD-kI-snv"/>
                 <outlet property="imageView" destination="UVG-4X-XF6" id="cOU-Vk-Voe"/>
                 <outlet property="messageLabel" destination="HXv-Jh-TgD" id="8mC-jO-lab"/>
@@ -29,7 +31,7 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vzq-Hs-9FW">
-                            <rect key="frame" x="16" y="466.66666666666663" width="361" height="276.33333333333337"/>
+                            <rect key="frame" x="16" y="759" width="361" height="276.33333333333326"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Fjw-19-UPi">
                                     <rect key="frame" x="32" y="32.000000000000014" width="297" height="212.33333333333337"/>
@@ -64,6 +66,9 @@
                                             <state key="normal" title="Got it!">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <action selector="bottomButtonTapped:" destination="-1" eventType="touchUpInside" id="bEk-bg-gPa"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
@@ -79,8 +84,8 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="vzq-Hs-9FW" firstAttribute="centerY" secondItem="M9c-Nk-JKw" secondAttribute="centerY" id="A7F-IO-dVP"/>
                         <constraint firstAttribute="trailing" secondItem="vzq-Hs-9FW" secondAttribute="trailing" constant="16" id="QYA-fr-Plb"/>
-                        <constraint firstAttribute="bottom" secondItem="vzq-Hs-9FW" secondAttribute="bottom" constant="16" id="lnI-7Y-brJ"/>
                         <constraint firstItem="vzq-Hs-9FW" firstAttribute="leading" secondItem="M9c-Nk-JKw" secondAttribute="leading" constant="16" id="zvw-Wl-rOS"/>
                     </constraints>
                 </view>
@@ -89,6 +94,7 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="M9c-Nk-JKw" secondAttribute="trailing" id="LrU-G4-ED0"/>
+                <constraint firstItem="vzq-Hs-9FW" firstAttribute="top" secondItem="M9c-Nk-JKw" secondAttribute="bottom" id="QaJ-kr-GWm"/>
                 <constraint firstItem="M9c-Nk-JKw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="dVL-Zr-i3f"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="M9c-Nk-JKw" secondAttribute="bottom" id="lVt-wA-kXK"/>
                 <constraint firstItem="M9c-Nk-JKw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pgH-fM-aCK"/>
