@@ -66,6 +66,11 @@ extension UIViewController {
         self.present(vcToPresent, animated: animated, completion: completion)
     }
     
+    func present(_ vcToPresent: UIViewController, modalStyle: UIModalPresentationStyle, animated: Bool, completion: (() -> Void)? = nil) {
+        vcToPresent.modalPresentationStyle = modalStyle
+        self.present(vcToPresent, animated: animated, completion: completion)
+    }
+    
     ///popVC / dismiss 를 자동으로 결정하여 수행.
     func moveBackVC(animated: Bool, completion: (()-> Void)? = nil) {
         if let naviVC = self.navigationController,

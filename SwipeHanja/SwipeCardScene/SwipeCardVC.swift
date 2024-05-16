@@ -76,10 +76,12 @@ class SwipeCardVC: UIViewController {
     
     
     @IBAction func listButtonTapped(_ sender: Any) {
-    
+        let vc = WordListVC()
+        vc.configure(cardList: vm.cardPack.cardList.map({$0}))
+        present(vc, modalStyle: .pageSheet, animated: true)
     }
     
-   
+    
     
     //MARK: Bind ViewModel
     func bindVM() {

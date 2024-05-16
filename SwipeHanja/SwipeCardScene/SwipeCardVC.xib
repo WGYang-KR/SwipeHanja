@@ -3,7 +3,7 @@
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -223,7 +223,7 @@
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
                                             </state>
                                             <connections>
-                                                <action selector="undoButtonTapped" destination="-1" eventType="touchUpInside" id="zzC-1v-tpQ"/>
+                                                <action selector="undoButtonTapped" destination="-1" eventType="touchUpInside" id="llR-jA-xdW"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgS-z7-kjz">
@@ -241,7 +241,6 @@
                                             </state>
                                             <connections>
                                                 <action selector="listButtonTapped:" destination="-1" eventType="touchUpInside" id="eSt-o5-W5L"/>
-                                                <action selector="undoButtonTapped" destination="-1" eventType="touchUpInside" id="Hvq-oZ-Nzf"/>
                                             </connections>
                                         </button>
                                     </subviews>
