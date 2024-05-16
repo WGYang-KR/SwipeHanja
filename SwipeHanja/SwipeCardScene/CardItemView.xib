@@ -23,7 +23,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s5X-Op-AVE">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="537"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="漢子  한자" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qQ-XL-Vm9">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="漢子  한자" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qQ-XL-Vm9">
                             <rect key="frame" x="103.33333333333333" y="240.00000000000003" width="186.66666666666669" height="57.333333333333343"/>
                             <fontDescription key="fontDescription" type="system" pointSize="48"/>
                             <color key="textColor" name="ColorTossBlack01"/>
@@ -33,7 +33,11 @@
                     <color key="backgroundColor" name="colorGrey02"/>
                     <constraints>
                         <constraint firstItem="5qQ-XL-Vm9" firstAttribute="centerY" secondItem="s5X-Op-AVE" secondAttribute="centerY" id="EPO-SG-X8w"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="5qQ-XL-Vm9" secondAttribute="bottom" constant="16" id="GbA-IT-O6E"/>
+                        <constraint firstItem="5qQ-XL-Vm9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="s5X-Op-AVE" secondAttribute="top" constant="16" id="NPG-se-yP4"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5qQ-XL-Vm9" secondAttribute="trailing" constant="16" id="cl7-9t-xeZ"/>
                         <constraint firstItem="5qQ-XL-Vm9" firstAttribute="centerX" secondItem="s5X-Op-AVE" secondAttribute="centerX" id="ja5-Nr-xtk"/>
+                        <constraint firstItem="5qQ-XL-Vm9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="s5X-Op-AVE" secondAttribute="leading" constant="16" id="xfa-GU-jeN"/>
                     </constraints>
                 </view>
             </subviews>
