@@ -39,43 +39,56 @@ struct SettingsView: View {
             
             List {
                 Section {
-    
-                    Button(action: {
-                        self.showingAlert = true
-                    }, label: {
-                        Text("학습 기록 초기화")
-                            .fontWeight(.semibold)
-                            .foregroundStyle(Color.colorTeal02)
-                    })
-                    .alert(isPresented: $showingAlert) {
-                        Alert(
-                            title: Text("학습기록이 초기화 됩니다."),
-                            primaryButton: .default(Text("확인"), action: {
-                                resetProgressClosure?()
-                            }),
-                            secondaryButton: .cancel(Text("취소"))
-                        )
+                    
+                    HStack {
+                        Button(action: {
+                            self.showingAlert = true
+                        }, label: {
+                            Text("학습 기록 초기화")
+                                .fontWeight(.semibold)
+                                .foregroundStyle(Color.colorTeal02)
+                        })
+                        .alert(isPresented: $showingAlert) {
+                            Alert(
+                                title: Text("학습기록이 초기화 됩니다."),
+                                primaryButton: .default(Text("확인"), action: {
+                                    resetProgressClosure?()
+                                }),
+                                secondaryButton: .cancel(Text("취소"))
+                            )
+                        }
+                        
+                        Spacer()
+                        
+                        Image(systemName: "chevron.right")
+                            .foregroundColor(.colorTeal03)
                     }
                 }
                 
                 Section {
-                    Button(action: {
-                        EmailHelper.shared
-                            .sendEmail(subject: "[Swipe 한자] 문의 & 피드백",
-                                       body:
+                    HStack {
+                        Button(action: {
+                            EmailHelper.shared
+                                .sendEmail(subject: "[Swipe 한자] 문의 & 피드백",
+                                           body:
                                    """
                                    Version: \(AppStatus.fullVersion)
                                    Device: \(AppStatus.getModelName())
                                    OS: \(AppStatus.getOsVersion())
                                    
                                    """,
-                                       to: "anto.wg.yang@gmail.com"  )
-                    }, label: {
-                        Text("문의 & 피드백")
-                            .fontWeight(.semibold)
-                            .foregroundStyle(Color.colorTeal02)
-                    })
-                    
+                                           to: "anto.wg.yang@gmail.com"  )
+                        }, label: {
+                            Text("문의 & 피드백")
+                                .fontWeight(.semibold)
+                                .foregroundStyle(Color.colorTeal02)
+                        })
+                        
+                        Spacer()
+                        
+                        Image(systemName: "chevron.right")
+                            .foregroundColor(.colorTeal03)
+                    }
                     HStack(alignment: .center) {
                         Text("버전")
                             .foregroundStyle(Color.colorTeal02)
