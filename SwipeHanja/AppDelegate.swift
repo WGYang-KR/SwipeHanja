@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Use the Firebase library to configure APIs.
+        FirebaseApp.configure()
+        
+        let title = "AppDidFinishLaunchingWithOptions"
+        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+          AnalyticsParameterItemID: "id-\(title)",
+          AnalyticsParameterItemName: "\(title)",
+          AnalyticsParameterContentType: "cont",
+        ])
+        
         return true
     }
 
