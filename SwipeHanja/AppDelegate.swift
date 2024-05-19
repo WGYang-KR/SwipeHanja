@@ -19,13 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use the Firebase library to configure APIs.
         FirebaseApp.configure()
         
-        let title = "AppDidFinishLaunchingWithOptions"
-        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
-          AnalyticsParameterItemID: "id-\(title)",
-          AnalyticsParameterItemName: "\(title)",
-          AnalyticsParameterContentType: "cont",
-        ])
-        
         return true
     }
 
