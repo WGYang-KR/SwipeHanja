@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6A5C2D232BF8A553003E7CF6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A5C2D222BF8A553003E7CF6 /* GoogleService-Info.plist */; };
-		6A5C2D262BF8AFFA003E7CF6 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 6A5C2D252BF8AFFA003E7CF6 /* FirebaseAnalyticsWithoutAdIdSupport */; };
-		6A5C2D282BF8AFFA003E7CF6 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 6A5C2D272BF8AFFA003E7CF6 /* FirebaseCrashlytics */; };
 		6A5C2D2C2BFA1E25003E7CF6 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 6A5C2D2B2BFA1E25003E7CF6 /* PrivacyInfo.xcprivacy */; };
 		6A788E4C2BD17EF800B7ABDA /* CardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A788E4A2BD17EF800B7ABDA /* CardItemView.swift */; };
 		6A788E4D2BD17EF800B7ABDA /* CardItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A788E4B2BD17EF800B7ABDA /* CardItemView.xib */; };
@@ -51,11 +49,12 @@
 		6AFD0C072BE90AB700F27BBE /* CardSideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0C062BE90AB700F27BBE /* CardSideType.swift */; };
 		6AFD0C0E2BE93BEB00F27BBE /* SHOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0C0C2BE93BEB00F27BBE /* SHOverlayView.swift */; };
 		6AFD0C0F2BE93BEB00F27BBE /* SHOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AFD0C0D2BE93BEB00F27BBE /* SHOverlayView.xib */; };
-		A0B30CCB4701005DFB3F0B79 /* Pods_SwipeHanja.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CC7FF4B5428C0E41E71CA1 /* Pods_SwipeHanja.framework */; };
+		9114C6749677CE4FDE17A75F /* Pods_SwipeHanja.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E043EBE98ECE749CC710537 /* Pods_SwipeHanja.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		03CC7FF4B5428C0E41E71CA1 /* Pods_SwipeHanja.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeHanja.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E043EBE98ECE749CC710537 /* Pods_SwipeHanja.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeHanja.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51C1AE3546CA790C8CA26438 /* Pods-SwipeHanja.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeHanja.debug.xcconfig"; path = "Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja.debug.xcconfig"; sourceTree = "<group>"; };
 		6A5C2D212BF8A2C1003E7CF6 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		6A5C2D222BF8A553003E7CF6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6A5C2D2B2BFA1E25003E7CF6 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
@@ -101,8 +100,7 @@
 		6AFD0C062BE90AB700F27BBE /* CardSideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSideType.swift; sourceTree = "<group>"; };
 		6AFD0C0C2BE93BEB00F27BBE /* SHOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHOverlayView.swift; sourceTree = "<group>"; };
 		6AFD0C0D2BE93BEB00F27BBE /* SHOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHOverlayView.xib; sourceTree = "<group>"; };
-		B1AD6178E7CF99EF37CA7931 /* Pods-SwipeHanja.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeHanja.release.xcconfig"; path = "Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja.release.xcconfig"; sourceTree = "<group>"; };
-		C3436B0057D6212720791000 /* Pods-SwipeHanja.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeHanja.debug.xcconfig"; path = "Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja.debug.xcconfig"; sourceTree = "<group>"; };
+		F08B7299C4A081E29039B2B9 /* Pods-SwipeHanja.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeHanja.release.xcconfig"; path = "Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,28 +108,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A5C2D282BF8AFFA003E7CF6 /* FirebaseCrashlytics in Frameworks */,
-				A0B30CCB4701005DFB3F0B79 /* Pods_SwipeHanja.framework in Frameworks */,
-				6A5C2D262BF8AFFA003E7CF6 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				9114C6749677CE4FDE17A75F /* Pods_SwipeHanja.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		05C7303ED6535096A7F6C8A9 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				03CC7FF4B5428C0E41E71CA1 /* Pods_SwipeHanja.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		68CEB7AEF3D59C4AD917EBCE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C3436B0057D6212720791000 /* Pods-SwipeHanja.debug.xcconfig */,
-				B1AD6178E7CF99EF37CA7931 /* Pods-SwipeHanja.release.xcconfig */,
+				51C1AE3546CA790C8CA26438 /* Pods-SwipeHanja.debug.xcconfig */,
+				F08B7299C4A081E29039B2B9 /* Pods-SwipeHanja.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -183,7 +171,7 @@
 				6AA332002BD14E0200996EC5 /* SwipeHanja */,
 				6AA331FF2BD14E0200996EC5 /* Products */,
 				68CEB7AEF3D59C4AD917EBCE /* Pods */,
-				05C7303ED6535096A7F6C8A9 /* Frameworks */,
+				81ED5F353FD6330ECA590612 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -292,6 +280,14 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		81ED5F353FD6330ECA590612 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E043EBE98ECE749CC710537 /* Pods_SwipeHanja.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -299,22 +295,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6AA332122BD14E0200996EC5 /* Build configuration list for PBXNativeTarget "SwipeHanja" */;
 			buildPhases = (
-				48396A9F1323D7FDCBF0E377 /* [CP] Check Pods Manifest.lock */,
+				BC99947E097C01E5B20F419E /* [CP] Check Pods Manifest.lock */,
 				6AA331FA2BD14E0200996EC5 /* Sources */,
 				6AA331FB2BD14E0200996EC5 /* Frameworks */,
 				6AA331FC2BD14E0200996EC5 /* Resources */,
-				4E027A40EFF547A60CA07C76 /* [CP] Embed Pods Frameworks */,
 				6A5C2D292BF8BF2D003E7CF6 /* Firebase crashlytics */,
+				70C847D62644595FAC090413 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SwipeHanja;
-			packageProductDependencies = (
-				6A5C2D252BF8AFFA003E7CF6 /* FirebaseAnalyticsWithoutAdIdSupport */,
-				6A5C2D272BF8AFFA003E7CF6 /* FirebaseCrashlytics */,
-			);
 			productName = SwipeHanja;
 			productReference = 6AA331FE2BD14E0200996EC5 /* SwipeHanja.app */;
 			productType = "com.apple.product-type.application";
@@ -344,9 +336,6 @@
 				ko,
 			);
 			mainGroup = 6AA331F52BD14E0100996EC5;
-			packageReferences = (
-				6A5C2D242BF8AFFA003E7CF6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-			);
 			productRefGroup = 6AA331FF2BD14E0200996EC5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -380,45 +369,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		48396A9F1323D7FDCBF0E377 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SwipeHanja-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4E027A40EFF547A60CA07C76 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6A5C2D292BF8BF2D003E7CF6 /* Firebase crashlytics */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -441,6 +391,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if [ \"${CONFIGURATION}\" != \"Debug\" ]; then\n    \"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\nfi\n";
+		};
+		70C847D62644595FAC090413 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC99947E097C01E5B20F419E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwipeHanja-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -627,7 +616,7 @@
 		};
 		6AA332132BD14E0200996EC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3436B0057D6212720791000 /* Pods-SwipeHanja.debug.xcconfig */;
+			baseConfigurationReference = 51C1AE3546CA790C8CA26438 /* Pods-SwipeHanja.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -664,7 +653,7 @@
 		};
 		6AA332142BD14E0200996EC5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1AD6178E7CF99EF37CA7931 /* Pods-SwipeHanja.release.xcconfig */;
+			baseConfigurationReference = F08B7299C4A081E29039B2B9 /* Pods-SwipeHanja.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -720,30 +709,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		6A5C2D242BF8AFFA003E7CF6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.26.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		6A5C2D252BF8AFFA003E7CF6 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6A5C2D242BF8AFFA003E7CF6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsWithoutAdIdSupport;
-		};
-		6A5C2D272BF8AFFA003E7CF6 /* FirebaseCrashlytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6A5C2D242BF8AFFA003E7CF6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseCrashlytics;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6AA331F62BD14E0100996EC5 /* Project object */;
 }
