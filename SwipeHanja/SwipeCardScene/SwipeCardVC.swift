@@ -32,8 +32,8 @@ class SwipeCardVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setCardDefaultSide(AppSetting.cardDefaultSide)
-        
+        initCardDefaultSide()
+       
         bindVM()
         vm.prepareCardList()
         
@@ -42,6 +42,10 @@ class SwipeCardVC: UIViewController {
         
         titleLabel.text = vm.cardPack.title
     
+        func initCardDefaultSide() {
+            cardDefaultSide = AppSetting.cardDefaultSide
+            kolodaView.cardDefaultSide = cardDefaultSide
+        }
         
     }
     
@@ -105,8 +109,13 @@ class SwipeCardVC: UIViewController {
     func setCardDefaultSide(_ side: CardSideType) {
         cardDefaultSide = side
         AppSetting.cardDefaultSide = side
+        
+        let cardSideDesc = cardDefaultSide == .front ? "'한자'로" : "'뜻'으로"
+        AlertHelper.notesInform(message: "기본 카드 방향이 \(cardSideDesc) 변경됨")
+        
         kolodaView.cardDefaultSide = side
         kolodaView.reconfigureCards()
+        
     }
     
 }

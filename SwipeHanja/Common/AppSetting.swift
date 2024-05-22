@@ -14,7 +14,7 @@ class AppSetting {
         case cardDefaultSide
     }
     
-    ///학습 시작시에 항상 랜덤 섞기 여부
+    ///카드 전/후면 설정값
     static var cardDefaultSide: CardSideType {
         get {
             let intValue = UserDefaults.standard.integer(forKey: Keys.cardDefaultSide.rawValue)

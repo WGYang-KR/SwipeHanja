@@ -30,8 +30,10 @@ class MainVC: UIViewController {
     @IBAction func infoButtonTapped(_ sender: Any) {
         
         let view = SettingsView(resetProgressClosure: { [weak self] in
-            self?.vm.initCardPackIfNeeded(always: true)
-            self?.vm.prepareCardPackList()
+            guard let self else { return }
+            self.vm.initCardPackIfNeeded(always: true)
+            self.vm.prepareCardPackList()
+            AlertHelper.notesInform(message: "모든 학습 진도가 초기화 되었습니다.")
         })
         let vc = UIHostingController(rootView: view)
         presentFull(vc, animated: true)
