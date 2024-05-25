@@ -23,6 +23,7 @@ class SwipeCardVC: UIViewController {
     @IBOutlet weak var totalCountLabel: UILabel!
 
     var cardDefaultSide: CardSideType = .front
+    var cardFontType: FontType = .KanjiStrokeOrders
     
     func configure(cardPack: CardPack) {
         self.vm = SwipeCardVM(cardPack: cardPack) 
@@ -165,7 +166,13 @@ extension SwipeCardVC: KolodaViewDataSource {
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         let cardItemView = CardItemView(text: dataSource[index].frontWord)
-        cardItemView.label.font = .systemFont(ofSize: 56)
+        switch cardFontType {
+        case .system:
+            cardItemView.label.font = .systemFont(ofSize: 56)
+        case .KanjiStrokeOrders:
+            cardItemView.label.font = .init(name: "KanjiStrokeOrders", size: 80)
+        }
+      
         return cardItemView
     }
     
