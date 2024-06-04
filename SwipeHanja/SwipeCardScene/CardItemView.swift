@@ -8,7 +8,7 @@
 import UIKit
 
 protocol CardItemViewDelegate: AnyObject {
-    func cardItemViewFavoriteButtonToggled(_ marked: Bool)
+    func cardItemViewFavoriteButtonToggled(at index: Int, _ marked: Bool)
 }
 
 class CardItemView: UIView {
@@ -20,27 +20,27 @@ class CardItemView: UIView {
     let linedStarImage: UIImage? = .init(systemName: "star")
     let filledStarImage: UIImage? = .init(systemName: "star.fill")
     
+    var index: Int = 0
+    
     ///즐겨찾기 여부
     var isFavorite: Bool = false {
         didSet {
             //값이 바뀌면 UI 갱신하고, delegate에 전달
             updateFavoriteUI()
-            delegate?.cardItemViewFavoriteButtonToggled(isFavorite)
         }
     }
     
     weak var delegate: CardItemViewDelegate?
     
-    func configure(font: UIFont?, delegate: CardItemViewDelegate) {
+    func configure(index: Int, text: String, font: UIFont?, isFavorite: Bool, delegate: CardItemViewDelegate) {
+        self.index = index
+        self.label.text = text
         if let font {
             self.label.font = font
         }
+        
+        self.isFavorite = isFavorite
         self.delegate = delegate
-    }
-    
-    convenience init(text: String) {
-        self.init(frame: .zero)
-        label.text = text
     }
     
     override init(frame: CGRect) {
@@ -79,6 +79,7 @@ class CardItemView: UIView {
     
     @IBAction func favoriteButtonTapped(_ sender: Any) {
         isFavorite = !isFavorite
+        delegate?.cardItemViewFavoriteButtonToggled(at: index, isFavorite)
     }
     
 }

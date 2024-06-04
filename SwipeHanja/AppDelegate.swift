@@ -7,7 +7,7 @@
 
 import UIKit
 import FirebaseCore
-
+import RealmSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Use the Firebase library to configure APIs.
         FirebaseApp.configure()
-        
+        initRealm()
         return true
     }
 
@@ -38,5 +38,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+extension AppDelegate {
+    func initRealm() {
+        let config = Realm.Configuration(
+            schemaVersion: 1)
+        // Use this configuration when opening realms
+        Realm.Configuration.defaultConfiguration = config
+        
+    }
 }
 

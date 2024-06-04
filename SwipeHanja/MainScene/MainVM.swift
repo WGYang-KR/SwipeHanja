@@ -87,5 +87,9 @@ class MainVM {
         let item = cardPackList[index]
         item.setLearningStatus(.notStarted)
     }
+    
+    func imigrateRealm() {
+        Realm.Configuration.defaultConfiguration.schemaVersion
+    }
 }
 

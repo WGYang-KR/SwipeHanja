@@ -79,5 +79,39 @@ class SwipeCardVM {
    
     }
     
+    func markFavorite(at index: Int, _ isFavorite: Bool) {
+        guard index < cardList.value.count else { shLog("오류: 오버레인지"); return  }
+        let item = cardList.value[index]
+        
+        do {
+            let realm = try Realm()
+            try realm.write {
+                // CardItem 업데이트
+                item.isFavorite = isFavorite
+                realm.add(item, update: .modified)
+                
+                // FavoriteCardList 객체 가져오기
+                var favoriteCardList = realm.objects(FavoriteCardList.self).first
+                
+                // FavoriteCardList 객체가 없으면 새로 생성
+                if favoriteCardList == nil {
+                    favoriteCardList = FavoriteCardList()
+                    realm.add(favoriteCardList!)
+                }
+                
+                if let favoriteCardList {
+                    // CardItem을 cardList에 추가
+                    favoriteCardList.cardList.append(item)
+                    shLog("Favorite 업데이트 완료: \(item.frontWord) to \(isFavorite)")
+                } else {
+                    shLog("Favorite 업데이트 오류: \(item.frontWord) to \(isFavorite)")
+                }
+            }
+        } catch(let error) {
+            shLog(error.localizedDescription)
+        }
+            
+    }
+    
     
 }

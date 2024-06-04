@@ -165,7 +165,8 @@ extension SwipeCardVC: KolodaViewDataSource {
     }
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-        let cardItemView = CardItemView(text: dataSource[index].frontWord)
+        let item = dataSource[index]
+        let cardItemView = CardItemView()
        
         var font: UIFont?
         switch cardFontType {
@@ -175,15 +176,26 @@ extension SwipeCardVC: KolodaViewDataSource {
             font = .init(name: "KanjiStrokeOrders", size: 80)
         }
 
-        cardItemView.configure(font: font, delegate: self)
+        cardItemView.configure(index: index,
+                               text: item.frontWord,
+                               font: font,
+                               isFavorite: item.isFavorite,
+                               delegate: self)
         
         return cardItemView
     }
     
     func koloda(_ koloda: KolodaView, backViewForCardAt index: Int) -> UIView {
-        let cardItemView = CardItemView(text: dataSource[index].backWord)
-        cardItemView.configure(font: .systemFont(ofSize: 40), delegate: self)
-        return  cardItemView
+        let item = dataSource[index]
+        let cardItemView = CardItemView()
+        
+        cardItemView.configure(index: index,
+                               text: item.backWord,
+                               font: .systemFont(ofSize: 40),
+                               isFavorite: item.isFavorite,
+                               delegate: self)
+        
+        return cardItemView
     }
     
     func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
@@ -195,7 +207,8 @@ extension SwipeCardVC: KolodaViewDataSource {
 
 extension SwipeCardVC: CardItemViewDelegate {
     
-    func cardItemViewFavoriteButtonToggled(_ marked: Bool) {
+    func cardItemViewFavoriteButtonToggled(at index: Int, _ marked: Bool) {
         shLog("Favorite Toggled: \(marked)")
+        vm.markFavorite(at: index, marked)
     }
 }
