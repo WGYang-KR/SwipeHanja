@@ -7,10 +7,36 @@
 
 import UIKit
 
+protocol CardItemViewDelegate: AnyObject {
+    func cardItemViewFavoriteButtonToggled(_ marked: Bool)
+}
+
 class CardItemView: UIView {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var favoriteButton: UIButton!
+    
+    let linedStarImage: UIImage? = .init(systemName: "star")
+    let filledStarImage: UIImage? = .init(systemName: "star.fill")
+    
+    ///즐겨찾기 여부
+    var isFavorite: Bool = false {
+        didSet {
+            //값이 바뀌면 UI 갱신하고, delegate에 전달
+            updateFavoriteUI()
+            delegate?.cardItemViewFavoriteButtonToggled(isFavorite)
+        }
+    }
+    
+    weak var delegate: CardItemViewDelegate?
+    
+    func configure(font: UIFont?, delegate: CardItemViewDelegate) {
+        if let font {
+            self.label.font = font
+        }
+        self.delegate = delegate
+    }
     
     convenience init(text: String) {
         self.init(frame: .zero)
@@ -37,6 +63,22 @@ class CardItemView: UIView {
         
         containerView.layer.borderWidth = 2
         containerView.layer.borderColor = UIColor.colorGrey01.cgColor
+        updateFavoriteUI()
     }
-
+    
+    
+    func updateFavoriteUI() {
+        if !isFavorite {
+            favoriteButton.setImage(linedStarImage, for: .normal)
+            favoriteButton.tintColor = .colorTeal02
+        } else {
+            favoriteButton.setImage(filledStarImage, for: .normal)
+            favoriteButton.tintColor = .colorGold
+        }
+    }
+    
+    @IBAction func favoriteButtonTapped(_ sender: Any) {
+        isFavorite = !isFavorite
+    }
+    
 }

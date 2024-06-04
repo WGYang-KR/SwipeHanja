@@ -23,7 +23,7 @@ class SwipeCardVC: UIViewController {
     @IBOutlet weak var totalCountLabel: UILabel!
 
     var cardDefaultSide: CardSideType = .front
-    var cardFontType: FontType = .KanjiStrokeOrders
+    var cardFontType: FontType = .system
     
     func configure(cardPack: CardPack) {
         self.vm = SwipeCardVM(cardPack: cardPack) 
@@ -166,19 +166,23 @@ extension SwipeCardVC: KolodaViewDataSource {
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         let cardItemView = CardItemView(text: dataSource[index].frontWord)
+       
+        var font: UIFont?
         switch cardFontType {
         case .system:
-            cardItemView.label.font = .systemFont(ofSize: 56)
+            font = .systemFont(ofSize: 56)
         case .KanjiStrokeOrders:
-            cardItemView.label.font = .init(name: "KanjiStrokeOrders", size: 80)
+            font = .init(name: "KanjiStrokeOrders", size: 80)
         }
-      
+
+        cardItemView.configure(font: font, delegate: self)
+        
         return cardItemView
     }
     
     func koloda(_ koloda: KolodaView, backViewForCardAt index: Int) -> UIView {
         let cardItemView = CardItemView(text: dataSource[index].backWord)
-        cardItemView.label.font = .systemFont(ofSize: 40)
+        cardItemView.configure(font: .systemFont(ofSize: 40), delegate: self)
         return  cardItemView
     }
     
@@ -187,3 +191,11 @@ extension SwipeCardVC: KolodaViewDataSource {
     }
 }
 
+//MARK: CardItemViewDelegate
+
+extension SwipeCardVC: CardItemViewDelegate {
+    
+    func cardItemViewFavoriteButtonToggled(_ marked: Bool) {
+        shLog("Favorite Toggled: \(marked)")
+    }
+}
