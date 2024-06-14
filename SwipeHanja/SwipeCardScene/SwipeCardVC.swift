@@ -166,7 +166,7 @@ extension SwipeCardVC: KolodaViewDataSource {
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         let item = dataSource[index]
-        let cardItemView = CardItemView()
+        let cardItemView = CardItemComponentView()
        
         var font: UIFont?
         switch cardFontType {
@@ -187,7 +187,7 @@ extension SwipeCardVC: KolodaViewDataSource {
     
     func koloda(_ koloda: KolodaView, backViewForCardAt index: Int) -> UIView {
         let item = dataSource[index]
-        let cardItemView = CardItemView()
+        let cardItemView = CardItemComponentView()
         
         cardItemView.configure(index: index,
                                text: item.backWord,
@@ -203,9 +203,9 @@ extension SwipeCardVC: KolodaViewDataSource {
     }
 }
 
-//MARK: CardItemViewDelegate
+//MARK: CardItemComponentViewDelegate
 
-extension SwipeCardVC: CardItemViewDelegate {
+extension SwipeCardVC: CardItemComponentViewDelegate {
     
     func cardItemViewFavoriteButtonToggled(at index: Int, _ marked: Bool) {
         shLog("Favorite Toggled: \(marked)")

@@ -88,8 +88,5 @@ class MainVM {
         item.setLearningStatus(.notStarted)
     }
     
-    func imigrateRealm() {
-        Realm.Configuration.defaultConfiguration.schemaVersion
-    }
 }
 
