@@ -89,6 +89,7 @@ class SwipeCardVM {
                 // CardItem 업데이트
                 item.isFavorite = isFavorite
                 realm.add(item, update: .modified)
+                shLog("Favorite 상태 업데이트 완료: \(item.frontWord) to \(isFavorite)")
                 
                 // FavoriteCardList 객체 가져오기
                 var favoriteCardList = realm.objects(FavoriteCardList.self).first
@@ -101,10 +102,23 @@ class SwipeCardVM {
                 
                 if let favoriteCardList {
                     // CardItem을 cardList에 추가
-                    favoriteCardList.cardList.append(item)
-                    shLog("Favorite 업데이트 완료: \(item.frontWord) to \(isFavorite)")
+                    if isFavorite {
+                        favoriteCardList.cardList.append(item)
+                        shLog("FavoriteCardList 삽입 완료: \(item.frontWord) to \(isFavorite)")
+                    } else {
+                        guard let index = favoriteCardList.cardList.firstIndex(of: item)
+                        else {
+                            shLog("FavoriteCardList Index 찾기 오류: \(item.frontWord) to \(isFavorite)")
+                            return
+                        }
+                        
+                        favoriteCardList.cardList.remove(at: index)
+                        shLog("FavoriteCardList 삭제 완료: \(item.frontWord) to \(isFavorite)")
+            
+                    }
+               
                 } else {
-                    shLog("Favorite 업데이트 오류: \(item.frontWord) to \(isFavorite)")
+                    shLog("Favorite 상태 or 목록 업데이트 오류: \(item.frontWord) to \(isFavorite)")
                 }
             }
         } catch(let error) {

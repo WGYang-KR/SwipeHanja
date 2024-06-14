@@ -46,7 +46,7 @@ extension AppDelegate {
             schemaVersion: 1)
         // Use this configuration when opening realms
         Realm.Configuration.defaultConfiguration = config
-        
+        shLog("realm 위치: \(Realm.Configuration.defaultConfiguration.fileURL?.absoluteString ?? "")")
     }
 }
 

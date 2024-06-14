@@ -45,7 +45,6 @@ class SwipeCardVC: UIViewController {
     
         func initCardDefaultSide() {
             cardDefaultSide = AppSetting.cardDefaultSide
-            kolodaView.cardDefaultSide = cardDefaultSide
         }
         
     }
@@ -114,7 +113,6 @@ class SwipeCardVC: UIViewController {
         let cardSideDesc = cardDefaultSide == .front ? "'한자'로" : "'뜻'으로"
         AlertHelper.notesInform(message: "기본 카드 방향이 \(cardSideDesc) 변경됨")
         
-        kolodaView.cardDefaultSide = side
         kolodaView.reconfigureCards()
         
     }
@@ -166,7 +164,7 @@ extension SwipeCardVC: KolodaViewDataSource {
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         let item = dataSource[index]
-        let cardItemView = CardItemComponentView()
+        let cardItemView = CardItemView()
        
         var font: UIFont?
         switch cardFontType {
@@ -175,12 +173,14 @@ extension SwipeCardVC: KolodaViewDataSource {
         case .KanjiStrokeOrders:
             font = .init(name: "KanjiStrokeOrders", size: 80)
         }
-
         cardItemView.configure(index: index,
-                               text: item.frontWord,
-                               font: font,
+                               frontContent: .init(text: item.frontWord,
+                                                   font: font),
+                               backContent: .init(text: item.backWord,
+                                                  font: nil),
                                isFavorite: item.isFavorite,
-                               delegate: self)
+                               delegate: self,
+                               cardSideType: cardDefaultSide)
         
         return cardItemView
     }
@@ -192,7 +192,7 @@ extension SwipeCardVC: KolodaViewDataSource {
 
 //MARK: CardItemComponentViewDelegate
 
-extension SwipeCardVC: CardItemComponentViewDelegate {
+extension SwipeCardVC: CardItemViewDelegate {
     
     func cardItemViewFavoriteButtonToggled(at index: Int, _ marked: Bool) {
         shLog("Favorite Toggled: \(marked)")

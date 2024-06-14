@@ -86,7 +86,7 @@ class CardItemView: UIView {
     }
 
     func customInit() {
-        guard let view = Bundle.main.loadNibNamed("\(CardItemComponentView.self)", owner: self, options: nil)?.first as? UIView else { return }
+        guard let view = Bundle.main.loadNibNamed("\(CardItemView.self)", owner: self, options: nil)?.first as? UIView else { return }
         view.frame = self.bounds
         addSubview(view)
         

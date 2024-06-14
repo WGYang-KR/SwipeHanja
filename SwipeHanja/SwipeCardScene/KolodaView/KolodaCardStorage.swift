@@ -11,9 +11,9 @@ import UIKit
 
 extension KolodaView {
     
-    func createCard(at index: Int, frame: CGRect? = nil, defaultSide: CardSideType) -> DraggableCardView {
+    func createCard(at index: Int, frame: CGRect? = nil) -> DraggableCardView {
         let cardView = generateCard(frame ?? frameForTopCard())
-        configureCard(cardView, at: index, defaultSide: defaultSide)
+        configureCard(cardView, at: index)
         
         return cardView
     }
