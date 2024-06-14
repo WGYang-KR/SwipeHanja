@@ -11,6 +11,10 @@ target 'SwipeHanja' do
   pod 'FirebaseAnalytics'
   pod 'FirebaseCrashlytics'
   pod 'SwiftEntryKit', '2.0.0'
+  pod 'SnapKit', '~> 5.7.0'
+  pod 'RxSwift', '~> 6.7.1'
+  pod 'RxCocoa', '~> 6.7.1'
+  pod "RxGesture"
 end
 
 post_install do |installer|
