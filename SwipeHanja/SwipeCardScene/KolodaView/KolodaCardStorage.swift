@@ -25,12 +25,10 @@ extension KolodaView {
         return cardView
     }
     
-    func configureCard(_ card: DraggableCardView, at index: Int, defaultSide: CardSideType) {
+    func configureCard(_ card: DraggableCardView, at index: Int) {
         let contentView = dataSource!.koloda(self, viewForCardAt: index)
-        let backContentView = dataSource!.koloda(self, backViewForCardAt: index)
-        //TODO: Default 카드방향 설정
-        card.configure(contentView, backContentView: backContentView, overlayView: dataSource?.koloda(self, viewForCardOverlayAt: index), defaultPosition: defaultSide)
-
+        card.configure(contentView, overlayView: dataSource?.koloda(self, viewForCardOverlayAt: index))
+       
         //Reconfigure drag animation constants from Koloda instance.
         if let rotationMax = self.rotationMax {
             card.rotationMax = rotationMax
