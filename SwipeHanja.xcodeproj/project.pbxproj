@@ -13,6 +13,10 @@
 		6A21AD932C021AB8004ACBC0 /* FontType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A21AD922C021AB8004ACBC0 /* FontType.swift */; };
 		6A5C2D232BF8A553003E7CF6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A5C2D222BF8A553003E7CF6 /* GoogleService-Info.plist */; };
 		6A5C2D2C2BFA1E25003E7CF6 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 6A5C2D2B2BFA1E25003E7CF6 /* PrivacyInfo.xcprivacy */; };
+		6A70A7272C21C4F100B2B4AB /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70A7252C21C4F100B2B4AB /* MainTabBarController.swift */; };
+		6A70A72A2C21C5EA00B2B4AB /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A70A7292C21C5EA00B2B4AB /* MainVC.xib */; };
+		6A70A72E2C21C78000B2B4AB /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70A72C2C21C78000B2B4AB /* FavoritesVC.swift */; };
+		6A70A72F2C21C78000B2B4AB /* FavoritesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A70A72D2C21C78000B2B4AB /* FavoritesVC.xib */; };
 		6A788E4C2BD17EF800B7ABDA /* CardItemComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A788E4A2BD17EF800B7ABDA /* CardItemComponentView.swift */; };
 		6A788E4D2BD17EF800B7ABDA /* CardItemComponentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A788E4B2BD17EF800B7ABDA /* CardItemComponentView.xib */; };
 		6A788E902BD7EA6500B7ABDA /* DraggableCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A788E862BD7EA6500B7ABDA /* DraggableCardView.swift */; };
@@ -34,7 +38,6 @@
 		6AA332022BD14E0200996EC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA332012BD14E0200996EC5 /* AppDelegate.swift */; };
 		6AA332042BD14E0200996EC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA332032BD14E0200996EC5 /* SceneDelegate.swift */; };
 		6AA332062BD14E0200996EC5 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA332052BD14E0200996EC5 /* MainVC.swift */; };
-		6AA332092BD14E0200996EC5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6AA332082BD14E0200996EC5 /* Base */; };
 		6AA3320B2BD14E0200996EC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AA3320A2BD14E0200996EC5 /* Assets.xcassets */; };
 		6AA3320E2BD14E0200996EC5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6AA3320D2BD14E0200996EC5 /* Base */; };
 		6AA332192BD14F8C00996EC5 /* SwipeCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA332172BD14F8C00996EC5 /* SwipeCardVC.swift */; };
@@ -69,6 +72,10 @@
 		6A5C2D212BF8A2C1003E7CF6 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		6A5C2D222BF8A553003E7CF6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6A5C2D2B2BFA1E25003E7CF6 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		6A70A7252C21C4F100B2B4AB /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		6A70A7292C21C5EA00B2B4AB /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
+		6A70A72C2C21C78000B2B4AB /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
+		6A70A72D2C21C78000B2B4AB /* FavoritesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesVC.xib; sourceTree = "<group>"; };
 		6A788E4A2BD17EF800B7ABDA /* CardItemComponentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardItemComponentView.swift; sourceTree = "<group>"; };
 		6A788E4B2BD17EF800B7ABDA /* CardItemComponentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardItemComponentView.xib; sourceTree = "<group>"; };
 		6A788E862BD7EA6500B7ABDA /* DraggableCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableCardView.swift; sourceTree = "<group>"; };
@@ -91,7 +98,6 @@
 		6AA332012BD14E0200996EC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AA332032BD14E0200996EC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6AA332052BD14E0200996EC5 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		6AA332082BD14E0200996EC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6AA3320A2BD14E0200996EC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6AA3320D2BD14E0200996EC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6AA3320F2BD14E0200996EC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -146,6 +152,23 @@
 				6A21AD8E2C0215DD004ACBC0 /* readme_en_v4.004.txt */,
 			);
 			path = KanjiStrokeOrders_v4.004;
+			sourceTree = "<group>";
+		};
+		6A70A71E2C21C36800B2B4AB /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				6A70A7252C21C4F100B2B4AB /* MainTabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		6A70A72B2C21C74B00B2B4AB /* FavoritesScene */ = {
+			isa = PBXGroup;
+			children = (
+				6A70A72C2C21C78000B2B4AB /* FavoritesVC.swift */,
+				6A70A72D2C21C78000B2B4AB /* FavoritesVC.xib */,
+			);
+			path = FavoritesScene;
 			sourceTree = "<group>";
 		};
 		6A788E872BD7EA6500B7ABDA /* DraggableCardView */ = {
@@ -212,7 +235,9 @@
 			children = (
 				6AA3321B2BD152DC00996EC5 /* Model */,
 				6AFD0BF92BE5962100F27BBE /* Common */,
+				6A70A71E2C21C36800B2B4AB /* TabBar */,
 				6AA332212BD15D3900996EC5 /* MainScene */,
+				6A70A72B2C21C74B00B2B4AB /* FavoritesScene */,
 				6AA332162BD14F7B00996EC5 /* SwipeCardScene */,
 				6AA126852BF5A10300B67424 /* WordListScene */,
 				6AFD0BF62BE5927700F27BBE /* SettingsScene */,
@@ -220,7 +245,6 @@
 				6AFD0BED2BE3DF5D00F27BBE /* Resource */,
 				6AA332012BD14E0200996EC5 /* AppDelegate.swift */,
 				6AA332032BD14E0200996EC5 /* SceneDelegate.swift */,
-				6AA332072BD14E0200996EC5 /* Main.storyboard */,
 				6AA3320A2BD14E0200996EC5 /* Assets.xcassets */,
 				6AA3320C2BD14E0200996EC5 /* LaunchScreen.storyboard */,
 				6AA3320F2BD14E0200996EC5 /* Info.plist */,
@@ -276,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				6AA332052BD14E0200996EC5 /* MainVC.swift */,
+				6A70A7292C21C5EA00B2B4AB /* MainVC.xib */,
 				6AFD0BE92BE24EA300F27BBE /* MainVM.swift */,
 				6AFD0BF22BE51BD800F27BBE /* CardPackItemCell.swift */,
 				6AFD0BF32BE51BD800F27BBE /* CardPackItemCell.xib */,
@@ -384,17 +409,18 @@
 				6A21AD8F2C0215DD004ACBC0 /* copyright.txt in Resources */,
 				6A7E78B22BF33FD40081F561 /* SwipeCardCompletionPopUpVC.xib in Resources */,
 				6A5C2D2C2BFA1E25003E7CF6 /* PrivacyInfo.xcprivacy in Resources */,
+				6A70A72F2C21C78000B2B4AB /* FavoritesVC.xib in Resources */,
 				6A788E4D2BD17EF800B7ABDA /* CardItemComponentView.xib in Resources */,
 				6AA1268D2BF5A15200B67424 /* WordListItemCell.xib in Resources */,
 				6A5C2D232BF8A553003E7CF6 /* GoogleService-Info.plist in Resources */,
 				6AA126892BF5A12A00B67424 /* WordListVC.xib in Resources */,
+				6A70A72A2C21C5EA00B2B4AB /* MainVC.xib in Resources */,
 				6AA3320E2BD14E0200996EC5 /* Base in Resources */,
 				6A928E832C173A3C00894FD4 /* CardItemView.xib in Resources */,
 				6AFD0BF52BE51BD800F27BBE /* CardPackItemCell.xib in Resources */,
 				6AFD0C0F2BE93BEB00F27BBE /* SHOverlayView.xib in Resources */,
 				6A21AD902C0215DD004ACBC0 /* KanjiStrokeOrders_v4.004.ttf in Resources */,
 				6A21AD912C0215DD004ACBC0 /* readme_en_v4.004.txt in Resources */,
-				6AA332092BD14E0200996EC5 /* Base in Resources */,
 				6AA3321A2BD14F8C00996EC5 /* SwipeCardVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,9 +499,11 @@
 			files = (
 				6A788E912BD7EA6500B7ABDA /* OverlayView.swift in Sources */,
 				6A788E952BD7EA6500B7ABDA /* KolodaViewAnimatior.swift in Sources */,
+				6A70A7272C21C4F100B2B4AB /* MainTabBarController.swift in Sources */,
 				6AFD0BFB2BE5963000F27BBE /* AppSetting.swift in Sources */,
 				6AFD0C052BE8F80E00F27BBE /* AlertHelper.swift in Sources */,
 				6AFD0BE52BDA855400F27BBE /* CardPack.swift in Sources */,
+				6A70A72E2C21C78000B2B4AB /* FavoritesVC.swift in Sources */,
 				6A788E902BD7EA6500B7ABDA /* DraggableCardView.swift in Sources */,
 				6A928E812C173A2D00894FD4 /* CardItemView.swift in Sources */,
 				6A788E962BD7EA6500B7ABDA /* SwipeResultDirection.swift in Sources */,
@@ -509,14 +537,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6AA332072BD14E0200996EC5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6AA332082BD14E0200996EC5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6AA3320C2BD14E0200996EC5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -666,7 +686,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Swipe! 상공한자";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -702,7 +721,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Swipe! 상공한자";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
