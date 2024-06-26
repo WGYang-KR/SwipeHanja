@@ -11,6 +11,9 @@
 		6A21AD902C0215DD004ACBC0 /* KanjiStrokeOrders_v4.004.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A21AD8D2C0215DD004ACBC0 /* KanjiStrokeOrders_v4.004.ttf */; };
 		6A21AD912C0215DD004ACBC0 /* readme_en_v4.004.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6A21AD8E2C0215DD004ACBC0 /* readme_en_v4.004.txt */; };
 		6A21AD932C021AB8004ACBC0 /* FontType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A21AD922C021AB8004ACBC0 /* FontType.swift */; };
+		6A2310DB2C2B0D2A008BFCBC /* FavoriteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2310DA2C2B0D2A008BFCBC /* FavoriteData.swift */; };
+		6A2310E32C2C5C26008BFCBC /* FavoritesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2310E22C2C5C26008BFCBC /* FavoritesVM.swift */; };
+		6A2310E62C2C6448008BFCBC /* FavoriteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2310E52C2C6448008BFCBC /* FavoriteItem.swift */; };
 		6A5C2D232BF8A553003E7CF6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A5C2D222BF8A553003E7CF6 /* GoogleService-Info.plist */; };
 		6A5C2D2C2BFA1E25003E7CF6 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 6A5C2D2B2BFA1E25003E7CF6 /* PrivacyInfo.xcprivacy */; };
 		6A70A7272C21C4F100B2B4AB /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70A7252C21C4F100B2B4AB /* MainTabBarController.swift */; };
@@ -28,7 +31,6 @@
 		6A788E962BD7EA6500B7ABDA /* SwipeResultDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A788E8E2BD7EA6500B7ABDA /* SwipeResultDirection.swift */; };
 		6A7E78B12BF33FD40081F561 /* SwipeCardCompletionPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E78AF2BF33FD40081F561 /* SwipeCardCompletionPopUpVC.swift */; };
 		6A7E78B22BF33FD40081F561 /* SwipeCardCompletionPopUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A7E78B02BF33FD40081F561 /* SwipeCardCompletionPopUpVC.xib */; };
-		6A928E7F2C0F554300894FD4 /* FavoriteCardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A928E7E2C0F554300894FD4 /* FavoriteCardList.swift */; };
 		6A928E812C173A2D00894FD4 /* CardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A928E802C173A2D00894FD4 /* CardItemView.swift */; };
 		6A928E832C173A3C00894FD4 /* CardItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A928E822C173A3C00894FD4 /* CardItemView.xib */; };
 		6AA126882BF5A12A00B67424 /* WordListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA126862BF5A12A00B67424 /* WordListVC.swift */; };
@@ -73,6 +75,9 @@
 		6A21AD8D2C0215DD004ACBC0 /* KanjiStrokeOrders_v4.004.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KanjiStrokeOrders_v4.004.ttf; sourceTree = "<group>"; };
 		6A21AD8E2C0215DD004ACBC0 /* readme_en_v4.004.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme_en_v4.004.txt; sourceTree = "<group>"; };
 		6A21AD922C021AB8004ACBC0 /* FontType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontType.swift; sourceTree = "<group>"; };
+		6A2310DA2C2B0D2A008BFCBC /* FavoriteData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteData.swift; sourceTree = "<group>"; };
+		6A2310E22C2C5C26008BFCBC /* FavoritesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVM.swift; sourceTree = "<group>"; };
+		6A2310E52C2C6448008BFCBC /* FavoriteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteItem.swift; sourceTree = "<group>"; };
 		6A5C2D212BF8A2C1003E7CF6 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		6A5C2D222BF8A553003E7CF6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6A5C2D2B2BFA1E25003E7CF6 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
@@ -91,7 +96,6 @@
 		6A788E8E2BD7EA6500B7ABDA /* SwipeResultDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeResultDirection.swift; sourceTree = "<group>"; };
 		6A7E78AF2BF33FD40081F561 /* SwipeCardCompletionPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCardCompletionPopUpVC.swift; sourceTree = "<group>"; };
 		6A7E78B02BF33FD40081F561 /* SwipeCardCompletionPopUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwipeCardCompletionPopUpVC.xib; sourceTree = "<group>"; };
-		6A928E7E2C0F554300894FD4 /* FavoriteCardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCardList.swift; sourceTree = "<group>"; };
 		6A928E802C173A2D00894FD4 /* CardItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItemView.swift; sourceTree = "<group>"; };
 		6A928E822C173A3C00894FD4 /* CardItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardItemView.xib; sourceTree = "<group>"; };
 		6AA126862BF5A12A00B67424 /* WordListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListVC.swift; sourceTree = "<group>"; };
@@ -162,6 +166,14 @@
 			path = KanjiStrokeOrders_v4.004;
 			sourceTree = "<group>";
 		};
+		6A2310E42C2C6430008BFCBC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6A2310E52C2C6448008BFCBC /* FavoriteItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		6A70A71E2C21C36800B2B4AB /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +185,8 @@
 		6A70A72B2C21C74B00B2B4AB /* FavoritesScene */ = {
 			isa = PBXGroup;
 			children = (
+				6A2310E42C2C6430008BFCBC /* Model */,
+				6A2310E22C2C5C26008BFCBC /* FavoritesVM.swift */,
 				6A70A72C2C21C78000B2B4AB /* FavoritesVC.swift */,
 				6A70A72D2C21C78000B2B4AB /* FavoritesVC.xib */,
 				6AE23B622C29A634009E8978 /* FavoritesStartLearningCell.swift */,
@@ -289,8 +303,8 @@
 			isa = PBXGroup;
 			children = (
 				6AA3321C2BD1532000996EC5 /* CardItem.swift */,
+				6A2310DA2C2B0D2A008BFCBC /* FavoriteData.swift */,
 				6AFD0BE42BDA855400F27BBE /* CardPack.swift */,
-				6A928E7E2C0F554300894FD4 /* FavoriteCardList.swift */,
 				6AFD0C022BE7698C00F27BBE /* LearningStatus.swift */,
 				6AFD0C062BE90AB700F27BBE /* CardSideType.swift */,
 				6A21AD922C021AB8004ACBC0 /* FontType.swift */,
@@ -520,6 +534,7 @@
 				6A70A72E2C21C78000B2B4AB /* FavoritesVC.swift in Sources */,
 				6A788E902BD7EA6500B7ABDA /* DraggableCardView.swift in Sources */,
 				6A928E812C173A2D00894FD4 /* CardItemView.swift in Sources */,
+				6A2310DB2C2B0D2A008BFCBC /* FavoriteData.swift in Sources */,
 				6A788E962BD7EA6500B7ABDA /* SwipeResultDirection.swift in Sources */,
 				6AFD0BF82BE5937E00F27BBE /* SettingsView.swift in Sources */,
 				6AA332062BD14E0200996EC5 /* MainVC.swift in Sources */,
@@ -529,13 +544,13 @@
 				6A788E4C2BD17EF800B7ABDA /* CardItemComponentView.swift in Sources */,
 				6AFD0BE72BDA89CD00F27BBE /* SwipeCardVM.swift in Sources */,
 				6AA332022BD14E0200996EC5 /* AppDelegate.swift in Sources */,
-				6A928E7F2C0F554300894FD4 /* FavoriteCardList.swift in Sources */,
 				6AFD0C0E2BE93BEB00F27BBE /* SHOverlayView.swift in Sources */,
 				6AFD0C032BE7698C00F27BBE /* LearningStatus.swift in Sources */,
 				6AA3321D2BD1532000996EC5 /* CardItem.swift in Sources */,
 				6AA332202BD1579B00996EC5 /* CommonUtility.swift in Sources */,
 				6A21AD932C021AB8004ACBC0 /* FontType.swift in Sources */,
 				6AA332042BD14E0200996EC5 /* SceneDelegate.swift in Sources */,
+				6A2310E32C2C5C26008BFCBC /* FavoritesVM.swift in Sources */,
 				6AFD0BEA2BE24EA300F27BBE /* MainVM.swift in Sources */,
 				6A788E942BD7EA6500B7ABDA /* KolodaView.swift in Sources */,
 				6AA126882BF5A12A00B67424 /* WordListVC.swift in Sources */,
@@ -546,6 +561,7 @@
 				6AFD0C072BE90AB700F27BBE /* CardSideType.swift in Sources */,
 				6AFD0BFF2BE5979200F27BBE /* EmailHelper.swift in Sources */,
 				6AFD0BF42BE51BD800F27BBE /* CardPackItemCell.swift in Sources */,
+				6A2310E62C2C6448008BFCBC /* FavoriteItem.swift in Sources */,
 				6A788E922BD7EA6500B7ABDA /* KolodaAnimationSemaphore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

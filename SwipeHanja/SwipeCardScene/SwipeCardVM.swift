@@ -86,40 +86,37 @@ class SwipeCardVM {
         do {
             let realm = try Realm()
             try realm.write {
-                // CardItem 업데이트
-                item.isFavorite = isFavorite
-                realm.add(item, update: .modified)
-                shLog("Favorite 상태 업데이트 완료: \(item.frontWord) to \(isFavorite)")
-                
-                // FavoriteCardList 객체 가져오기
-                var favoriteCardList = realm.objects(FavoriteCardList.self).first
-                
-                // FavoriteCardList 객체가 없으면 새로 생성
-                if favoriteCardList == nil {
-                    favoriteCardList = FavoriteCardList()
-                    realm.add(favoriteCardList!)
-                }
-                
-                if let favoriteCardList {
-                    // CardItem을 cardList에 추가
-                    if isFavorite {
-                        favoriteCardList.cardList.append(item)
-                        shLog("FavoriteCardList 삽입 완료: \(item.frontWord) to \(isFavorite)")
-                    } else {
-                        guard let index = favoriteCardList.cardList.firstIndex(of: item)
-                        else {
-                            shLog("FavoriteCardList Index 찾기 오류: \(item.frontWord) to \(isFavorite)")
-                            return
-                        }
-                        
-                        favoriteCardList.cardList.remove(at: index)
-                        shLog("FavoriteCardList 삭제 완료: \(item.frontWord) to \(isFavorite)")
-            
-                    }
-               
+                // FavoriteData 생성/삭제, CardItem 업데이트
+                if isFavorite {
+                    //새 FavoriteData 생성
+                    let favoriteData = FavoriteData()
+                    realm.add(favoriteData)
+                    
+                    //CardItem에 등록
+                    item.isFavorite = true
+                    item.favoriteData = favoriteData
+                    realm.add(item, update: .modified)
                 } else {
-                    shLog("Favorite 상태 or 목록 업데이트 오류: \(item.frontWord) to \(isFavorite)")
+                  
+                    //CardItem에서 삭제
+                    let favoriteData = item.favoriteData
+                    item.isFavorite = false
+                    item.favoriteData = nil
+                    realm.add(item, update: .modified)
+                    
+                    
+                    //FavoriteData 삭제
+                    guard let favoriteData else {
+                        shLog("Favorite 삭제 실패: \(item.frontWord)의 favoriteData가 없음")
+                        return
+                    }
+                    
+                    realm.delete(favoriteData)
+                    
                 }
+              
+                shLog("Favorite 등록/삭제 완료: \(item.frontWord) to \(isFavorite)")
+                
             }
         } catch(let error) {
             shLog(error.localizedDescription)

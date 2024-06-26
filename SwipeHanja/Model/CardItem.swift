@@ -19,6 +19,8 @@ final class CardItem: Object, Decodable {
     @Persisted var hasShown: Bool
     @Persisted var hasMemorized: Bool
     @Persisted var isFavorite: Bool = false
+    ///favorite를 true로 바꿀 때 생성되는 favoriteData이다. 별도의 hasShown, hasMemorized 정보가 만들어진다.
+    @Persisted var favoriteData: FavoriteData?
 
     override init() {
         super.init()
