@@ -12,6 +12,8 @@ class FavoritesVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var titleLabel: UILabel!
     
+    let vm = FavoritesVM()
+    
     enum SectionType {
         case startLearning
         case items
@@ -21,7 +23,12 @@ class FavoritesVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initTableView()
-
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        vm.fetchFavoriteItem()
+        tableView.reloadData()
     }
     
     func initTableView() {
@@ -47,7 +54,7 @@ extension FavoritesVC: UITableViewDataSource {
         case .startLearning:
             return 1
         case .items:
-            return 3
+            return vm.favoriteItems.value.count
         }
  
     }
@@ -69,13 +76,14 @@ extension FavoritesVC: UITableViewDataSource {
             guard let cell = tableView
                 .dequeueReusableCell(withIdentifier: "\(FavoritesStartLearningCell.self)", for: indexPath) as? FavoritesStartLearningCell
             else { return UITableViewCell() }
-            
+            cell.totalCountLabel.text = "\(vm.totalCardCount)"
             return cell
         case .items:
             guard let cell = tableView
                 .dequeueReusableCell(withIdentifier: "\(FavoritesItemCell.self)", for: indexPath) as? FavoritesItemCell
             else { return UITableViewCell() }
-//            let item = vm.cardPackList[indexPath.row]
+            let item = vm.favoriteItems.value[indexPath.row]
+            cell.configure(favoriteItem: item)
             return cell
         }
         
