@@ -16,8 +16,14 @@ class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mainVC.tabBarItem = UITabBarItem(title: "학습", image: nil, selectedImage: nil)
-        favoritesVC.tabBarItem = UITabBarItem(title: "단어장", image: nil, selectedImage: nil)
+        mainVC.tabBarItem = UITabBarItem(title: "학습", 
+                                         image: UIImage(systemName: "text.book.closed"),
+                                         selectedImage: UIImage(systemName: "text.book.closed.fill"))
+                                      
+        favoritesVC.tabBarItem = UITabBarItem(title: "단어장", 
+                                              image: UIImage(systemName: "star"),
+                                              selectedImage: UIImage(systemName: "star.fill"))
+                                              
         
         setViewControllers([mainVC,favoritesVC], animated: false)
         
@@ -33,11 +39,11 @@ class MainTabBarController: UITabBarController {
         // 아이템 컬러 설정
         let normalAttributes: [NSAttributedString.Key: Any] = [
             .foregroundColor: UIColor.colorTeal03,
-            .font: UIFont.systemFont(ofSize: 20)
+            .font: UIFont.systemFont(ofSize: 12)
         ]
         let selectedAttributes: [NSAttributedString.Key: Any] = [
             .foregroundColor: UIColor.colorTeal02,
-            .font: UIFont.boldSystemFont(ofSize: 20)
+            .font: UIFont.boldSystemFont(ofSize: 12)
         ]
         
         appearance.stackedLayoutAppearance.normal.titleTextAttributes = normalAttributes
