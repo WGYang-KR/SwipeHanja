@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import Combine
 
 class FavoritesVC: UIViewController {
 
+    var cancellables = Set<AnyCancellable>()
+    
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var titleLabel: UILabel!
     
@@ -83,7 +87,18 @@ extension FavoritesVC: UITableViewDataSource {
                 .dequeueReusableCell(withIdentifier: "\(FavoritesItemCell.self)", for: indexPath) as? FavoritesItemCell
             else { return UITableViewCell() }
             let item = vm.favoriteItems.value[indexPath.row]
-            cell.configure(favoriteItem: item)
+            cell.configure(firstText: item.cardItem.frontWord,
+                           secondText: item.cardItem.backWord,
+                           isFavorite: item.isFavorite)
+            cell.isFavorite.dropFirst().sink { [weak self] newValue in
+                //DB 값 갱신
+                item.updateFavorite(newValue)
+                
+                //단어 총갯수 변경
+                guard let startLearingIndex = self?.sectionTypes.firstIndex(of: .startLearning) else { return }
+                self?.tableView.reloadSections( IndexSet(integer: startLearingIndex), with: .none)
+                
+            }.store(in: &cell.reusableCancellables)
             return cell
         }
         

@@ -14,7 +14,6 @@ class FavoritesVM {
     ///단어 아이템 리스트
     let favoriteItems = CurrentValueSubject<[FavoriteItem],Never>([])
     
-    
     ///총 카드수
     var totalCardCount: Int {
         return favoriteItems.value.filter({$0.isFavorite}).count
@@ -25,6 +24,7 @@ class FavoritesVM {
         return favoriteItems.value.filter{!$0.favoriteData.hasMemorized}.count
     }
     
+  
     ///DB의 FavoriteData를 불러와서 [FavoriteItem]를 만든다.
     func fetchFavoriteItem() {
         do {

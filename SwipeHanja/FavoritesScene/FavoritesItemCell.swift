@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Combine
 class FavoritesItemCell: UITableViewCell {
 
     
@@ -17,33 +17,41 @@ class FavoritesItemCell: UITableViewCell {
     let linedStarImage: UIImage? = .init(systemName: "star")
     let filledStarImage: UIImage? = .init(systemName: "star.fill")
     
-    weak var favoriteItem: FavoriteItem?
-    
+    ///변경시에 UI도 같이 갱신된다.
+    let isFavorite = CurrentValueSubject<Bool,Never>(false)
+    var cancellables = Set<AnyCancellable>()
+    var reusableCancellables = Set<AnyCancellable>()
+
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
+        isFavorite.sink { [weak self] value in
+            //favorite 여부 바뀌먄 UI 갱신
+            self?.setFavoriteButtonUI(value)
+        }.store(in: &cancellables)
+    }
+    override func prepareForReuse() {
+        self.reusableCancellables = Set<AnyCancellable>()
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
     @IBAction func favoritesButtonTapped(_ sender: Any) {
-        guard let favoriteItem else { return }
-        let newValue = !favoriteItem.isFavorite
-        favoriteItem.updateFavorite(newValue)
-        setFavoriteButtonUI(newValue)
+        //favorite 여부 변경
+        let newValue = !isFavorite.value
+        isFavorite.send(newValue)
     }
     
-    func configure(favoriteItem: FavoriteItem) {
-        self.favoriteItem = favoriteItem
-        firstLabel.text = favoriteItem.cardItem.frontWord
-        secondLabel.text = favoriteItem.cardItem.backWord
-        setFavoriteButtonUI(favoriteItem.isFavorite)
+    /// - Parameters:
+    ///   - firstText: 표제어 텍스트
+    ///   - secondText: 뜻 텍스트
+    ///   - isFavorite: Favorite 여부
+    /// - Returns: isFavorite 변경 값 publisher
+    func configure(firstText: String, secondText: String, isFavorite: Bool)  {
+        self.firstLabel.text = firstText
+        self.secondLabel.text = secondText
+        self.isFavorite.send(isFavorite)
     }
-    
+
+    ///favorite 아이콘 UI를 갱신한다.
     func setFavoriteButtonUI(_ isFavorite: Bool) {
         if !isFavorite {
             favoriteButton.setImage(linedStarImage, for: .normal)
