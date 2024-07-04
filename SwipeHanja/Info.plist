@@ -23,5 +23,7 @@
 			</array>
 		</dict>
 	</dict>
+    <key>FIREBASE_ANALYTICS_COLLECTION_ENABLED</key>
+    <false/>
 </dict>
 </plist>

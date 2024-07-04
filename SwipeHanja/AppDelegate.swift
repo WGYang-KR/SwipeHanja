@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseCore
+import FirebaseAnalytics
 import RealmSwift
 
 @main
@@ -19,6 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Use the Firebase library to configure APIs.
         FirebaseApp.configure()
+        
+        #if DEBUG
+        Analytics.setAnalyticsCollectionEnabled(false)
+        #else
+        Analytics.setAnalyticsCollectionEnabled(true)
+        #endif
+        
         initRealm()
         return true
     }
