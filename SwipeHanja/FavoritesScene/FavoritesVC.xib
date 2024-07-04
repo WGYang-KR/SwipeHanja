@@ -44,19 +44,13 @@
                                             <color key="textColor" name="colorTeal02"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rw8-V6-lp7">
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BK1-Nb-U9a">
                                             <rect key="frame" x="329" y="0.0" width="32" height="32"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="32" id="E0P-ix-qWj"/>
-                                                <constraint firstAttribute="width" constant="32" id="RGY-bo-YU8"/>
+                                                <constraint firstAttribute="width" constant="32" id="0S2-ha-zsy"/>
+                                                <constraint firstAttribute="height" constant="32" id="Xge-1e-lt9"/>
                                             </constraints>
-                                            <color key="tintColor" name="colorTeal02"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <state key="normal" image="info.circle" catalog="system">
-                                                <color key="titleColor" name="colorTeal02"/>
-                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
-                                            </state>
                                         </button>
                                     </subviews>
                                 </stackView>
@@ -98,7 +92,6 @@
         </view>
     </objects>
     <resources>
-        <image name="info.circle" catalog="system" width="128" height="123"/>
         <namedColor name="colorGrey04">
             <color red="0.97254901960784312" green="0.96470588235294119" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -21,7 +21,7 @@ class FavoritesVM {
     
     ///암기 잔여 카드수
     var remainCardCount: Int {
-        return favoriteItems.value.filter{!$0.favoriteData.hasMemorized}.count
+        return favoriteItems.value.filter{$0.isFavorite}.filter{!$0.favoriteData.hasMemorized}.count
     }
     
   

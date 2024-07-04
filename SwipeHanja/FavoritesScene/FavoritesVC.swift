@@ -44,6 +44,7 @@ class FavoritesVC: UIViewController {
         
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .singleLine
+        tableView.contentInset = UIEdgeInsets(top: -20.0, left: 0, bottom: 0, right: 0)
     }
 }
 
@@ -66,7 +67,7 @@ extension FavoritesVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection: Int) -> String? {
         switch sectionTypes[titleForHeaderInSection] {
         case .startLearning:
-            return ""
+            return nil
         case .items:
             return "저장된 단어"
         }
@@ -81,6 +82,7 @@ extension FavoritesVC: UITableViewDataSource {
                 .dequeueReusableCell(withIdentifier: "\(FavoritesStartLearningCell.self)", for: indexPath) as? FavoritesStartLearningCell
             else { return UITableViewCell() }
             cell.totalCountLabel.text = "\(vm.totalCardCount)"
+            cell.remainCountLabel.text = "\(vm.remainCardCount)"
             return cell
         case .items:
             guard let cell = tableView

@@ -17,8 +17,8 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
         
         mainVC.tabBarItem = UITabBarItem(title: "학습", 
-                                         image: UIImage(systemName: "text.book.closed"),
-                                         selectedImage: UIImage(systemName: "text.book.closed.fill"))
+                                         image: UIImage(systemName: "menucard"),
+                                         selectedImage: UIImage(systemName: "menucard.fill"))
                                       
         favoritesVC.tabBarItem = UITabBarItem(title: "단어장", 
                                               image: UIImage(systemName: "star"),

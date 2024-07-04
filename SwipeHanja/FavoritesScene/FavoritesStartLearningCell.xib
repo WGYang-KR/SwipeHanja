@@ -25,27 +25,39 @@
                                 <rect key="frame" x="0.0" y="0.0" width="559" height="110"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="raW-2k-7qS">
-                                        <rect key="frame" x="30" y="30" width="507" height="50"/>
+                                        <rect key="frame" x="30" y="28" width="507" height="54"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="단어장 학습하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afH-ce-Bff">
-                                                <rect key="frame" x="0.0" y="0.0" width="424" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="390.66666666666669" height="54"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" name="colorTeal02"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JTu-nU-iPQ">
-                                                <rect key="frame" x="436" y="0.0" width="31" height="50"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Etb-tS-zhB">
+                                                <rect key="frame" x="402.66666666666669" y="0.0" width="64.333333333333314" height="54"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKJ-d6-x4k">
-                                                        <rect key="frame" x="0.0" y="0.0" width="31" height="50"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYe-JD-lbN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="31" height="54"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <color key="textColor" name="ColorTossBlue"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="/" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aeo-YQ-DO3">
+                                                        <rect key="frame" x="31" y="0.0" width="5" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" name="colorTeal02"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKJ-d6-x4k">
+                                                        <rect key="frame" x="36" y="0.0" width="28.333333333333329" height="54"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" name="colorTeal02"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="253" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="k8t-TS-aIO">
-                                                <rect key="frame" x="479" y="2" width="28" height="46.333333333333329"/>
+                                                <rect key="frame" x="479" y="2" width="28" height="50.333333333333329"/>
                                                 <color key="tintColor" name="colorTeal03"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="28" id="oym-h3-058"/>
@@ -58,8 +70,8 @@
                                 <constraints>
                                     <constraint firstItem="raW-2k-7qS" firstAttribute="leading" secondItem="IWV-fK-y4n" secondAttribute="leading" constant="30" id="2lt-1z-u3R"/>
                                     <constraint firstAttribute="trailing" secondItem="raW-2k-7qS" secondAttribute="trailing" constant="22" id="Be9-1o-aVa"/>
-                                    <constraint firstAttribute="bottom" secondItem="raW-2k-7qS" secondAttribute="bottom" constant="30" id="QN5-fl-gZk"/>
-                                    <constraint firstItem="raW-2k-7qS" firstAttribute="top" secondItem="IWV-fK-y4n" secondAttribute="top" constant="30" id="oK1-vl-9Cg"/>
+                                    <constraint firstAttribute="bottom" secondItem="raW-2k-7qS" secondAttribute="bottom" constant="28" id="QN5-fl-gZk"/>
+                                    <constraint firstItem="raW-2k-7qS" firstAttribute="top" secondItem="IWV-fK-y4n" secondAttribute="top" constant="28" id="oK1-vl-9Cg"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -88,6 +100,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="remainCountLabel" destination="SYe-JD-lbN" id="hNi-ga-2xy"/>
                 <outlet property="titleLabel" destination="afH-ce-Bff" id="zcL-m2-1RB"/>
                 <outlet property="totalCountLabel" destination="YKJ-d6-x4k" id="mC6-JA-XG6"/>
             </connections>
@@ -96,6 +109,9 @@
     </objects>
     <resources>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <namedColor name="ColorTossBlue">
+            <color red="0.28235294117647058" green="0.50196078431372548" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <namedColor name="colorTeal02">
             <color red="0.074509803921568626" green="0.36470588235294116" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
