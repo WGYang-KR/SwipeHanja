@@ -112,6 +112,10 @@ extension FavoritesVC: UITableViewDataSource {
 extension FavoritesVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        guard let startLearingIndex = self.sectionTypes.firstIndex(of: .startLearning) else { return }
+        if indexPath.section == startLearingIndex {
+            let vc = FavoritesSwipeVC()
+            presentFull(vc, animated: true)
+        }
     }
 }

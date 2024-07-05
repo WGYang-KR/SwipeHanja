@@ -14,6 +14,9 @@
 		6A2310DB2C2B0D2A008BFCBC /* FavoriteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2310DA2C2B0D2A008BFCBC /* FavoriteData.swift */; };
 		6A2310E32C2C5C26008BFCBC /* FavoritesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2310E22C2C5C26008BFCBC /* FavoritesVM.swift */; };
 		6A2310E62C2C6448008BFCBC /* FavoriteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2310E52C2C6448008BFCBC /* FavoriteItem.swift */; };
+		6A2310ED2C382488008BFCBC /* FavoritesSwipeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2310EB2C382488008BFCBC /* FavoritesSwipeVC.swift */; };
+		6A2310EE2C382488008BFCBC /* FavoritesSwipeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A2310EC2C382488008BFCBC /* FavoritesSwipeVC.xib */; };
+		6A2310F02C38248F008BFCBC /* FavoritesSwipeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2310EF2C38248F008BFCBC /* FavoritesSwipeVM.swift */; };
 		6A5C2D232BF8A553003E7CF6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A5C2D222BF8A553003E7CF6 /* GoogleService-Info.plist */; };
 		6A5C2D2C2BFA1E25003E7CF6 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 6A5C2D2B2BFA1E25003E7CF6 /* PrivacyInfo.xcprivacy */; };
 		6A70A7272C21C4F100B2B4AB /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70A7252C21C4F100B2B4AB /* MainTabBarController.swift */; };
@@ -78,6 +81,9 @@
 		6A2310DA2C2B0D2A008BFCBC /* FavoriteData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteData.swift; sourceTree = "<group>"; };
 		6A2310E22C2C5C26008BFCBC /* FavoritesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVM.swift; sourceTree = "<group>"; };
 		6A2310E52C2C6448008BFCBC /* FavoriteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteItem.swift; sourceTree = "<group>"; };
+		6A2310EB2C382488008BFCBC /* FavoritesSwipeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesSwipeVC.swift; sourceTree = "<group>"; };
+		6A2310EC2C382488008BFCBC /* FavoritesSwipeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesSwipeVC.xib; sourceTree = "<group>"; };
+		6A2310EF2C38248F008BFCBC /* FavoritesSwipeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesSwipeVM.swift; sourceTree = "<group>"; };
 		6A5C2D212BF8A2C1003E7CF6 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		6A5C2D222BF8A553003E7CF6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6A5C2D2B2BFA1E25003E7CF6 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
@@ -193,6 +199,9 @@
 				6AE23B632C29A634009E8978 /* FavoritesStartLearningCell.xib */,
 				6AE23B5E2C29A35F009E8978 /* FavoritesItemCell.swift */,
 				6AE23B5F2C29A35F009E8978 /* FavoritesItemCell.xib */,
+				6A2310EF2C38248F008BFCBC /* FavoritesSwipeVM.swift */,
+				6A2310EB2C382488008BFCBC /* FavoritesSwipeVC.swift */,
+				6A2310EC2C382488008BFCBC /* FavoritesSwipeVC.xib */,
 			);
 			path = FavoritesScene;
 			sourceTree = "<group>";
@@ -447,6 +456,7 @@
 				6A928E832C173A3C00894FD4 /* CardItemView.xib in Resources */,
 				6AFD0BF52BE51BD800F27BBE /* CardPackItemCell.xib in Resources */,
 				6AFD0C0F2BE93BEB00F27BBE /* SHOverlayView.xib in Resources */,
+				6A2310EE2C382488008BFCBC /* FavoritesSwipeVC.xib in Resources */,
 				6A21AD902C0215DD004ACBC0 /* KanjiStrokeOrders_v4.004.ttf in Resources */,
 				6A21AD912C0215DD004ACBC0 /* readme_en_v4.004.txt in Resources */,
 				6AA3321A2BD14F8C00996EC5 /* SwipeCardVC.xib in Resources */,
@@ -532,6 +542,7 @@
 				6AFD0C052BE8F80E00F27BBE /* AlertHelper.swift in Sources */,
 				6AFD0BE52BDA855400F27BBE /* CardPack.swift in Sources */,
 				6A70A72E2C21C78000B2B4AB /* FavoritesVC.swift in Sources */,
+				6A2310F02C38248F008BFCBC /* FavoritesSwipeVM.swift in Sources */,
 				6A788E902BD7EA6500B7ABDA /* DraggableCardView.swift in Sources */,
 				6A928E812C173A2D00894FD4 /* CardItemView.swift in Sources */,
 				6A2310DB2C2B0D2A008BFCBC /* FavoriteData.swift in Sources */,
@@ -549,6 +560,7 @@
 				6AA3321D2BD1532000996EC5 /* CardItem.swift in Sources */,
 				6AA332202BD1579B00996EC5 /* CommonUtility.swift in Sources */,
 				6A21AD932C021AB8004ACBC0 /* FontType.swift in Sources */,
+				6A2310ED2C382488008BFCBC /* FavoritesSwipeVC.swift in Sources */,
 				6AA332042BD14E0200996EC5 /* SceneDelegate.swift in Sources */,
 				6A2310E32C2C5C26008BFCBC /* FavoritesVM.swift in Sources */,
 				6AFD0BEA2BE24EA300F27BBE /* MainVM.swift in Sources */,

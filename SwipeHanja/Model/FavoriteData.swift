@@ -13,6 +13,7 @@ class FavoriteData: Object {
 
     ///현 아이템을 참조하고 있는 부모 CardItem
     @Persisted(originProperty: "favoriteData") var parentCardItem: LinkingObjects<CardItem>
+    @Persisted(primaryKey: true) var _id: ObjectId
     @Persisted var timestamp = Date()
     @Persisted var hasShown: Bool = false
     @Persisted var hasMemorized: Bool = false
