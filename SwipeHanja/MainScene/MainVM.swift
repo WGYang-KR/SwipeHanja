@@ -36,6 +36,25 @@ class MainVM {
         }
     }
     
+    func resetStudyProgress() {
+        do {
+            let realm = try Realm()
+            let results = realm.objects(CardPack.self)
+            try realm.write {
+                for cardPack in results {
+                    for item in cardPack.cardList {
+                        item.hasShown = false
+                        item.hasMemorized = false
+                    }
+                }
+                realm.add(results, update: .modified)
+                
+            }
+        } catch{
+            shLog("Error retrieving data from Realm: \(error)")
+        }
+    }
+    
     ///DB를 JSON에서 불러와서 저장한다.
     private func initCardPackDBFromJson() {
         do {
