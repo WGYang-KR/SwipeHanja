@@ -15,6 +15,7 @@ class SwipeCardVC: UIViewController {
     
     private var cancellables = Set<AnyCancellable>()
     
+    @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var kolodaView: KolodaView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var countLeftLabel: UILabel!
@@ -103,8 +104,18 @@ class SwipeCardVC: UIViewController {
             self?.totalCountLabel.text = String(total)
         }.store(in: &cancellables)
         
+        Publishers.CombineLatest(vm.totalCardCount, vm.remainCardCount)
+            .sink { [weak self] total, remain in
+                let done = total - remain
+                let progressRate: Float = total > 0 ? Float(done) / Float(total) : 1.0
+                shLog("Progress: \(progressRate)")
+                self?.updateProgressView(progressRate)
+            }
+            .store(in: &cancellables)
+        
     }
     
+    //MARK: -
     ///카드 전후면 설정을 업데이트한다
     func setCardDefaultSide(_ side: CardSideType) {
         cardDefaultSide = side
@@ -115,6 +126,13 @@ class SwipeCardVC: UIViewController {
         
         kolodaView.reconfigureCards()
         
+    }
+    
+    ///진행상태바를 업데이트 한다.
+    func updateProgressView(_ rate: Float) {
+        progressView.progress = rate <= 1.0 ? rate : 1.0
+ 
+    
     }
     
 }

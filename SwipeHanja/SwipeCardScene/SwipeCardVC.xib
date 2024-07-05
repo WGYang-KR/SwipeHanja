@@ -15,6 +15,7 @@
                 <outlet property="countLeftLabel" destination="uQu-4b-hVD" id="kqG-Ds-9Cb"/>
                 <outlet property="countRightLabel" destination="dty-tD-a7w" id="nHk-Q1-0Pf"/>
                 <outlet property="kolodaView" destination="vYa-7L-kQD" id="dc8-Kh-fJz"/>
+                <outlet property="progressView" destination="ySg-ti-uNv" id="JOX-kL-uss"/>
                 <outlet property="remainCountLabel" destination="MD1-DB-Wmw" id="me2-NE-SU3"/>
                 <outlet property="titleLabel" destination="hef-CG-ayM" id="bsy-cJ-8m9"/>
                 <outlet property="totalCountLabel" destination="bBc-VM-mVK" id="zhF-Rg-ok3"/>
@@ -30,7 +31,7 @@
                     <rect key="frame" x="0.0" y="50" width="375" height="728"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="T6b-La-aUw">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YrH-lw-XrY">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
@@ -90,15 +91,20 @@
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nZG-g9-O9L">
                                     <rect key="frame" x="0.0" y="48" width="375" height="2"/>
-                                    <color key="backgroundColor" name="colorGrey02"/>
+                                    <color key="backgroundColor" name="colorGrey01"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="2" id="4b8-XE-dCV"/>
                                     </constraints>
                                 </view>
+                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ySg-ti-uNv">
+                                    <rect key="frame" x="0.0" y="50" width="375" height="4"/>
+                                    <color key="progressTintColor" name="ColorSatCyan"/>
+                                    <color key="trackTintColor" name="colorGrey02"/>
+                                </progressView>
                             </subviews>
                         </stackView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jaV-UJ-8w2">
-                            <rect key="frame" x="0.0" y="50" width="375" height="678"/>
+                            <rect key="frame" x="0.0" y="54" width="375" height="674"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z7X-cp-Vb8">
                                     <rect key="frame" x="0.0" y="12" width="375" height="36"/>
@@ -203,11 +209,11 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYa-7L-kQD" customClass="KolodaView" customModule="SwipeHanja" customModuleProvider="target">
-                                    <rect key="frame" x="32" y="84" width="311" height="468"/>
+                                    <rect key="frame" x="32" y="84" width="311" height="464"/>
                                     <color key="backgroundColor" name="colorGrey02"/>
                                 </view>
                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="udO-6l-wn2">
-                                    <rect key="frame" x="50" y="588" width="275" height="40"/>
+                                    <rect key="frame" x="50" y="584" width="275" height="40"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOe-cO-pxg">
                                             <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -305,6 +311,12 @@
         <image name="list.bullet" catalog="system" width="128" height="87"/>
         <image name="rectangle.portrait.righthalf.filled" catalog="system" width="115" height="128"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="ColorSatCyan">
+            <color red="0.0" green="0.73725490196078436" blue="0.83137254901960789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="colorGrey01">
+            <color red="0.7686274509803922" green="0.87450980392156863" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="colorGrey02">
             <color red="0.82352941176470584" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
