@@ -114,6 +114,16 @@ PODS:
   - Realm/Headers (10.49.2)
   - RealmSwift (10.49.2):
     - Realm (= 10.49.2)
+  - RxCocoa (6.7.1):
+    - RxRelay (= 6.7.1)
+    - RxSwift (= 6.7.1)
+  - RxGesture (4.0.4):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxRelay (6.7.1):
+    - RxSwift (= 6.7.1)
+  - RxSwift (6.7.1)
+  - SnapKit (5.7.1)
   - SwiftEntryKit (2.0.0)
 
 DEPENDENCIES:
@@ -121,6 +131,10 @@ DEPENDENCIES:
   - FirebaseCrashlytics
   - pop
   - RealmSwift (~> 10)
+  - RxCocoa (~> 6.7.1)
+  - RxGesture
+  - RxSwift (~> 6.7.1)
+  - SnapKit (~> 5.7.0)
   - SwiftEntryKit (= 2.0.0)
 
 SPEC REPOS:
@@ -142,6 +156,11 @@ SPEC REPOS:
     - PromisesSwift
     - Realm
     - RealmSwift
+    - RxCocoa
+    - RxGesture
+    - RxRelay
+    - RxSwift
+    - SnapKit
     - SwiftEntryKit
 
 SPEC CHECKSUMS:
@@ -162,8 +181,13 @@ SPEC CHECKSUMS:
   PromisesSwift: 9d77319bbe72ebf6d872900551f7eeba9bce2851
   Realm: c1a96376972e5f6c26276a0cd6dee15eeefaf53c
   RealmSwift: db6ea9e15607653352baa42321bd9586850b7f04
+  RxCocoa: f5609cb4637587a7faa99c5d5787e3ad582b75a4
+  RxGesture: f3efb47ed2d26a8082f7b660d4a59970e275a7f8
+  RxRelay: 4151ba01152436b08271e08410135e099880eae5
+  RxSwift: b9a93a26031785159e11abd40d1a55bcb8057e52
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
   SwiftEntryKit: 61b5fa36f34a97dd8013e48a7345bc4c4720be9a
 
-PODFILE CHECKSUM: c8bde416e284e6054c4c130861a92c33e862f2b1
+PODFILE CHECKSUM: c8d6f66b0f069d08f988413de22d40b52814cedc
 
 COCOAPODS: 1.15.2

@@ -15,6 +15,7 @@ class SwipeCardVC: UIViewController {
     
     private var cancellables = Set<AnyCancellable>()
     
+    @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var kolodaView: KolodaView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var countLeftLabel: UILabel!
@@ -23,6 +24,7 @@ class SwipeCardVC: UIViewController {
     @IBOutlet weak var totalCountLabel: UILabel!
 
     var cardDefaultSide: CardSideType = .front
+    var cardFontType: FontType = .system
     
     func configure(cardPack: CardPack) {
         self.vm = SwipeCardVM(cardPack: cardPack) 
@@ -44,7 +46,6 @@ class SwipeCardVC: UIViewController {
     
         func initCardDefaultSide() {
             cardDefaultSide = AppSetting.cardDefaultSide
-            kolodaView.cardDefaultSide = cardDefaultSide
         }
         
     }
@@ -103,8 +104,18 @@ class SwipeCardVC: UIViewController {
             self?.totalCountLabel.text = String(total)
         }.store(in: &cancellables)
         
+        Publishers.CombineLatest(vm.totalCardCount, vm.remainCardCount)
+            .sink { [weak self] total, remain in
+                let done = total - remain
+                let progressRate: Float = total > 0 ? Float(done) / Float(total) : 1.0
+                shLog("Progress: \(progressRate)")
+                self?.updateProgressView(progressRate)
+            }
+            .store(in: &cancellables)
+        
     }
     
+    //MARK: -
     ///카드 전후면 설정을 업데이트한다
     func setCardDefaultSide(_ side: CardSideType) {
         cardDefaultSide = side
@@ -113,9 +124,15 @@ class SwipeCardVC: UIViewController {
         let cardSideDesc = cardDefaultSide == .front ? "'한자'로" : "'뜻'으로"
         AlertHelper.notesInform(message: "기본 카드 방향이 \(cardSideDesc) 변경됨")
         
-        kolodaView.cardDefaultSide = side
         kolodaView.reconfigureCards()
         
+    }
+    
+    ///진행상태바를 업데이트 한다.
+    func updateProgressView(_ rate: Float) {
+        progressView.progress = rate <= 1.0 ? rate : 1.0
+ 
+    
     }
     
 }
@@ -164,15 +181,26 @@ extension SwipeCardVC: KolodaViewDataSource {
     }
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-        let cardItemView = CardItemView(text: dataSource[index].frontWord)
-        cardItemView.label.font = .systemFont(ofSize: 56)
+        let item = dataSource[index]
+        let cardItemView = CardItemView()
+       
+        var font: UIFont?
+        switch cardFontType {
+        case .system:
+            font = .systemFont(ofSize: 56)
+        case .KanjiStrokeOrders:
+            font = .init(name: "KanjiStrokeOrders", size: 80)
+        }
+        cardItemView.configure(index: index,
+                               frontContent: .init(text: item.frontWord,
+                                                   font: font),
+                               backContent: .init(text: item.backWord,
+                                                  font: nil),
+                               isFavorite: item.isFavorite,
+                               delegate: self,
+                               cardSideType: cardDefaultSide)
+        
         return cardItemView
-    }
-    
-    func koloda(_ koloda: KolodaView, backViewForCardAt index: Int) -> UIView {
-        let cardItemView = CardItemView(text: dataSource[index].backWord)
-        cardItemView.label.font = .systemFont(ofSize: 40)
-        return  cardItemView
     }
     
     func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
@@ -180,3 +208,12 @@ extension SwipeCardVC: KolodaViewDataSource {
     }
 }
 
+//MARK: CardItemComponentViewDelegate
+
+extension SwipeCardVC: CardItemViewDelegate {
+    
+    func cardItemViewFavoriteButtonToggled(at index: Int, _ marked: Bool) {
+        shLog("Favorite Toggled: \(marked)")
+        vm.markFavorite(at: index, marked)
+    }
+}
