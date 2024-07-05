@@ -27,6 +27,7 @@ class CardItemView: UIView {
     var index: Int = 0
     
     private(set) var cardSideType: CardSideType = .front
+    
     ///즐겨찾기 여부(직접 변경시에 UI만 갱신된다)
     private let isFavorite = CurrentValueSubject<Bool,Never>(false)
     
@@ -52,6 +53,7 @@ class CardItemView: UIView {
                                  font: backContent.font,
                                 isFavorite: self.isFavorite.eraseToAnyPublisher())
         bindViews()
+        self.cardSideType = cardSideType
         flipCard(cardSideType, animated: false)
         self.delegate = delegate
     }
@@ -108,7 +110,8 @@ class CardItemView: UIView {
         view.rx.tapGesture().when(.recognized)
             .subscribe{  [weak self] _ in
                 guard let self else { return }
-                flipCard(cardSideType.reversed, animated: true)
+                self.cardSideType = cardSideType.reversed
+                flipCard(cardSideType, animated: true)
             }
             .disposed(by: disposeBag)
     }
