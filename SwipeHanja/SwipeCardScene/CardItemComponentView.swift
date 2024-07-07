@@ -13,6 +13,7 @@ class CardItemComponentView: UIView {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var searchButton: UIButton!
     
     let linedStarImage: UIImage? = .init(systemName: "star")
     let filledStarImage: UIImage? = .init(systemName: "star.fill")
@@ -22,7 +23,8 @@ class CardItemComponentView: UIView {
     
     ///즐겨찾기 클릭시에 이벤트 방출
     let favoriteBtnTapped = PassthroughSubject<Void,Never>()
-
+    let searchBtnTapped = PassthroughSubject<Void,Never>()
+    
     func configure(text: String, font: UIFont?, isFavorite: AnyPublisher<Bool,Never>) {
         self.label.text = text
         if let font {
@@ -71,4 +73,12 @@ class CardItemComponentView: UIView {
         favoriteBtnTapped.send(Void())
     }
     
+    @IBAction func searchButtonTapped(_ sender: Any) {
+        searchButton.isEnabled = false
+        searchBtnTapped.send(Void())
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {[weak self] in
+            self?.searchButton.isEnabled = true
+        })
+    
+    }
 }

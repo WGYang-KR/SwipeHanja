@@ -173,9 +173,14 @@ extension FavoritesSwipeVC: KolodaViewDataSource {
 //MARK: CardItemComponentViewDelegate
 
 extension FavoritesSwipeVC: CardItemViewDelegate {
-    
+
     func cardItemViewFavoriteButtonToggled(at index: Int, _ marked: Bool) {
         shLog("Favorite Toggled: \(marked)")
         vm.markFavorite(at: index, marked)
     }
+    
+    func cardItemViewSerachButtonTapped(at index: Int) {
+        
+    }
+    
 }

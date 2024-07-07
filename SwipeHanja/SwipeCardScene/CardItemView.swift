@@ -13,6 +13,7 @@ import RxGesture
 
 protocol CardItemViewDelegate: AnyObject {
     func cardItemViewFavoriteButtonToggled(at index: Int, _ marked: Bool)
+    func cardItemViewSerachButtonTapped(at index: Int)
 }
 
 ///CardItemComponetView를 2개를 이용하여 탭으로 Flip 하는 뷰이다.
@@ -71,6 +72,19 @@ class CardItemView: UIView {
             guard let self else { return }
             isFavorite.send(!isFavorite.value)
             delegate?.cardItemViewFavoriteButtonToggled(at: index, isFavorite.value)
+        }
+        .store(in: &cancellables)
+        
+        //검색버튼 이벤트 캐치
+        self.frontView.searchBtnTapped.sink { [weak self] in
+            guard let self else { return }
+            delegate?.cardItemViewSerachButtonTapped(at: index)
+        }
+        .store(in: &cancellables)
+        
+        self.backView.searchBtnTapped.sink { [weak self] in
+            guard let self else { return }
+            delegate?.cardItemViewSerachButtonTapped(at: index)
         }
         .store(in: &cancellables)
     }
