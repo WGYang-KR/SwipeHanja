@@ -18,6 +18,9 @@ final class CardItem: Object, Decodable {
     @Persisted var backWord: String
     @Persisted var hasShown: Bool
     @Persisted var hasMemorized: Bool
+    @Persisted var isFavorite: Bool = false
+    ///favorite를 true로 바꿀 때 생성되는 favoriteData이다. 별도의 hasShown, hasMemorized 정보가 만들어진다.
+    @Persisted var favoriteData: FavoriteData?
 
     override init() {
         super.init()
@@ -34,6 +37,7 @@ final class CardItem: Object, Decodable {
         case backWord
         case hasShown
         case hasMemorized
+        case isFavorite
         
     }
     
@@ -47,7 +51,7 @@ final class CardItem: Object, Decodable {
         backWord = try container.decodeIfPresent(String.self, forKey: .backWord) ?? ""
         hasShown = try container.decodeIfPresent(Bool.self, forKey: .hasShown) ?? false
         hasMemorized = try container.decodeIfPresent(Bool.self, forKey: .hasMemorized) ?? false
-    
+        isFavorite = try container.decodeIfPresent(Bool.self, forKey: .isFavorite) ?? false
     }
     
     //MARK: -
@@ -61,5 +65,6 @@ final class CardItem: Object, Decodable {
         self.backWord = backWord
         self.hasShown = hasShown
         self.hasMemorized = hasMemorized
+        self.isFavorite = false
     }
 }
