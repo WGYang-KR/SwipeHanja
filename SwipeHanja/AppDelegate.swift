@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Use the Firebase library to configure APIs.
         FirebaseApp.configure()
+        AppSetting.prepareRemoteConfig()
         
         #if DEBUG
         Analytics.setAnalyticsCollectionEnabled(false)
