@@ -388,8 +388,8 @@
 				6AA331FA2BD14E0200996EC5 /* Sources */,
 				6AA331FB2BD14E0200996EC5 /* Frameworks */,
 				6AA331FC2BD14E0200996EC5 /* Resources */,
-				6A5C2D292BF8BF2D003E7CF6 /* Firebase crashlytics */,
 				70C847D62644595FAC090413 /* [CP] Embed Pods Frameworks */,
+				6A5C2D292BF8BF2D003E7CF6 /* Firebase crashlytics */,
 			);
 			buildRules = (
 			);
@@ -487,7 +487,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"${CONFIGURATION}\" != \"Debug\" ]; then\n    \"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\nfi\n";
+			shellScript = "if [ \"${CONFIGURATION}\" != \"Debug\" ]; then\n    \"${PODS_ROOT}/FirebaseCrashlytics/run\"\nfi\n";
 		};
 		70C847D62644595FAC090413 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -737,7 +737,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wgyang.swipeSangGongHanja;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -772,7 +772,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wgyang.swipeSangGongHanja;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
