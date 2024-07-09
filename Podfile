@@ -10,6 +10,7 @@ target 'SwipeHanja' do
   pod 'RealmSwift', '~>10'
   pod 'FirebaseAnalytics'
   pod 'FirebaseCrashlytics'
+  pod 'FirebaseRemoteConfig'
   pod 'SwiftEntryKit', '2.0.0'
   pod 'SnapKit', '~> 5.7.0'
   pod 'RxSwift', '~> 6.7.1'
