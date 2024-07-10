@@ -219,7 +219,10 @@ extension SwipeCardVC: CardItemViewDelegate {
     }
     
     func cardItemViewSerachButtonTapped(at index: Int) {
-        
+        let item = dataSource[index]
+        let vc = SearchWebVC()
+        vc.configuration(searchText: item.frontWord)
+        presentOverFull(vc, animated: true)
     }
     
 }

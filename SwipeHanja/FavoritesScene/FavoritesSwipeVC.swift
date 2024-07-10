@@ -180,7 +180,11 @@ extension FavoritesSwipeVC: CardItemViewDelegate {
     }
     
     func cardItemViewSerachButtonTapped(at index: Int) {
-        
+        let item = dataSource[index]
+        let vc = SearchWebVC()
+        vc.configuration(searchText: item.cardItem.frontWord)
+        presentOverFull(vc, animated: true)
     }
+    
     
 }
