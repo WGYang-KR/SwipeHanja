@@ -29,6 +29,7 @@ class FavoritesSwipeVC: UIViewController {
         super.viewDidLoad()
         
         self.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+        navigationController?.interactivePopGestureRecognizer?.delegate = nil
         
         initCardDefaultSide()
        
@@ -44,6 +45,11 @@ class FavoritesSwipeVC: UIViewController {
             cardDefaultSide = AppSetting.cardDefaultSide
         }
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     // MARK: IBActions
@@ -183,7 +189,7 @@ extension FavoritesSwipeVC: CardItemViewDelegate {
         let item = dataSource[index]
         let vc = SearchWebVC()
         vc.configuration(searchText: item.cardItem.frontWord)
-        presentOverFull(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     

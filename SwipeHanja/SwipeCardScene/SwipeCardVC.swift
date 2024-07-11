@@ -33,6 +33,7 @@ class SwipeCardVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.interactivePopGestureRecognizer?.delegate = nil
         
         initCardDefaultSide()
        
@@ -48,6 +49,11 @@ class SwipeCardVC: UIViewController {
             cardDefaultSide = AppSetting.cardDefaultSide
         }
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     // MARK: IBActions
@@ -83,7 +89,7 @@ class SwipeCardVC: UIViewController {
     @IBAction func listButtonTapped(_ sender: Any) {
         let vc = WordListVC()
         vc.configure(cardList: vm.cardPack.cardList.map({$0}))
-        present(vc, modalStyle: .pageSheet, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     
@@ -222,7 +228,7 @@ extension SwipeCardVC: CardItemViewDelegate {
         let item = dataSource[index]
         let vc = SearchWebVC()
         vc.configuration(searchText: item.frontWord)
-        presentOverFull(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }

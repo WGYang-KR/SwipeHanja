@@ -22,7 +22,7 @@ class WordListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .colorGrey04
-        self.sheetPresentationController?.prefersGrabberVisible = true
+        navigationController?.interactivePopGestureRecognizer?.delegate = nil
         initTableView()
     }
     func initTableView() {
@@ -33,7 +33,16 @@ class WordListVC: UIViewController {
         tableView.separatorStyle = .none
     }
     
+    func searchBtnTapped(at index: Int) {
+        let item = cardList[index]
+        let vc = SearchWebVC()
+        vc.configuration(searchText: item.frontWord)
+        navigationController?.pushViewController(vc, animated: true)
+    }
 
+    @IBAction func backBtnTapped(_ sender: Any) {
+        self.moveBackVC(animated: true)
+    }
 }
 
 extension WordListVC: UITableViewDataSource {
@@ -53,12 +62,7 @@ extension WordListVC: UITableViewDataSource {
         return cell
     }
     
-    func searchBtnTapped(at index: Int) {
-        let item = cardList[index]
-        let vc = SearchWebVC()
-        vc.configuration(searchText: item.frontWord)
-        presentOverFull(vc, animated: true)
-    }
+  
     
 }
 
