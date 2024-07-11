@@ -67,6 +67,7 @@
                                     </subviews>
                                 </stackView>
                             </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="hff-mY-Zpw" secondAttribute="bottom" constant="4" id="Uzj-CO-Pjc"/>
                                 <constraint firstAttribute="trailing" secondItem="hff-mY-Zpw" secondAttribute="trailing" constant="16" id="XZU-lt-nSj"/>
@@ -75,10 +76,10 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAT-Et-IkW">
-                            <rect key="frame" x="0.0" y="36" width="375" height="656"/>
+                            <rect key="frame" x="0.0" y="36" width="375" height="652"/>
                             <subviews>
                                 <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDy-me-CRz">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="656"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="652"/>
                                     <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <wkWebViewConfiguration key="configuration">
                                         <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -86,7 +87,7 @@
                                     </wkWebViewConfiguration>
                                 </wkWebView>
                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="3fs-rm-NmI">
-                                    <rect key="frame" x="171.66666666666666" y="312" width="32" height="32"/>
+                                    <rect key="frame" x="171.66666666666666" y="310" width="32" height="32"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="32" id="WaL-G3-FGv"/>
                                         <constraint firstAttribute="width" constant="32" id="d35-cR-CzL"/>
@@ -106,7 +107,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cdu-by-xwZ">
-                            <rect key="frame" x="0.0" y="692" width="375" height="36"/>
+                            <rect key="frame" x="0.0" y="688" width="375" height="36"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0BK-u0-mEz">
                                     <rect key="frame" x="16" y="4" width="343" height="32"/>
@@ -198,7 +199,7 @@
                                     </constraints>
                                 </stackView>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="0BK-u0-mEz" firstAttribute="leading" secondItem="cdu-by-xwZ" secondAttribute="leading" constant="16" id="hy5-B0-zQL"/>
                                 <constraint firstAttribute="trailing" secondItem="0BK-u0-mEz" secondAttribute="trailing" constant="16" id="lFs-AB-9ZI"/>
@@ -207,7 +208,7 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="2W0-eG-3bd" firstAttribute="top" secondItem="MN3-Lh-p2K" secondAttribute="top" id="CJP-3G-UiV"/>
                         <constraint firstAttribute="trailing" secondItem="2W0-eG-3bd" secondAttribute="trailing" id="Dnb-qU-G7T"/>
@@ -218,12 +219,12 @@
                         <constraint firstItem="cdu-by-xwZ" firstAttribute="top" secondItem="cAT-Et-IkW" secondAttribute="bottom" id="nDs-ad-aO9"/>
                         <constraint firstItem="cAT-Et-IkW" firstAttribute="top" secondItem="2W0-eG-3bd" secondAttribute="bottom" id="oB0-2H-B3N"/>
                         <constraint firstAttribute="trailing" secondItem="cAT-Et-IkW" secondAttribute="trailing" id="pZw-fI-Nw5"/>
-                        <constraint firstAttribute="bottom" secondItem="cdu-by-xwZ" secondAttribute="bottom" id="vVr-rb-No7"/>
+                        <constraint firstAttribute="bottom" secondItem="cdu-by-xwZ" secondAttribute="bottom" constant="4" id="vVr-rb-No7"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" name="colorGrey04"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="MN3-Lh-p2K" secondAttribute="bottom" id="Kyt-Ta-wdc"/>
                 <constraint firstItem="MN3-Lh-p2K" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Vam-6u-LRr"/>
@@ -238,6 +239,9 @@
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="safari" catalog="system" width="128" height="123"/>
+        <namedColor name="colorGrey04">
+            <color red="0.97254901960784312" green="0.96470588235294119" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="colorTeal02">
             <color red="0.074509803921568626" green="0.36470588235294116" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
