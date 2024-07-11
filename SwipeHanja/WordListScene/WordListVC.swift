@@ -15,9 +15,12 @@ class WordListVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var cardList: [CardItem] = []
+    weak var swipeCardVC: SwipeCardVC?
     
-    func configure(cardList: [CardItem] ) {
+    ///swipeCardVC는 favoriteData 업데이트를 알리기 위해서 필요.
+    func configure(cardList: [CardItem], swipeCardVC: SwipeCardVC) {
         self.cardList = cardList
+        self.swipeCardVC = swipeCardVC
     }
     
     override func viewDidLoad() {
@@ -79,6 +82,9 @@ class WordListVC: UIViewController {
               
                 shLog("Favorite 등록/삭제 완료: \(item.frontWord) to \(isFavorite)")
                 
+            }
+            if let swipeCardVC {
+                swipeCardVC.favoriteDataUpdated()
             }
         } catch(let error) {
             shLog(error.localizedDescription)

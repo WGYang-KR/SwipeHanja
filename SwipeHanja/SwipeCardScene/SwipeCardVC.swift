@@ -88,7 +88,7 @@ class SwipeCardVC: UIViewController {
     
     @IBAction func listButtonTapped(_ sender: Any) {
         let vc = WordListVC()
-        vc.configure(cardList: vm.cardPack.cardList.map({$0}))
+        vc.configure(cardList: vm.cardPack.cardList.map({$0}), swipeCardVC: self)
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -137,8 +137,10 @@ class SwipeCardVC: UIViewController {
     ///진행상태바를 업데이트 한다.
     func updateProgressView(_ rate: Float) {
         progressView.progress = rate <= 1.0 ? rate : 1.0
- 
+    }
     
+    func favoriteDataUpdated() {
+        kolodaView.reconfigureCards()
     }
     
 }
