@@ -114,7 +114,7 @@ extension WordListVC: UITableViewDataSource {
             self?.searchBtnTapped(at: indexPath.row)
         }.store(in: &cell.cancellables)
         
-        cell.isFavorite.sink { [weak self] marked in
+        cell.isFavorite.dropFirst().sink { [weak self] marked in
             shLog("Favorite Toggled: \(marked)")
             self?.markFavorite(at: indexPath.row, marked)
         }.store(in: &cell.cancellables)
