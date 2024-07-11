@@ -100,6 +100,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="containerView" destination="IWV-fK-y4n" id="RAV-4W-s4s"/>
                 <outlet property="remainCountLabel" destination="SYe-JD-lbN" id="hNi-ga-2xy"/>
                 <outlet property="titleLabel" destination="afH-ce-Bff" id="zcL-m2-1RB"/>
                 <outlet property="totalCountLabel" destination="YKJ-d6-x4k" id="mC6-JA-XG6"/>

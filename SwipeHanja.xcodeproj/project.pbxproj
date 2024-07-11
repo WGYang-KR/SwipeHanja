@@ -49,6 +49,9 @@
 		6AA3321A2BD14F8C00996EC5 /* SwipeCardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AA332182BD14F8C00996EC5 /* SwipeCardVC.xib */; };
 		6AA3321D2BD1532000996EC5 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA3321C2BD1532000996EC5 /* CardItem.swift */; };
 		6AA332202BD1579B00996EC5 /* CommonUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA3321F2BD1579B00996EC5 /* CommonUtility.swift */; };
+		6AC284092C3AE47E007BEFD1 /* SearchWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC284072C3AE47E007BEFD1 /* SearchWebVC.swift */; };
+		6AC2840A2C3AE47E007BEFD1 /* SearchWebVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AC284082C3AE47E007BEFD1 /* SearchWebVC.xib */; };
+		6AC2840C2C3D6BA6007BEFD1 /* remote_config_defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AC2840B2C3D6BA6007BEFD1 /* remote_config_defaults.plist */; };
 		6AE23B602C29A35F009E8978 /* FavoritesItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE23B5E2C29A35F009E8978 /* FavoritesItemCell.swift */; };
 		6AE23B612C29A35F009E8978 /* FavoritesItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AE23B5F2C29A35F009E8978 /* FavoritesItemCell.xib */; };
 		6AE23B642C29A634009E8978 /* FavoritesStartLearningCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE23B622C29A634009E8978 /* FavoritesStartLearningCell.swift */; };
@@ -119,6 +122,9 @@
 		6AA332182BD14F8C00996EC5 /* SwipeCardVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwipeCardVC.xib; sourceTree = "<group>"; };
 		6AA3321C2BD1532000996EC5 /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
 		6AA3321F2BD1579B00996EC5 /* CommonUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtility.swift; sourceTree = "<group>"; };
+		6AC284072C3AE47E007BEFD1 /* SearchWebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWebVC.swift; sourceTree = "<group>"; };
+		6AC284082C3AE47E007BEFD1 /* SearchWebVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchWebVC.xib; sourceTree = "<group>"; };
+		6AC2840B2C3D6BA6007BEFD1 /* remote_config_defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = remote_config_defaults.plist; sourceTree = "<group>"; };
 		6AE23B5E2C29A35F009E8978 /* FavoritesItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesItemCell.swift; sourceTree = "<group>"; };
 		6AE23B5F2C29A35F009E8978 /* FavoritesItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesItemCell.xib; sourceTree = "<group>"; };
 		6AE23B622C29A634009E8978 /* FavoritesStartLearningCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesStartLearningCell.swift; sourceTree = "<group>"; };
@@ -275,6 +281,7 @@
 				6A70A72B2C21C74B00B2B4AB /* FavoritesScene */,
 				6AA332162BD14F7B00996EC5 /* SwipeCardScene */,
 				6AA126852BF5A10300B67424 /* WordListScene */,
+				6AC284062C3AE43E007BEFD1 /* SearchScene */,
 				6AFD0BF62BE5927700F27BBE /* SettingsScene */,
 				6AA3321E2BD1573800996EC5 /* Utility */,
 				6AFD0BED2BE3DF5D00F27BBE /* Resource */,
@@ -283,6 +290,7 @@
 				6AA3320A2BD14E0200996EC5 /* Assets.xcassets */,
 				6AA3320C2BD14E0200996EC5 /* LaunchScreen.storyboard */,
 				6AA3320F2BD14E0200996EC5 /* Info.plist */,
+				6AC2840B2C3D6BA6007BEFD1 /* remote_config_defaults.plist */,
 				6A5C2D222BF8A553003E7CF6 /* GoogleService-Info.plist */,
 				6A5C2D2B2BFA1E25003E7CF6 /* PrivacyInfo.xcprivacy */,
 			);
@@ -341,6 +349,15 @@
 				6AFD0BF32BE51BD800F27BBE /* CardPackItemCell.xib */,
 			);
 			path = MainScene;
+			sourceTree = "<group>";
+		};
+		6AC284062C3AE43E007BEFD1 /* SearchScene */ = {
+			isa = PBXGroup;
+			children = (
+				6AC284072C3AE47E007BEFD1 /* SearchWebVC.swift */,
+				6AC284082C3AE47E007BEFD1 /* SearchWebVC.xib */,
+			);
+			path = SearchScene;
 			sourceTree = "<group>";
 		};
 		6AFD0BED2BE3DF5D00F27BBE /* Resource */ = {
@@ -443,6 +460,7 @@
 				6AFD0C012BE7415A00F27BBE /* CardPacks.json in Resources */,
 				6AE23B612C29A35F009E8978 /* FavoritesItemCell.xib in Resources */,
 				6A21AD8F2C0215DD004ACBC0 /* copyright.txt in Resources */,
+				6AC2840C2C3D6BA6007BEFD1 /* remote_config_defaults.plist in Resources */,
 				6AE23B652C29A634009E8978 /* FavoritesStartLearningCell.xib in Resources */,
 				6A7E78B22BF33FD40081F561 /* SwipeCardCompletionPopUpVC.xib in Resources */,
 				6A5C2D2C2BFA1E25003E7CF6 /* PrivacyInfo.xcprivacy in Resources */,
@@ -452,6 +470,7 @@
 				6A5C2D232BF8A553003E7CF6 /* GoogleService-Info.plist in Resources */,
 				6AA126892BF5A12A00B67424 /* WordListVC.xib in Resources */,
 				6A70A72A2C21C5EA00B2B4AB /* MainVC.xib in Resources */,
+				6AC2840A2C3AE47E007BEFD1 /* SearchWebVC.xib in Resources */,
 				6AA3320E2BD14E0200996EC5 /* Base in Resources */,
 				6A928E832C173A3C00894FD4 /* CardItemView.xib in Resources */,
 				6AFD0BF52BE51BD800F27BBE /* CardPackItemCell.xib in Resources */,
@@ -554,6 +573,7 @@
 				6AA1268C2BF5A15200B67424 /* WordListItemCell.swift in Sources */,
 				6A788E4C2BD17EF800B7ABDA /* CardItemComponentView.swift in Sources */,
 				6AFD0BE72BDA89CD00F27BBE /* SwipeCardVM.swift in Sources */,
+				6AC284092C3AE47E007BEFD1 /* SearchWebVC.swift in Sources */,
 				6AA332022BD14E0200996EC5 /* AppDelegate.swift in Sources */,
 				6AFD0C0E2BE93BEB00F27BBE /* SHOverlayView.swift in Sources */,
 				6AFD0C032BE7698C00F27BBE /* LearningStatus.swift in Sources */,

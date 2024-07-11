@@ -113,7 +113,8 @@ extension MainVC: UITableViewDelegate {
         func moveSwipeCardVC() {
             let vc = SwipeCardVC()
             vc.configure(cardPack: item)
-            presentFull(vc, animated: true)
+            let naviVC = UINavigationController(rootViewController: vc)
+            presentFull(naviVC, animated: true)
         }
         
     }

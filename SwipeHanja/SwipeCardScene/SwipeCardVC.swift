@@ -33,6 +33,7 @@ class SwipeCardVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.interactivePopGestureRecognizer?.delegate = nil
         
         initCardDefaultSide()
        
@@ -48,6 +49,11 @@ class SwipeCardVC: UIViewController {
             cardDefaultSide = AppSetting.cardDefaultSide
         }
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     // MARK: IBActions
@@ -82,8 +88,8 @@ class SwipeCardVC: UIViewController {
     
     @IBAction func listButtonTapped(_ sender: Any) {
         let vc = WordListVC()
-        vc.configure(cardList: vm.cardPack.cardList.map({$0}))
-        present(vc, modalStyle: .pageSheet, animated: true)
+        vc.configure(cardList: vm.cardPack.cardList.map({$0}), swipeCardVC: self)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     
@@ -131,8 +137,10 @@ class SwipeCardVC: UIViewController {
     ///진행상태바를 업데이트 한다.
     func updateProgressView(_ rate: Float) {
         progressView.progress = rate <= 1.0 ? rate : 1.0
- 
+    }
     
+    func favoriteDataUpdated() {
+        kolodaView.reconfigureCards()
     }
     
 }
@@ -211,9 +219,18 @@ extension SwipeCardVC: KolodaViewDataSource {
 //MARK: CardItemComponentViewDelegate
 
 extension SwipeCardVC: CardItemViewDelegate {
+
     
     func cardItemViewFavoriteButtonToggled(at index: Int, _ marked: Bool) {
         shLog("Favorite Toggled: \(marked)")
         vm.markFavorite(at: index, marked)
     }
+    
+    func cardItemViewSerachButtonTapped(at index: Int) {
+        let item = dataSource[index]
+        let vc = SearchWebVC()
+        vc.configuration(searchText: item.frontWord)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }

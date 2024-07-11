@@ -115,7 +115,8 @@ extension FavoritesVC: UITableViewDelegate {
         guard let startLearingIndex = self.sectionTypes.firstIndex(of: .startLearning) else { return }
         if indexPath.section == startLearingIndex {
             let vc = FavoritesSwipeVC()
-            presentFull(vc, animated: true)
+            let naviVC = UINavigationController(rootViewController: vc)
+            presentFull(naviVC, animated: true)
         }
     }
 }

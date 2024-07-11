@@ -29,6 +29,7 @@ class FavoritesSwipeVC: UIViewController {
         super.viewDidLoad()
         
         self.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+        navigationController?.interactivePopGestureRecognizer?.delegate = nil
         
         initCardDefaultSide()
        
@@ -44,6 +45,11 @@ class FavoritesSwipeVC: UIViewController {
             cardDefaultSide = AppSetting.cardDefaultSide
         }
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     // MARK: IBActions
@@ -173,9 +179,18 @@ extension FavoritesSwipeVC: KolodaViewDataSource {
 //MARK: CardItemComponentViewDelegate
 
 extension FavoritesSwipeVC: CardItemViewDelegate {
-    
+
     func cardItemViewFavoriteButtonToggled(at index: Int, _ marked: Bool) {
         shLog("Favorite Toggled: \(marked)")
         vm.markFavorite(at: index, marked)
     }
+    
+    func cardItemViewSerachButtonTapped(at index: Int) {
+        let item = dataSource[index]
+        let vc = SearchWebVC()
+        vc.configuration(searchText: item.cardItem.frontWord)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
 }
