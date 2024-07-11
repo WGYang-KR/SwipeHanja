@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class WordListVC: UIViewController {
     
@@ -45,9 +46,20 @@ extension WordListVC: UITableViewDataSource {
             .dequeueReusableCell(withIdentifier: "\(WordListItemCell.self)", for: indexPath) as! WordListItemCell
         let item = cardList[indexPath.row]
         cell.configure(index: indexPath.row + 1, firstText: item.frontWord, secondText: item.backWord, checked: item.hasMemorized)
+        cell.selectBtnTappedSubject.sink { [weak self] in
+            self?.searchBtnTapped(at: indexPath.row)
+        }.store(in: &cell.cancellables)
         
         return cell
     }
+    
+    func searchBtnTapped(at index: Int) {
+        let item = cardList[index]
+        let vc = SearchWebVC()
+        vc.configuration(searchText: item.frontWord)
+        presentOverFull(vc, animated: true)
+    }
+    
 }
 
 extension WordListVC: UITableViewDelegate {

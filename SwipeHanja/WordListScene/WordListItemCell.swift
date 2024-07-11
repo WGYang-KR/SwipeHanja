@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class WordListItemCell: UITableViewCell {
     @IBOutlet weak var indexLabel: UILabel!
@@ -14,6 +15,10 @@ class WordListItemCell: UITableViewCell {
     @IBOutlet weak var checkMarkImageView: UIImageView!
     
     let checkMarkImage =   UIImage(systemName: "checkmark.seal.fill")
+    
+    var cancellables = Set<AnyCancellable>()
+    
+    let selectBtnTappedSubject = PassthroughSubject<Void,Never>()
     
     func configure(index: Int, firstText: String, secondText: String, checked: Bool) {
         indexLabel.text = String(index)
@@ -35,7 +40,11 @@ class WordListItemCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
+        cancellables.removeAll()
         configure(index: 0, firstText: "", secondText: "", checked: false)
     }
     
+    @IBAction func searchBtnTapped(_ sender: Any) {
+        selectBtnTappedSubject.send(Void())
+    }
 }
