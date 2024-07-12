@@ -13,12 +13,16 @@ class FavoritesItemCell: UITableViewCell {
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var secondLabel: UILabel!
+    @IBOutlet weak var searchButton: UIButton!
     
     let linedStarImage: UIImage? = .init(systemName: "star")
     let filledStarImage: UIImage? = .init(systemName: "star.fill")
     
     ///변경시에 UI도 같이 갱신된다.
     let isFavorite = CurrentValueSubject<Bool,Never>(false)
+    
+    let searchBtnTapped = PassthroughSubject<Void,Never>()
+    
     var cancellables = Set<AnyCancellable>()
     var reusableCancellables = Set<AnyCancellable>()
 
@@ -60,5 +64,8 @@ class FavoritesItemCell: UITableViewCell {
             favoriteButton.setImage(filledStarImage, for: .normal)
             favoriteButton.tintColor = .colorGold
         }
+    }
+    @IBAction func searchButtonTapped(_ sender: Any) {
+        searchBtnTapped.send(Void())
     }
 }

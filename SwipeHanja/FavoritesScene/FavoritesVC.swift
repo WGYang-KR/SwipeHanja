@@ -27,10 +27,13 @@ class FavoritesVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initTableView()
+        navigationController?.interactivePopGestureRecognizer?.delegate = nil
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        
         vm.fetchFavoriteItem()
         tableView.reloadData()
     }
@@ -46,6 +49,17 @@ class FavoritesVC: UIViewController {
         tableView.separatorStyle = .singleLine
         tableView.contentInset = UIEdgeInsets(top: -20.0, left: 0, bottom: 0, right: 0)
     }
+    
+    
+    
+    func searchBtnTapped(at index: Int) {
+        let item = vm.favoriteItems.value[index]
+        let vc = SearchWebVC()
+        vc.hidesBottomBarWhenPushed = true
+        vc.configuration(searchText: item.cardItem.frontWord)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 
 extension FavoritesVC: UITableViewDataSource {
@@ -69,7 +83,7 @@ extension FavoritesVC: UITableViewDataSource {
         case .startLearning:
             return nil
         case .items:
-            return "저장된 단어"
+            return "단어 목록"
         }
     }
 
@@ -101,6 +115,11 @@ extension FavoritesVC: UITableViewDataSource {
                 self?.tableView.reloadSections( IndexSet(integer: startLearingIndex), with: .none)
                 
             }.store(in: &cell.reusableCancellables)
+            
+            cell.searchBtnTapped.sink { [weak self] in
+                self?.searchBtnTapped(at: indexPath.row)
+            }.store(in: &cell.reusableCancellables)
+            
             return cell
         }
         

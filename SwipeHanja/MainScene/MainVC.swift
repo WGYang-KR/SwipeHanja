@@ -79,7 +79,7 @@ extension MainVC: UITableViewDataSource {
             cell.checkSealImageView.isHidden = false
             cell.chevronLeftImageView.isHidden = true
         } else if  item.remainCardCount < item.totalCardCount {
-            cell.remainCountLabel.textColor = .colorTeal02
+            cell.remainCountLabel.textColor = .colorSwipeNo
             cell.remainCountLabel.font = UIFont.systemFont(ofSize: 17.0, weight: .bold)
             cell.checkSealImageView.isHidden = true
             cell.chevronLeftImageView.isHidden = false
