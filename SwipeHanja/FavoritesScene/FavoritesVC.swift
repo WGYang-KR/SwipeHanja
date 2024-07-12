@@ -83,7 +83,7 @@ extension FavoritesVC: UITableViewDataSource {
         case .startLearning:
             return nil
         case .items:
-            return "저장된 단어"
+            return "단어 목록"
         }
     }
 
