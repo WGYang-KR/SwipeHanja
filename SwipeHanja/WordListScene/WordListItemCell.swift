@@ -66,6 +66,7 @@ class WordListItemCell: UITableViewCell {
     @IBAction func searchButtonTapped(_ sender: Any) {
         selectBtnTapped.send(Void())
     }
+    
     @IBAction func favoriteButtonTapped(_ sender: Any) {
         isFavorite.send(!isFavorite.value)
     }

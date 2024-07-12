@@ -24,11 +24,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3q-I6-KwU">
                                 <rect key="frame" x="0.0" y="0.0" width="477" height="95"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="iud-Dw-s38">
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iud-Dw-s38">
                                         <rect key="frame" x="30" y="16" width="425" height="63"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="dhR-75-XCA">
-                                                <rect key="frame" x="0.0" y="17.333333333333336" width="381" height="28.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="17.333333333333336" width="353" height="28.666666666666664"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="漢" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uua-td-oil">
                                                         <rect key="frame" x="0.0" y="0.0" width="21" height="28.666666666666668"/>
@@ -37,7 +37,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="한나라 한" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nqr-Fd-Ds6">
-                                                        <rect key="frame" x="33" y="2.3333333333333286" width="348" height="24"/>
+                                                        <rect key="frame" x="33" y="2.3333333333333286" width="320" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <color key="textColor" name="colorTeal02"/>
                                                         <nil key="highlightedColor"/>
@@ -45,20 +45,38 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NrL-QT-B9T">
-                                                <rect key="frame" x="393" y="15.666666666666668" width="32" height="32"/>
+                                                <rect key="frame" x="361" y="17.666666666666664" width="28" height="28"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="32" id="xvQ-zs-o3y"/>
-                                                    <constraint firstAttribute="height" constant="32" id="y8Y-wK-ut2"/>
+                                                    <constraint firstAttribute="width" constant="28" id="xvQ-zs-o3y"/>
+                                                    <constraint firstAttribute="height" constant="28" id="y8Y-wK-ut2"/>
                                                 </constraints>
                                                 <color key="tintColor" name="ColorGold"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="star.fill" catalog="system">
                                                     <color key="titleColor" name="colorTeal02"/>
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="favoritesButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="XHy-SC-dDF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WD9-tY-pgX">
+                                                <rect key="frame" x="397" y="17.666666666666664" width="28" height="28"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="28" id="Ulw-Gm-mqr"/>
+                                                    <constraint firstAttribute="width" constant="28" id="nQu-VH-jrX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="tintColor" name="colorTeal02"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="magnifyingglass" catalog="system">
+                                                    <color key="titleColor" name="colorTeal02"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="searchButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="uUh-5G-e5X"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -100,12 +118,14 @@
             <connections>
                 <outlet property="favoriteButton" destination="NrL-QT-B9T" id="5LR-oZ-GJ9"/>
                 <outlet property="firstLabel" destination="Uua-td-oil" id="jAr-ik-wlQ"/>
+                <outlet property="searchButton" destination="WD9-tY-pgX" id="TG5-Pn-GAN"/>
                 <outlet property="secondLabel" destination="Nqr-Fd-Ds6" id="rQW-JO-wYk"/>
             </connections>
             <point key="canvasLocation" x="258.77862595419845" y="38.380281690140848"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <namedColor name="ColorGold">
             <color red="0.99215686274509807" green="0.83137254901960789" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
