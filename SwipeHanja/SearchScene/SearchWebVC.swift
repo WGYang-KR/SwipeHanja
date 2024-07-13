@@ -35,14 +35,15 @@ class SearchWebVC: UIViewController {
         webView.navigationDelegate = self
         webView.uiDelegate = self
         
-        let urlString = AppSetting.naverHanjaSearchURL.replacingOccurrences(of: "{SEARCH_TEXT}", with: searchText)
+        let encodedSeachText = searchText.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        let urlString = AppSetting.naverHanjaSearchURL.replacingOccurrences(of: "{SEARCH_TEXT}", with: encodedSeachText)
         
         if let url = URL(string: urlString) {
             let request = URLRequest(url: url)
             webView.load(request)
         }
     }
-    
+
     
     
     @IBAction func previousVCBtnTapped(_ sender: Any) {
