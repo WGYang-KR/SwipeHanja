@@ -39,46 +39,86 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rJ2-y4-g3K">
                                             <rect key="frame" x="16" y="8" width="343" height="32"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BLo-RF-XnU">
-                                                    <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="32" id="JsI-FK-NIq"/>
-                                                        <constraint firstAttribute="width" constant="32" id="RwF-Dd-yqv"/>
-                                                    </constraints>
-                                                    <color key="tintColor" name="colorTeal02"/>
-                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" image="xmark" catalog="system">
-                                                        <color key="titleColor" name="colorTeal02"/>
-                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="topBackBtnTapped:" destination="-1" eventType="touchUpInside" id="w04-Xn-flA"/>
-                                                    </connections>
-                                                </button>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="29H-o7-hx7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="72" height="32"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BLo-RF-XnU">
+                                                            <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="32" id="JsI-FK-NIq"/>
+                                                                <constraint firstAttribute="width" constant="32" id="RwF-Dd-yqv"/>
+                                                            </constraints>
+                                                            <color key="tintColor" name="colorTeal02"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" image="xmark" catalog="system">
+                                                                <color key="titleColor" name="colorTeal02"/>
+                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="topBackBtnTapped:" destination="-1" eventType="touchUpInside" id="w04-Xn-flA"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EN1-hW-fQm">
+                                                            <rect key="frame" x="40" y="0.0" width="32" height="32"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="32" id="JU6-TN-t1V"/>
+                                                                <constraint firstAttribute="height" constant="32" id="Pse-SD-wVg"/>
+                                                            </constraints>
+                                                            <color key="tintColor" name="colorTeal02"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal">
+                                                                <color key="titleColor" name="colorTeal02"/>
+                                                            </state>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="챕터" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hef-CG-ayM">
-                                                    <rect key="frame" x="32" y="0.0" width="279" height="32"/>
+                                                    <rect key="frame" x="72" y="0.0" width="199" height="32"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="textColor" name="colorTeal02"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgS-z7-kjz">
-                                                    <rect key="frame" x="311" y="0.0" width="32" height="32"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="32" id="Ylg-of-nFI"/>
-                                                        <constraint firstAttribute="width" constant="32" id="qLH-Kj-8TM"/>
-                                                    </constraints>
-                                                    <color key="tintColor" name="colorTeal02"/>
-                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" image="list.bullet" catalog="system">
-                                                        <color key="titleColor" name="colorTeal02"/>
-                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="listButtonTapped:" destination="-1" eventType="touchUpInside" id="eSt-o5-W5L"/>
-                                                    </connections>
-                                                </button>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="l5g-0h-s9F">
+                                                    <rect key="frame" x="271" y="0.0" width="72" height="32"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bp9-3m-jxc">
+                                                            <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="32" id="EmF-XM-63c"/>
+                                                                <constraint firstAttribute="height" constant="32" id="oh8-Vo-WRx"/>
+                                                            </constraints>
+                                                            <color key="tintColor" name="colorTeal02"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" image="arrow.circlepath" catalog="system">
+                                                                <color key="titleColor" name="colorTeal02"/>
+                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="resetButtonTapped:" destination="-1" eventType="touchUpInside" id="7kj-iv-iyc"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgS-z7-kjz">
+                                                            <rect key="frame" x="40" y="0.0" width="32" height="32"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="32" id="Ylg-of-nFI"/>
+                                                                <constraint firstAttribute="width" constant="32" id="qLH-Kj-8TM"/>
+                                                            </constraints>
+                                                            <color key="tintColor" name="colorTeal02"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" image="list.bullet" catalog="system">
+                                                                <color key="titleColor" name="colorTeal02"/>
+                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="listButtonTapped:" destination="-1" eventType="touchUpInside" id="eSt-o5-W5L"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                         </stackView>
                                     </subviews>
@@ -168,22 +208,22 @@
                                             </constraints>
                                         </view>
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sHJ-Iy-Xmr">
-                                            <rect key="frame" x="155.33333333333334" y="7.9999999999999982" width="64.333333333333343" height="20.333333333333329"/>
+                                            <rect key="frame" x="156" y="7.9999999999999982" width="63.333333333333343" height="20.333333333333329"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MD1-DB-Wmw">
-                                                    <rect key="frame" x="0.0" y="0.0" width="31" height="20.333333333333332"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="30" height="20.333333333333332"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <color key="textColor" name="colorTeal01"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="/" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6mj-Kb-FlV">
-                                                    <rect key="frame" x="31" y="0.0" width="5" height="20.333333333333332"/>
+                                                    <rect key="frame" x="30" y="0.0" width="5" height="20.333333333333332"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" name="colorTeal02"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBc-VM-mVK">
-                                                    <rect key="frame" x="36" y="0.0" width="28.333333333333329" height="20.333333333333332"/>
+                                                    <rect key="frame" x="35" y="0.0" width="28.333333333333329" height="20.333333333333332"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" name="colorTeal02"/>
                                                     <nil key="highlightedColor"/>
@@ -233,15 +273,45 @@
                                             </connections>
                                         </button>
                                         <view contentMode="scaleToFill" horizontalHuggingPriority="248" translatesAutoresizingMaskIntoConstraints="NO" id="0yU-4h-y8i">
-                                            <rect key="frame" x="40" y="0.0" width="65" height="40"/>
+                                            <rect key="frame" x="40" y="0.0" width="38.333333333333343" height="40"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KV-mn-vdc">
+                                            <rect key="frame" x="78.333333333333343" y="0.0" width="40" height="40"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="a2x-kf-5aT"/>
+                                                <constraint firstAttribute="width" constant="40" id="iZL-DR-PgP"/>
+                                            </constraints>
+                                            <color key="tintColor" name="colorTeal02"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal">
+                                                <color key="titleColor" name="colorTeal02"/>
+                                            </state>
+                                        </button>
                                         <view contentMode="scaleToFill" horizontalHuggingPriority="248" translatesAutoresizingMaskIntoConstraints="NO" id="Saa-T3-iPo">
-                                            <rect key="frame" x="105" y="0.0" width="65" height="40"/>
+                                            <rect key="frame" x="118.33333333333333" y="0.0" width="38.333333333333329" height="40"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQH-qm-46P">
+                                            <rect key="frame" x="156.66666666666666" y="0.0" width="40" height="40"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="CHN-e5-KSJ"/>
+                                                <constraint firstAttribute="width" constant="40" id="uN8-Kg-RAV"/>
+                                            </constraints>
+                                            <color key="tintColor" name="colorTeal02"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="shuffle" catalog="system">
+                                                <color key="titleColor" name="colorTeal02"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="shuffleButtonTapped:" destination="-1" eventType="touchUpInside" id="UCv-G5-x82"/>
+                                            </connections>
+                                        </button>
                                         <view contentMode="scaleToFill" horizontalHuggingPriority="248" translatesAutoresizingMaskIntoConstraints="NO" id="pAH-YD-Fra">
-                                            <rect key="frame" x="170" y="0.0" width="65" height="40"/>
+                                            <rect key="frame" x="196.66666666666666" y="0.0" width="38.333333333333343" height="40"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
                                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVo-La-wRv">
@@ -307,9 +377,11 @@
         </view>
     </objects>
     <resources>
+        <image name="arrow.circlepath" catalog="system" width="128" height="112"/>
         <image name="arrow.uturn.backward" catalog="system" width="128" height="113"/>
         <image name="list.bullet" catalog="system" width="128" height="87"/>
         <image name="rectangle.portrait.righthalf.filled" catalog="system" width="115" height="128"/>
+        <image name="shuffle" catalog="system" width="128" height="95"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="ColorSatCyan">
             <color red="0.0" green="0.73725490196078436" blue="0.83137254901960789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

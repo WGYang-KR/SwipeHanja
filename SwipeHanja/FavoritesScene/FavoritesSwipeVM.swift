@@ -74,6 +74,11 @@ class FavoritesSwipeVM {
         noCardCount.send(0)
     }
     
+    func shuffleCardList() {
+        let shuffledCardList = cardList.value.shuffled()
+        cardList.send(shuffledCardList)
+    }
+    
     ///모든 카드의 학습상태  정보를 삭제한다.
     func deleteStudyStatus() {
         do {

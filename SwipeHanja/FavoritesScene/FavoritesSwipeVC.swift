@@ -62,6 +62,30 @@ class FavoritesSwipeVC: UIViewController {
         }
         
     }
+    @IBAction func resetButtonTapped(_ sender: Any) {
+
+        AlertHelper.alertConfirm(baseVC: self,
+                                 title: "학습기록을 초기화할까요?",
+                                 message: "" ) { [weak self] in
+            guard let self else { return }
+            vm.deleteStudyStatus()
+            vm.prepareCardList()
+            kolodaView.resetCurrentCardIndex()
+            AlertHelper.notesInform(message: "학습기록이 초기화되었습니다.")
+        }
+  
+    }
+    
+    @IBAction func shuffleButtonTapped(_ sender: Any) {
+        AlertHelper.alertConfirm(baseVC: self,
+                                 title: "카드 순서를 무작위로 섞을까요?",
+                                 message: "") { [weak self] in
+            guard let self else { return }
+            vm.shuffleCardList()
+            kolodaView.resetCurrentCardIndex()
+        }
+        
+    }
     
     @IBAction func topBackBtnTapped(_ sender: Any) {
         self.moveBackVC(animated: true)

@@ -52,7 +52,7 @@
                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="topBackBtnTapped:" destination="-1" eventType="touchUpInside" id="QrR-vo-lr2"/>
+                                                        <action selector="topBackBtnTapped:" destination="-1" eventType="touchUpInside" id="l9y-LQ-IIm"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="단어장" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRe-zG-SNM">
@@ -61,13 +61,22 @@
                                                     <color key="textColor" name="colorTeal02"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7IF-Zk-m8i">
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0X-uW-my1">
                                                     <rect key="frame" x="329" y="0.0" width="32" height="32"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="32" id="2QB-9f-X0n"/>
-                                                        <constraint firstAttribute="width" constant="32" id="zd1-19-kmj"/>
+                                                        <constraint firstAttribute="height" constant="32" id="MXx-1E-1bY"/>
+                                                        <constraint firstAttribute="width" constant="32" id="ipF-cp-673"/>
                                                     </constraints>
+                                                    <color key="tintColor" name="colorTeal02"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="arrow.circlepath" catalog="system">
+                                                        <color key="titleColor" name="colorTeal02"/>
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="resetButtonTapped:" destination="-1" eventType="touchUpInside" id="Nw5-PX-vuf"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
@@ -153,22 +162,22 @@
                                             </constraints>
                                         </view>
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FiO-G0-nhx">
-                                            <rect key="frame" x="164.33333333333334" y="7.9999999999999982" width="64.333333333333343" height="20.333333333333329"/>
+                                            <rect key="frame" x="165" y="7.9999999999999982" width="63.333333333333343" height="20.333333333333329"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdv-5i-Ceu">
-                                                    <rect key="frame" x="0.0" y="0.0" width="31" height="20.333333333333332"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="30" height="20.333333333333332"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <color key="textColor" name="colorTeal01"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="/" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqz-Ie-fXE">
-                                                    <rect key="frame" x="31" y="0.0" width="5" height="20.333333333333332"/>
+                                                    <rect key="frame" x="30" y="0.0" width="5" height="20.333333333333332"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" name="colorTeal02"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdi-Mt-VZN">
-                                                    <rect key="frame" x="36" y="0.0" width="28.333333333333329" height="20.333333333333332"/>
+                                                    <rect key="frame" x="35" y="0.0" width="28.333333333333329" height="20.333333333333332"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" name="colorTeal02"/>
                                                     <nil key="highlightedColor"/>
@@ -218,23 +227,53 @@
                                             </connections>
                                         </button>
                                         <view contentMode="scaleToFill" horizontalHuggingPriority="248" translatesAutoresizingMaskIntoConstraints="NO" id="th2-3f-H1H">
-                                            <rect key="frame" x="40" y="0.0" width="71" height="40"/>
+                                            <rect key="frame" x="40" y="0.0" width="44.333333333333343" height="40"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
-                                        <view contentMode="scaleToFill" horizontalHuggingPriority="248" translatesAutoresizingMaskIntoConstraints="NO" id="4Py-bA-cHl">
-                                            <rect key="frame" x="111" y="0.0" width="71" height="40"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </view>
-                                        <view contentMode="scaleToFill" horizontalHuggingPriority="248" translatesAutoresizingMaskIntoConstraints="NO" id="xgV-Ti-ymi">
-                                            <rect key="frame" x="182" y="0.0" width="71" height="40"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </view>
-                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySS-4G-u4m">
-                                            <rect key="frame" x="253" y="0.0" width="40" height="40"/>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySS-4G-u4m">
+                                            <rect key="frame" x="84.333333333333343" y="0.0" width="40" height="40"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="4Nz-0e-Pj8"/>
                                                 <constraint firstAttribute="width" constant="40" id="vgm-CD-0mG"/>
+                                            </constraints>
+                                            <color key="tintColor" name="colorTeal02"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal">
+                                                <color key="titleColor" name="colorTeal02"/>
+                                            </state>
+                                        </button>
+                                        <view contentMode="scaleToFill" horizontalHuggingPriority="248" translatesAutoresizingMaskIntoConstraints="NO" id="4Py-bA-cHl">
+                                            <rect key="frame" x="124.33333333333333" y="0.0" width="44.333333333333329" height="40"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5x-CV-bEv">
+                                            <rect key="frame" x="168.66666666666666" y="0.0" width="40" height="40"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="fMz-43-psx"/>
+                                                <constraint firstAttribute="width" constant="40" id="kMt-DJ-RiX"/>
+                                            </constraints>
+                                            <color key="tintColor" name="colorTeal02"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="shuffle" catalog="system">
+                                                <color key="titleColor" name="colorTeal02"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="shuffleButtonTapped:" destination="-1" eventType="touchUpInside" id="55o-Fm-q73"/>
+                                            </connections>
+                                        </button>
+                                        <view contentMode="scaleToFill" horizontalHuggingPriority="248" translatesAutoresizingMaskIntoConstraints="NO" id="xgV-Ti-ymi">
+                                            <rect key="frame" x="208.66666666666669" y="0.0" width="44.333333333333343" height="40"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Okd-FJ-Juh">
+                                            <rect key="frame" x="253" y="0.0" width="40" height="40"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="90v-lg-ihd"/>
+                                                <constraint firstAttribute="width" constant="40" id="ZLb-0M-c96"/>
                                             </constraints>
                                             <color key="tintColor" name="colorTeal02"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -243,7 +282,7 @@
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
                                             </state>
                                             <connections>
-                                                <action selector="toggleCardDefaultSideBtnTapped:" destination="-1" eventType="touchUpInside" id="C85-fE-Yuq"/>
+                                                <action selector="toggleCardDefaultSideBtnTapped:" destination="-1" eventType="touchUpInside" id="2ye-qb-H6u"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -292,8 +331,10 @@
         </view>
     </objects>
     <resources>
+        <image name="arrow.circlepath" catalog="system" width="128" height="112"/>
         <image name="arrow.uturn.backward" catalog="system" width="128" height="113"/>
         <image name="rectangle.portrait.righthalf.filled" catalog="system" width="115" height="128"/>
+        <image name="shuffle" catalog="system" width="128" height="95"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="colorGrey02">
             <color red="0.82352941176470584" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
