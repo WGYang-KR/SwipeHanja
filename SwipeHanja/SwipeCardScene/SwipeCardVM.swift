@@ -39,6 +39,13 @@ class SwipeCardVM {
         noCardCount.send(0)
     }
     
+    
+    func shuffleCardList() {
+        let shuffledCardList = cardList.value.shuffled()
+        cardList.send(shuffledCardList)
+    }
+    
+    
     ///모든 카드의 학습상태  정보를 삭제하고, 카드리스트를 다시 준비한다.
     func deleteStudyStatus() {
         cardPack.setLearningStatus(.notStarted)

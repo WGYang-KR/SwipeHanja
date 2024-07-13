@@ -50,7 +50,7 @@ struct SettingsView: View {
                         })
                         .alert(isPresented: $showingAlert) {
                             Alert(
-                                title: Text("학습기록이 초기화 됩니다."),
+                                title: Text("모든 학습기록을 초기화할까요?"),
                                 primaryButton: .default(Text("확인"), action: {
                                     resetProgressClosure?()
                                 }),
