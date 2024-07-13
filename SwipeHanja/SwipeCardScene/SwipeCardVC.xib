@@ -92,7 +92,7 @@
                                                             </constraints>
                                                             <color key="tintColor" name="colorTeal02"/>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                            <state key="normal" image="arrow.circlepath" catalog="system">
+                                                            <state key="normal" image="arrow.counterclockwise" catalog="system">
                                                                 <color key="titleColor" name="colorTeal02"/>
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
                                                             </state>
@@ -377,7 +377,7 @@
         </view>
     </objects>
     <resources>
-        <image name="arrow.circlepath" catalog="system" width="128" height="112"/>
+        <image name="arrow.counterclockwise" catalog="system" width="113" height="128"/>
         <image name="arrow.uturn.backward" catalog="system" width="128" height="113"/>
         <image name="list.bullet" catalog="system" width="128" height="87"/>
         <image name="rectangle.portrait.righthalf.filled" catalog="system" width="115" height="128"/>
