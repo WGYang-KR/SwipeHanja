@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import StoreKit
 
 class SwipeCardVC: UIViewController {
 
@@ -168,7 +169,7 @@ class SwipeCardVC: UIViewController {
     func favoriteDataUpdated() {
         kolodaView.reconfigureCards()
     }
-    
+
 }
 
 // MARK: KolodaViewDelegate
@@ -182,7 +183,14 @@ extension SwipeCardVC: KolodaViewDelegate {
         if dataSource.count == 0 { // 학습완료시
             let vc = SwipeCardCompletionPopUpVC()
             vc.configure { [weak self] in
-                self?.moveBackVC(animated: true)
+                self?.moveBackVC(animated: true) {
+                    
+                    //리뷰 요청을 한다.
+                    if !AppStatus.hasRequestedReview {
+                        AppStatus.hasRequestedReview = true
+                        SKStoreReviewController.requestReview()
+                    }
+                }
             }
             presentOverFull(vc, animated: false)
         }
