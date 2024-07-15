@@ -31,20 +31,15 @@ class SwipeCardVM {
     }
     
     ///미학습 또는 미암기 카드만 추출하여 카드리스트를 준비한다.
-    func prepareCardList() {
-        cardList.send(cardPack.cardList.filter { !$0.hasMemorized || !$0.hasShown } )
+    func prepareCardList(shuffle: Bool) {
+        let fetchedCardList: [CardItem] = cardPack.cardList.filter { !$0.hasMemorized || !$0.hasShown }
+        cardList.send(shuffle ? fetchedCardList.shuffled() : fetchedCardList )
         totalCardCount.send(cardList.value.count)
         remainCardCount.send(cardList.value.count)
         yesCardCount.send(0)
         noCardCount.send(0)
     }
-    
-    
-    func shuffleCardList() {
-        let shuffledCardList = cardList.value.shuffled()
-        cardList.send(shuffledCardList)
-    }
-    
+
     
     ///모든 카드의 학습상태  정보를 삭제하고, 카드리스트를 다시 준비한다.
     func deleteStudyStatus() {
