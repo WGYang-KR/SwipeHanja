@@ -35,7 +35,7 @@ class FavoritesSwipeVC: UIViewController {
        
         bindVM()
         vm.fetchFavoriteItem()
-        vm.prepareCardList()
+        vm.prepareCardList(shuffle: false)
         
         kolodaView.dataSource = self
         kolodaView.delegate = self
@@ -69,7 +69,7 @@ class FavoritesSwipeVC: UIViewController {
                                  message: "" ) { [weak self] in
             guard let self else { return }
             vm.deleteStudyStatus()
-            vm.prepareCardList()
+            vm.prepareCardList(shuffle: false)
             kolodaView.resetCurrentCardIndex()
             AlertHelper.notesInform(message: "학습기록이 초기화되었습니다.")
         }
@@ -81,7 +81,7 @@ class FavoritesSwipeVC: UIViewController {
                                  title: "카드 순서를 무작위로 섞을까요?",
                                  message: "") { [weak self] in
             guard let self else { return }
-            vm.shuffleCardList()
+            vm.prepareCardList(shuffle: true )
             kolodaView.resetCurrentCardIndex()
         }
         
@@ -133,7 +133,7 @@ class FavoritesSwipeVC: UIViewController {
 extension FavoritesSwipeVC: KolodaViewDelegate {
     
     func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
-        vm.prepareCardList()
+        vm.prepareCardList(shuffle: false)
         kolodaView.resetCurrentCardIndex()
     
         if dataSource.count == 0 { // 학습완료시

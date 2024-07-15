@@ -65,18 +65,14 @@ class FavoritesSwipeVM {
         
     }
     
-    ///미학습 또는 미암기 카드만 추출하여 카드리스트를 준비한다.
-    func prepareCardList() {
-        cardList.send(favoriteItems.value.filter{ $0.isFavorite && ( !$0.favoriteData.hasMemorized || !$0.favoriteData.hasShown )})
+    ///미학습 또는 미암기 카드만 추출하여 카드리스트를 준비한다. shuffle 이 true이면 카드를 랜덤하게 섞는다
+    func prepareCardList(shuffle: Bool) {
+        let fetchedCardList = favoriteItems.value.filter{ $0.isFavorite && ( !$0.favoriteData.hasMemorized || !$0.favoriteData.hasShown )}
+        cardList.send(shuffle ? fetchedCardList.shuffled() : fetchedCardList )
         totalCardCount.send(cardList.value.count)
         remainCardCount.send(cardList.value.count)
         yesCardCount.send(0)
         noCardCount.send(0)
-    }
-    
-    func shuffleCardList() {
-        let shuffledCardList = cardList.value.shuffled()
-        cardList.send(shuffledCardList)
     }
     
     ///모든 카드의 학습상태  정보를 삭제한다.
