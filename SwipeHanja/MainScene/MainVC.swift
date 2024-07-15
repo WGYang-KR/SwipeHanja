@@ -33,7 +33,7 @@ class MainVC: UIViewController {
             guard let self else { return }
             self.vm.resetStudyProgress()
             self.vm.prepareCardPackList()
-            AlertHelper.notesInform(message: "모든 학습 진도가 초기화 되었습니다.")
+            AlertHelper.notesInform(message: "모든 학습기록이 초기화되었습니다.")
         })
         let vc = UIHostingController(rootView: view)
         presentFull(vc, animated: true)
@@ -79,13 +79,13 @@ extension MainVC: UITableViewDataSource {
             cell.checkSealImageView.isHidden = false
             cell.chevronLeftImageView.isHidden = true
         } else if  item.remainCardCount < item.totalCardCount {
-            cell.remainCountLabel.textColor = .colorTeal02
-            cell.remainCountLabel.font = UIFont.systemFont(ofSize: 17.0, weight: .bold)
+            cell.remainCountLabel.textColor = .colorSwipeNo
+            cell.remainCountLabel.font = UIFont.systemFont(ofSize: 17.0, weight: .semibold)
             cell.checkSealImageView.isHidden = true
             cell.chevronLeftImageView.isHidden = false
         } else {
             cell.remainCountLabel.textColor = .colorTeal02
-            cell.remainCountLabel.font = UIFont.systemFont(ofSize: 17.0, weight: .bold)
+            cell.remainCountLabel.font = UIFont.systemFont(ofSize: 17.0, weight: .semibold)
             cell.checkSealImageView.isHidden = true
             cell.chevronLeftImageView.isHidden = false
         }
@@ -113,7 +113,8 @@ extension MainVC: UITableViewDelegate {
         func moveSwipeCardVC() {
             let vc = SwipeCardVC()
             vc.configure(cardPack: item)
-            presentFull(vc, animated: true)
+            let naviVC = UINavigationController(rootViewController: vc)
+            presentFull(naviVC, animated: true)
         }
         
     }

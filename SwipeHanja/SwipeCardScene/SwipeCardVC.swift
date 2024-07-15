@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import StoreKit
 
 class SwipeCardVC: UIViewController {
 
@@ -33,6 +34,7 @@ class SwipeCardVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.interactivePopGestureRecognizer?.delegate = nil
         
         initCardDefaultSide()
        
@@ -48,6 +50,11 @@ class SwipeCardVC: UIViewController {
             cardDefaultSide = AppSetting.cardDefaultSide
         }
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     // MARK: IBActions
@@ -71,6 +78,32 @@ class SwipeCardVC: UIViewController {
         
     }
     
+    @IBAction func resetButtonTapped(_ sender: Any) {
+
+        AlertHelper.alertConfirm(baseVC: self,
+                                 title: "학습기록을 초기화할까요?",
+                                 message: "" ) { [weak self] in
+            guard let self else { return }
+            vm.deleteStudyStatus()
+            vm.prepareCardList()
+            kolodaView.resetCurrentCardIndex()
+            AlertHelper.notesInform(message: "학습기록이 초기화되었습니다.")
+        }
+  
+    }
+    
+    @IBAction func shuffleButtonTapped(_ sender: Any) {
+        AlertHelper.alertConfirm(baseVC: self,
+                                 title: "카드 순서를 무작위로 섞을까요?",
+                                 message: "" ) { [weak self] in
+            guard let self else { return }
+            vm.shuffleCardList()
+            kolodaView.resetCurrentCardIndex()
+        }
+        
+    }
+    
+    
     @IBAction func topBackBtnTapped(_ sender: Any) {
         self.moveBackVC(animated: true)
     }
@@ -82,8 +115,8 @@ class SwipeCardVC: UIViewController {
     
     @IBAction func listButtonTapped(_ sender: Any) {
         let vc = WordListVC()
-        vc.configure(cardList: vm.cardPack.cardList.map({$0}))
-        present(vc, modalStyle: .pageSheet, animated: true)
+        vc.configure(cardList: vm.cardPack.cardList.map({$0}), swipeCardVC: self)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     
@@ -131,10 +164,12 @@ class SwipeCardVC: UIViewController {
     ///진행상태바를 업데이트 한다.
     func updateProgressView(_ rate: Float) {
         progressView.progress = rate <= 1.0 ? rate : 1.0
- 
-    
     }
     
+    func favoriteDataUpdated() {
+        kolodaView.reconfigureCards()
+    }
+
 }
 
 // MARK: KolodaViewDelegate
@@ -148,7 +183,14 @@ extension SwipeCardVC: KolodaViewDelegate {
         if dataSource.count == 0 { // 학습완료시
             let vc = SwipeCardCompletionPopUpVC()
             vc.configure { [weak self] in
-                self?.moveBackVC(animated: true)
+                self?.moveBackVC(animated: true) {
+                    
+                    //리뷰 요청을 한다.
+                    if !AppStatus.hasRequestedReview {
+                        AppStatus.hasRequestedReview = true
+                        SKStoreReviewController.requestReview()
+                    }
+                }
             }
             presentOverFull(vc, animated: false)
         }
@@ -211,9 +253,18 @@ extension SwipeCardVC: KolodaViewDataSource {
 //MARK: CardItemComponentViewDelegate
 
 extension SwipeCardVC: CardItemViewDelegate {
+
     
     func cardItemViewFavoriteButtonToggled(at index: Int, _ marked: Bool) {
         shLog("Favorite Toggled: \(marked)")
         vm.markFavorite(at: index, marked)
     }
+    
+    func cardItemViewSerachButtonTapped(at index: Int) {
+        let item = dataSource[index]
+        let vc = SearchWebVC()
+        vc.configuration(searchText: item.frontWord)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }

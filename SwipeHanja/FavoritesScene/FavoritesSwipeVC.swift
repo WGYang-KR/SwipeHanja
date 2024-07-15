@@ -29,6 +29,7 @@ class FavoritesSwipeVC: UIViewController {
         super.viewDidLoad()
         
         self.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+        navigationController?.interactivePopGestureRecognizer?.delegate = nil
         
         initCardDefaultSide()
        
@@ -46,6 +47,11 @@ class FavoritesSwipeVC: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     // MARK: IBActions
     @IBAction func undoButtonTapped() {
         if let kolodaView, kolodaView.canRevert() {
@@ -53,6 +59,30 @@ class FavoritesSwipeVC: UIViewController {
             kolodaView.revertAction()
         } else {
             shLog("Revert 무시됨")
+        }
+        
+    }
+    @IBAction func resetButtonTapped(_ sender: Any) {
+
+        AlertHelper.alertConfirm(baseVC: self,
+                                 title: "학습기록을 초기화할까요?",
+                                 message: "" ) { [weak self] in
+            guard let self else { return }
+            vm.deleteStudyStatus()
+            vm.prepareCardList()
+            kolodaView.resetCurrentCardIndex()
+            AlertHelper.notesInform(message: "학습기록이 초기화되었습니다.")
+        }
+  
+    }
+    
+    @IBAction func shuffleButtonTapped(_ sender: Any) {
+        AlertHelper.alertConfirm(baseVC: self,
+                                 title: "카드 순서를 무작위로 섞을까요?",
+                                 message: "") { [weak self] in
+            guard let self else { return }
+            vm.shuffleCardList()
+            kolodaView.resetCurrentCardIndex()
         }
         
     }
@@ -173,9 +203,18 @@ extension FavoritesSwipeVC: KolodaViewDataSource {
 //MARK: CardItemComponentViewDelegate
 
 extension FavoritesSwipeVC: CardItemViewDelegate {
-    
+
     func cardItemViewFavoriteButtonToggled(at index: Int, _ marked: Bool) {
         shLog("Favorite Toggled: \(marked)")
         vm.markFavorite(at: index, marked)
     }
+    
+    func cardItemViewSerachButtonTapped(at index: Int) {
+        let item = dataSource[index]
+        let vc = SearchWebVC()
+        vc.configuration(searchText: item.cardItem.frontWord)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
 }

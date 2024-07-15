@@ -25,7 +25,7 @@ class MainTabBarController: UITabBarController {
                                               selectedImage: UIImage(systemName: "star.fill"))
                                               
         
-        setViewControllers([mainVC,favoritesVC], animated: false)
+        setViewControllers([mainVC,UINavigationController(rootViewController: favoritesVC)], animated: false)
         
         // 탭바 배경색
         let appearance = UITabBarAppearance()

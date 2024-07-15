@@ -57,7 +57,7 @@ class SwipeCardCompletionPopUpVC: UIViewController {
         case .fromNormalStudy:
             messageLabel.text = "축하해요! 학습을 모두 마쳤습니다.\n다음 챕터로 이동하여 학습을 계속해 주세요."
         case .fromFavoritesStudy:
-            messageLabel.text = "축하해요! 학습을 모두 마쳤습니다.\n학습 진도가 초기화 됩니다."
+            messageLabel.text = "축하해요! 학습을 모두 마쳤습니다.\n학습기록이 초기화 됩니다."
         }
 
         bottomButton.setTitle("확인", for: .normal)

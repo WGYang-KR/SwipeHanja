@@ -2,6 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>FIREBASE_ANALYTICS_COLLECTION_ENABLED</key>
+	<false/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<false/>
+	</dict>
 	<key>UIAppFonts</key>
 	<array>
 		<string>KanjiStrokeOrders_v4.004.ttf</string>
@@ -23,7 +30,5 @@
 			</array>
 		</dict>
 	</dict>
-    <key>FIREBASE_ANALYTICS_COLLECTION_ENABLED</key>
-    <false/>
 </dict>
 </plist>

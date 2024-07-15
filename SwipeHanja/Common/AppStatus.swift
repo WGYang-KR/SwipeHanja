@@ -11,6 +11,7 @@ class AppStatus {
 
     enum Keys: String {
         case appStatusIsFirstLaunch
+        case hasEverWrittenReview
     }
     
     static var isFirstLaunch: Bool { //앱 첫실행인지
@@ -34,6 +35,11 @@ class AppStatus {
         let build = dictionary["CFBundleVersion"] as? String else {return "0"}
 
         return build //1
+    }
+    
+    static var hasRequestedReview: Bool {
+        get { return UserDefaults.standard.bool(forKey: Keys.hasEverWrittenReview.rawValue)}
+        set(value){ UserDefaults.standard.set(value, forKey: Keys.hasEverWrittenReview.rawValue)}
     }
     
     // 디바이스 OS 버전 조회
