@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A0A8E432D16978100E3F993 /* HanjaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0A8E422D16976600E3F993 /* HanjaModel.swift */; };
+		6A0A8E462D169D9000E3F993 /* CardLearingStateRO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0A8E452D169D7E00E3F993 /* CardLearingStateRO.swift */; };
+		6A0A8E482D1704A200E3F993 /* CardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0A8E472D17049B00E3F993 /* CardService.swift */; };
+		6A0A8E4B2D17094000E3F993 /* CardPackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0A8E4A2D17093D00E3F993 /* CardPackModel.swift */; };
+		6A0A8E4D2D170B3200E3F993 /* FavoriteItemRO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0A8E4C2D170B3200E3F993 /* FavoriteItemRO.swift */; };
+		6A0A8E512D170E0500E3F993 /* CardItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0A8E502D170E0500E3F993 /* CardItemModel.swift */; };
+		6A0A8E532D171B7900E3F993 /* FavoriteItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0A8E522D171B7000E3F993 /* FavoriteItemModel.swift */; };
 		6A21AD8F2C0215DD004ACBC0 /* copyright.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6A21AD8C2C0215DD004ACBC0 /* copyright.txt */; };
 		6A21AD902C0215DD004ACBC0 /* KanjiStrokeOrders_v4.004.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A21AD8D2C0215DD004ACBC0 /* KanjiStrokeOrders_v4.004.ttf */; };
 		6A21AD912C0215DD004ACBC0 /* readme_en_v4.004.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6A21AD8E2C0215DD004ACBC0 /* readme_en_v4.004.txt */; };
@@ -77,6 +84,13 @@
 /* Begin PBXFileReference section */
 		2E043EBE98ECE749CC710537 /* Pods_SwipeHanja.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeHanja.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51C1AE3546CA790C8CA26438 /* Pods-SwipeHanja.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeHanja.debug.xcconfig"; path = "Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja.debug.xcconfig"; sourceTree = "<group>"; };
+		6A0A8E422D16976600E3F993 /* HanjaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanjaModel.swift; sourceTree = "<group>"; };
+		6A0A8E452D169D7E00E3F993 /* CardLearingStateRO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardLearingStateRO.swift; sourceTree = "<group>"; };
+		6A0A8E472D17049B00E3F993 /* CardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardService.swift; sourceTree = "<group>"; };
+		6A0A8E4A2D17093D00E3F993 /* CardPackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPackModel.swift; sourceTree = "<group>"; };
+		6A0A8E4C2D170B3200E3F993 /* FavoriteItemRO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteItemRO.swift; sourceTree = "<group>"; };
+		6A0A8E502D170E0500E3F993 /* CardItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItemModel.swift; sourceTree = "<group>"; };
+		6A0A8E522D171B7000E3F993 /* FavoriteItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteItemModel.swift; sourceTree = "<group>"; };
 		6A21AD8C2C0215DD004ACBC0 /* copyright.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = copyright.txt; sourceTree = "<group>"; };
 		6A21AD8D2C0215DD004ACBC0 /* KanjiStrokeOrders_v4.004.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KanjiStrokeOrders_v4.004.ttf; sourceTree = "<group>"; };
 		6A21AD8E2C0215DD004ACBC0 /* readme_en_v4.004.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme_en_v4.004.txt; sourceTree = "<group>"; };
@@ -166,6 +180,35 @@
 				F08B7299C4A081E29039B2B9 /* Pods-SwipeHanja.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		6A0A8E442D169D3400E3F993 /* Model_v_1_5 */ = {
+			isa = PBXGroup;
+			children = (
+				6A0A8E4F2D170DAE00E3F993 /* RealmObject */,
+				6A0A8E422D16976600E3F993 /* HanjaModel.swift */,
+				6A0A8E502D170E0500E3F993 /* CardItemModel.swift */,
+				6A0A8E522D171B7000E3F993 /* FavoriteItemModel.swift */,
+				6A0A8E4A2D17093D00E3F993 /* CardPackModel.swift */,
+			);
+			path = Model_v_1_5;
+			sourceTree = "<group>";
+		};
+		6A0A8E4E2D170C9500E3F993 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				6A0A8E472D17049B00E3F993 /* CardService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		6A0A8E4F2D170DAE00E3F993 /* RealmObject */ = {
+			isa = PBXGroup;
+			children = (
+				6A0A8E452D169D7E00E3F993 /* CardLearingStateRO.swift */,
+				6A0A8E4C2D170B3200E3F993 /* FavoriteItemRO.swift */,
+			);
+			path = RealmObject;
 			sourceTree = "<group>";
 		};
 		6A21AD8B2C0215C3004ACBC0 /* KanjiStrokeOrders_v4.004 */ = {
@@ -274,6 +317,8 @@
 		6AA332002BD14E0200996EC5 /* SwipeHanja */ = {
 			isa = PBXGroup;
 			children = (
+				6A0A8E4E2D170C9500E3F993 /* Service */,
+				6A0A8E442D169D3400E3F993 /* Model_v_1_5 */,
 				6AA3321B2BD152DC00996EC5 /* Model */,
 				6AFD0BF92BE5962100F27BBE /* Common */,
 				6A70A71E2C21C36800B2B4AB /* TabBar */,
@@ -320,8 +365,8 @@
 			isa = PBXGroup;
 			children = (
 				6AA3321C2BD1532000996EC5 /* CardItem.swift */,
-				6A2310DA2C2B0D2A008BFCBC /* FavoriteData.swift */,
 				6AFD0BE42BDA855400F27BBE /* CardPack.swift */,
+				6A2310DA2C2B0D2A008BFCBC /* FavoriteData.swift */,
 				6AFD0C022BE7698C00F27BBE /* LearningStatus.swift */,
 				6AFD0C062BE90AB700F27BBE /* CardSideType.swift */,
 				6A21AD922C021AB8004ACBC0 /* FontType.swift */,
@@ -556,7 +601,9 @@
 			files = (
 				6A788E912BD7EA6500B7ABDA /* OverlayView.swift in Sources */,
 				6A788E952BD7EA6500B7ABDA /* KolodaViewAnimatior.swift in Sources */,
+				6A0A8E532D171B7900E3F993 /* FavoriteItemModel.swift in Sources */,
 				6A70A7272C21C4F100B2B4AB /* MainTabBarController.swift in Sources */,
+				6A0A8E462D169D9000E3F993 /* CardLearingStateRO.swift in Sources */,
 				6AFD0BFB2BE5963000F27BBE /* AppSetting.swift in Sources */,
 				6AFD0C052BE8F80E00F27BBE /* AlertHelper.swift in Sources */,
 				6AFD0BE52BDA855400F27BBE /* CardPack.swift in Sources */,
@@ -573,7 +620,9 @@
 				6AA1268C2BF5A15200B67424 /* WordListItemCell.swift in Sources */,
 				6A788E4C2BD17EF800B7ABDA /* CardItemComponentView.swift in Sources */,
 				6AFD0BE72BDA89CD00F27BBE /* SwipeCardVM.swift in Sources */,
+				6A0A8E482D1704A200E3F993 /* CardService.swift in Sources */,
 				6AC284092C3AE47E007BEFD1 /* SearchWebVC.swift in Sources */,
+				6A0A8E432D16978100E3F993 /* HanjaModel.swift in Sources */,
 				6AA332022BD14E0200996EC5 /* AppDelegate.swift in Sources */,
 				6AFD0C0E2BE93BEB00F27BBE /* SHOverlayView.swift in Sources */,
 				6AFD0C032BE7698C00F27BBE /* LearningStatus.swift in Sources */,
@@ -585,6 +634,9 @@
 				6A2310E32C2C5C26008BFCBC /* FavoritesVM.swift in Sources */,
 				6AFD0BEA2BE24EA300F27BBE /* MainVM.swift in Sources */,
 				6A788E942BD7EA6500B7ABDA /* KolodaView.swift in Sources */,
+				6A0A8E4B2D17094000E3F993 /* CardPackModel.swift in Sources */,
+				6A0A8E4D2D170B3200E3F993 /* FavoriteItemRO.swift in Sources */,
+				6A0A8E512D170E0500E3F993 /* CardItemModel.swift in Sources */,
 				6AA126882BF5A12A00B67424 /* WordListVC.swift in Sources */,
 				6AE23B642C29A634009E8978 /* FavoritesStartLearningCell.swift in Sources */,
 				6AFD0BFD2BE5974F00F27BBE /* AppStatus.swift in Sources */,
