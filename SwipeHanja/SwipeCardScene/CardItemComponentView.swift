@@ -12,6 +12,9 @@ class CardItemComponentView: UIView {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var descLabel: UILabel!
+    @IBOutlet weak var radicalStorkeCountLabel: UILabel!
+    
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
     

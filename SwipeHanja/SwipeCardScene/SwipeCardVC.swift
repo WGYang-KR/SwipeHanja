@@ -23,7 +23,8 @@ class SwipeCardVC: UIViewController {
     @IBOutlet weak var countRightLabel: UILabel!
     @IBOutlet weak var remainCountLabel: UILabel!
     @IBOutlet weak var totalCountLabel: UILabel!
-
+    @IBOutlet weak var fontBtn: UIButton!
+    
     var cardDefaultSide: CardSideType = .front
     var cardFontType: FontType = .system
     
@@ -106,6 +107,11 @@ class SwipeCardVC: UIViewController {
     
     @IBAction func topBackBtnTapped(_ sender: Any) {
         self.moveBackVC(animated: true)
+    }
+    
+    
+    @IBAction func fontBtnTapped(_ sender: Any) {
+        
     }
     
     @IBAction func toggleCardDefaultSideBtnTapped(_ sender: Any) {

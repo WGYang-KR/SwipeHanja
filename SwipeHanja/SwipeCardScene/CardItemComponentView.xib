@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,8 +12,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardItemComponentView" customModule="SwipeHanja" customModuleProvider="target">
             <connections>
                 <outlet property="containerView" destination="s5X-Op-AVE" id="bfK-bm-N9e"/>
+                <outlet property="descLabel" destination="j2f-IO-IKg" id="fkR-JP-ffS"/>
                 <outlet property="favoriteButton" destination="brr-Dz-r1n" id="cow-Fz-RNQ"/>
                 <outlet property="label" destination="5qQ-XL-Vm9" id="qK6-HT-hoe"/>
+                <outlet property="radicalStorkeCountLabel" destination="7jQ-Eh-NlL" id="LDa-zZ-nHW"/>
                 <outlet property="searchButton" destination="AOV-EZ-NOP" id="Woe-pJ-og3"/>
             </connections>
         </placeholder>
@@ -25,12 +27,6 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s5X-Op-AVE">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="537"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="漢子  한자" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qQ-XL-Vm9">
-                            <rect key="frame" x="103.33333333333333" y="240.00000000000003" width="186.66666666666669" height="57.333333333333343"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="48"/>
-                            <color key="textColor" name="ColorTossBlack01"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brr-Dz-r1n">
                             <rect key="frame" x="327" y="16" width="50" height="50"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -66,19 +62,42 @@
                                 <action selector="searchButtonTapped:" destination="-1" eventType="touchUpInside" id="9cj-6b-K3d"/>
                             </connections>
                         </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1gd-FD-NGs">
+                            <rect key="frame" x="16" y="211.66666666666663" width="361" height="114"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="漢子  한자" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qQ-XL-Vm9">
+                                    <rect key="frame" x="0.0" y="0.0" width="361" height="57.333333333333336"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                    <color key="textColor" name="ColorTossBlack01"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="뜻 풀이" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2f-IO-IKg">
+                                    <rect key="frame" x="0.0" y="65.333333333333343" width="361" height="20.333333333333329"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" name="ColorTossBlack01"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="부수, 총획수" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jQ-Eh-NlL">
+                                    <rect key="frame" x="0.0" y="93.666666666666657" width="361" height="20.333333333333329"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" name="ColorTossBlack01"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
                     </subviews>
                     <color key="backgroundColor" name="colorGrey02"/>
                     <constraints>
-                        <constraint firstItem="5qQ-XL-Vm9" firstAttribute="centerY" secondItem="s5X-Op-AVE" secondAttribute="centerY" id="EPO-SG-X8w"/>
-                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="5qQ-XL-Vm9" secondAttribute="bottom" constant="16" id="GbA-IT-O6E"/>
-                        <constraint firstItem="5qQ-XL-Vm9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="s5X-Op-AVE" secondAttribute="top" constant="16" id="NPG-se-yP4"/>
+                        <constraint firstItem="1gd-FD-NGs" firstAttribute="leading" secondItem="s5X-Op-AVE" secondAttribute="leading" constant="16" id="0mO-ie-BGN"/>
+                        <constraint firstAttribute="trailing" secondItem="1gd-FD-NGs" secondAttribute="trailing" constant="16" id="3e0-5V-sYB"/>
+                        <constraint firstItem="1gd-FD-NGs" firstAttribute="centerY" secondItem="s5X-Op-AVE" secondAttribute="centerY" id="JIB-6F-MKF"/>
                         <constraint firstItem="AOV-EZ-NOP" firstAttribute="leading" secondItem="s5X-Op-AVE" secondAttribute="leading" constant="16" id="TTb-br-MbD"/>
                         <constraint firstAttribute="trailing" secondItem="brr-Dz-r1n" secondAttribute="trailing" constant="16" id="VFF-X2-65r"/>
                         <constraint firstItem="brr-Dz-r1n" firstAttribute="top" secondItem="s5X-Op-AVE" secondAttribute="top" constant="16" id="YpW-yA-5s2"/>
-                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5qQ-XL-Vm9" secondAttribute="trailing" constant="16" id="cl7-9t-xeZ"/>
-                        <constraint firstItem="5qQ-XL-Vm9" firstAttribute="centerX" secondItem="s5X-Op-AVE" secondAttribute="centerX" id="ja5-Nr-xtk"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1gd-FD-NGs" secondAttribute="bottom" constant="16" id="nNb-T7-y4R"/>
+                        <constraint firstItem="1gd-FD-NGs" firstAttribute="centerX" secondItem="s5X-Op-AVE" secondAttribute="centerX" id="uHj-YK-2TD"/>
                         <constraint firstItem="AOV-EZ-NOP" firstAttribute="top" secondItem="s5X-Op-AVE" secondAttribute="top" constant="16" id="wRR-2l-fo9"/>
-                        <constraint firstItem="5qQ-XL-Vm9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="s5X-Op-AVE" secondAttribute="leading" constant="16" id="xfa-GU-jeN"/>
+                        <constraint firstItem="1gd-FD-NGs" firstAttribute="top" relation="greaterThanOrEqual" secondItem="AOV-EZ-NOP" secondAttribute="bottom" constant="16" id="xEq-oF-dgU"/>
                     </constraints>
                 </view>
             </subviews>
