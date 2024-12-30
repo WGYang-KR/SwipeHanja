@@ -18,6 +18,7 @@
 		6A2310ED2C382488008BFCBC /* FavoritesSwipeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2310EB2C382488008BFCBC /* FavoritesSwipeVC.swift */; };
 		6A2310EE2C382488008BFCBC /* FavoritesSwipeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A2310EC2C382488008BFCBC /* FavoritesSwipeVC.xib */; };
 		6A2310F02C38248F008BFCBC /* FavoritesSwipeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2310EF2C38248F008BFCBC /* FavoritesSwipeVM.swift */; };
+		6A23F4CC2D22F5010001362B /* CardPacks_20241231.json in Resources */ = {isa = PBXBuildFile; fileRef = 6A23F4CB2D22F5010001362B /* CardPacks_20241231.json */; };
 		6A5C2D232BF8A553003E7CF6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A5C2D222BF8A553003E7CF6 /* GoogleService-Info.plist */; };
 		6A5C2D2C2BFA1E25003E7CF6 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 6A5C2D2B2BFA1E25003E7CF6 /* PrivacyInfo.xcprivacy */; };
 		6A70A7272C21C4F100B2B4AB /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70A7252C21C4F100B2B4AB /* MainTabBarController.swift */; };
@@ -66,7 +67,6 @@
 		6AFD0BFB2BE5963000F27BBE /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0BFA2BE5963000F27BBE /* AppSetting.swift */; };
 		6AFD0BFD2BE5974F00F27BBE /* AppStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0BFC2BE5974F00F27BBE /* AppStatus.swift */; };
 		6AFD0BFF2BE5979200F27BBE /* EmailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0BFE2BE5979200F27BBE /* EmailHelper.swift */; };
-		6AFD0C012BE7415A00F27BBE /* CardPacks.json in Resources */ = {isa = PBXBuildFile; fileRef = 6AFD0C002BE7415A00F27BBE /* CardPacks.json */; };
 		6AFD0C032BE7698C00F27BBE /* LearningStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0C022BE7698C00F27BBE /* LearningStatus.swift */; };
 		6AFD0C052BE8F80E00F27BBE /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0C042BE8F80E00F27BBE /* AlertHelper.swift */; };
 		6AFD0C072BE90AB700F27BBE /* CardSideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0C062BE90AB700F27BBE /* CardSideType.swift */; };
@@ -89,6 +89,7 @@
 		6A2310EB2C382488008BFCBC /* FavoritesSwipeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesSwipeVC.swift; sourceTree = "<group>"; };
 		6A2310EC2C382488008BFCBC /* FavoritesSwipeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesSwipeVC.xib; sourceTree = "<group>"; };
 		6A2310EF2C38248F008BFCBC /* FavoritesSwipeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesSwipeVM.swift; sourceTree = "<group>"; };
+		6A23F4CB2D22F5010001362B /* CardPacks_20241231.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CardPacks_20241231.json; sourceTree = "<group>"; };
 		6A5C2D212BF8A2C1003E7CF6 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		6A5C2D222BF8A553003E7CF6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6A5C2D2B2BFA1E25003E7CF6 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
@@ -140,7 +141,6 @@
 		6AFD0BFA2BE5963000F27BBE /* AppSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSetting.swift; sourceTree = "<group>"; };
 		6AFD0BFC2BE5974F00F27BBE /* AppStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStatus.swift; sourceTree = "<group>"; };
 		6AFD0BFE2BE5979200F27BBE /* EmailHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailHelper.swift; sourceTree = "<group>"; };
-		6AFD0C002BE7415A00F27BBE /* CardPacks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CardPacks.json; sourceTree = "<group>"; };
 		6AFD0C022BE7698C00F27BBE /* LearningStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningStatus.swift; sourceTree = "<group>"; };
 		6AFD0C042BE8F80E00F27BBE /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		6AFD0C062BE90AB700F27BBE /* CardSideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSideType.swift; sourceTree = "<group>"; };
@@ -367,7 +367,7 @@
 			children = (
 				6A0A8E542D18090E00E3F993 /* DBManager.swift */,
 				6A21AD8B2C0215C3004ACBC0 /* KanjiStrokeOrders_v4.004 */,
-				6AFD0C002BE7415A00F27BBE /* CardPacks.json */,
+				6A23F4CB2D22F5010001362B /* CardPacks_20241231.json */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -460,7 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AA3320B2BD14E0200996EC5 /* Assets.xcassets in Resources */,
-				6AFD0C012BE7415A00F27BBE /* CardPacks.json in Resources */,
+				6A23F4CC2D22F5010001362B /* CardPacks_20241231.json in Resources */,
 				6AE23B612C29A35F009E8978 /* FavoritesItemCell.xib in Resources */,
 				6A21AD8F2C0215DD004ACBC0 /* copyright.txt in Resources */,
 				6AC2840C2C3D6BA6007BEFD1 /* remote_config_defaults.plist in Resources */,
