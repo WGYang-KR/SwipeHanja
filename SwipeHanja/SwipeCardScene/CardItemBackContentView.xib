@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="449"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Trz-Ev-8Ra">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="449"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NyZ-JD-8C9">
+                            <rect key="frame" x="327" y="16" width="50" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="AgI-Ue-IxP"/>
+                                <constraint firstAttribute="width" constant="50" id="LwH-gm-DkI"/>
+                            </constraints>
+                            <color key="tintColor" name="ColorGold"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="star.fill" catalog="system">
+                                <color key="titleColor" name="colorTeal02"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qX-7w-hIH">
+                            <rect key="frame" x="16" y="16" width="50" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="ldL-Ui-V1e"/>
+                                <constraint firstAttribute="height" constant="50" id="xHT-eY-3aj"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="tintColor" name="colorTeal02"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="magnifyingglass" catalog="system">
+                                <color key="titleColor" name="colorTeal02"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                            </state>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9Mj-xC-lhY">
+                            <rect key="frame" x="32" y="181.66666666666666" width="329" height="85.666666666666657"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5K-aW-ZWx">
+                                    <rect key="frame" x="0.0" y="0.0" width="329" height="57.333333333333336"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                    <color key="textColor" name="ColorTossBlack01"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ur9-oI-1L2">
+                                    <rect key="frame" x="0.0" y="65.333333333333343" width="329" height="20.333333333333329"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" name="ColorTossBlack01"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" name="colorGrey02"/>
+                    <constraints>
+                        <constraint firstItem="6qX-7w-hIH" firstAttribute="top" secondItem="Trz-Ev-8Ra" secondAttribute="top" constant="16" id="41J-qS-SQx"/>
+                        <constraint firstItem="NyZ-JD-8C9" firstAttribute="top" secondItem="Trz-Ev-8Ra" secondAttribute="top" constant="16" id="8Yt-12-3wf"/>
+                        <constraint firstItem="6qX-7w-hIH" firstAttribute="leading" secondItem="Trz-Ev-8Ra" secondAttribute="leading" constant="16" id="PwW-th-Kff"/>
+                        <constraint firstAttribute="trailing" secondItem="9Mj-xC-lhY" secondAttribute="trailing" constant="32" id="Z7a-EP-GM4"/>
+                        <constraint firstItem="9Mj-xC-lhY" firstAttribute="centerX" secondItem="Trz-Ev-8Ra" secondAttribute="centerX" id="afa-ca-Gjl"/>
+                        <constraint firstAttribute="trailing" secondItem="NyZ-JD-8C9" secondAttribute="trailing" constant="16" id="fmJ-Lz-tr9"/>
+                        <constraint firstItem="9Mj-xC-lhY" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6qX-7w-hIH" secondAttribute="bottom" constant="16" id="jkz-Mw-Mab"/>
+                        <constraint firstItem="9Mj-xC-lhY" firstAttribute="leading" secondItem="Trz-Ev-8Ra" secondAttribute="leading" constant="32" id="khh-zg-Mmg"/>
+                        <constraint firstItem="9Mj-xC-lhY" firstAttribute="centerY" secondItem="Trz-Ev-8Ra" secondAttribute="centerY" id="paJ-U3-njb"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="9Mj-xC-lhY" secondAttribute="bottom" constant="32" id="zhh-tn-AkR"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Trz-Ev-8Ra" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="C3U-nO-5OG"/>
+                <constraint firstItem="Trz-Ev-8Ra" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ihl-rZ-4kB"/>
+                <constraint firstItem="Trz-Ev-8Ra" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pOX-c8-4Zt"/>
+                <constraint firstAttribute="bottom" secondItem="Trz-Ev-8Ra" secondAttribute="bottom" id="pPp-my-Unj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-5.343511450381679" y="96.126760563380287"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <namedColor name="ColorGold">
+            <color red="0.99215686274509807" green="0.83137254901960789" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorTossBlack01">
+            <color red="0.10196078431372549" green="0.12156862745098039" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="colorGrey02">
+            <color red="0.82352941176470584" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="colorTeal02">
+            <color red="0.074509803921568626" green="0.36470588235294116" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

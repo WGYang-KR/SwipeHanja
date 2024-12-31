@@ -1,17 +1,20 @@
 //
-//  CardItemComponentView.swift
+//  CardItemBackContentView.swift
 //  SwipeHanja
 //
-//  Created by Anto-Yang on 4/19/24.
+//  Created by WG-Yang on 12/31/24.
 //
 
 import UIKit
 import Combine
 
-class CardItemComponentView: UIView {
-    
+class CardItemBackContentView: NibUIView {
+
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var descLabel: UILabel!
+    @IBOutlet weak var radicalStorkeCountLabel: UILabel!
+    
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
     
@@ -81,4 +84,5 @@ class CardItemComponentView: UIView {
         })
     
     }
+
 }
