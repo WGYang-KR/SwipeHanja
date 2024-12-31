@@ -31,6 +31,13 @@ class CardItemComponentView: UIView {
             self.label.font = font
         }
         
+        // "Songti TC" 폰트를 설정
+        if let songtiFont = UIFont(name: "STSongti-TC-Regular", size: 56) {
+            label.font = songtiFont
+        } else {
+            print("Songti TC 폰트를 찾을 수 없습니다.")
+        }
+        
         //isFavorite 변수 변경되면 UI 업데이트되도록 바인드
         isFavorite.sink { [weak self] isFavorite  in
             guard let self else { return }

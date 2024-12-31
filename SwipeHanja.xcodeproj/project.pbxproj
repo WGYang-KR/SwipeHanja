@@ -40,6 +40,7 @@
 		6A848B562D23C68400CB888D /* CardItemBackContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A848B552D23C68400CB888D /* CardItemBackContentView.swift */; };
 		6A848B5A2D23C69800CB888D /* CardItemBackContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A848B592D23C69800CB888D /* CardItemBackContentView.xib */; };
 		6A848B5C2D23C6D000CB888D /* NibUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A848B5B2D23C6CB00CB888D /* NibUIView.swift */; };
+		6A848B5E2D23C94C00CB888D /* Songti.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 6A848B5D2D23C94C00CB888D /* Songti.ttc */; };
 		6A928E812C173A2D00894FD4 /* CardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A928E802C173A2D00894FD4 /* CardItemView.swift */; };
 		6A928E832C173A3C00894FD4 /* CardItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A928E822C173A3C00894FD4 /* CardItemView.xib */; };
 		6AA126882BF5A12A00B67424 /* WordListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA126862BF5A12A00B67424 /* WordListVC.swift */; };
@@ -115,6 +116,7 @@
 		6A848B552D23C68400CB888D /* CardItemBackContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItemBackContentView.swift; sourceTree = "<group>"; };
 		6A848B592D23C69800CB888D /* CardItemBackContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardItemBackContentView.xib; sourceTree = "<group>"; };
 		6A848B5B2D23C6CB00CB888D /* NibUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibUIView.swift; sourceTree = "<group>"; };
+		6A848B5D2D23C94C00CB888D /* Songti.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Songti.ttc; sourceTree = "<group>"; };
 		6A928E802C173A2D00894FD4 /* CardItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItemView.swift; sourceTree = "<group>"; };
 		6A928E822C173A3C00894FD4 /* CardItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardItemView.xib; sourceTree = "<group>"; };
 		6AA126862BF5A12A00B67424 /* WordListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListVC.swift; sourceTree = "<group>"; };
@@ -377,6 +379,7 @@
 			children = (
 				6A0A8E542D18090E00E3F993 /* DBManager.swift */,
 				6A21AD8B2C0215C3004ACBC0 /* KanjiStrokeOrders_v4.004 */,
+				6A848B5D2D23C94C00CB888D /* Songti.ttc */,
 				6A23F4CB2D22F5010001362B /* CardPacks_20241231.json */,
 			);
 			path = Resource;
@@ -482,6 +485,7 @@
 				6A0A8E552D18091100E3F993 /* DBManager.swift in Resources */,
 				6A788E4D2BD17EF800B7ABDA /* CardItemComponentView.xib in Resources */,
 				6AA1268D2BF5A15200B67424 /* WordListItemCell.xib in Resources */,
+				6A848B5E2D23C94C00CB888D /* Songti.ttc in Resources */,
 				6A5C2D232BF8A553003E7CF6 /* GoogleService-Info.plist in Resources */,
 				6AA126892BF5A12A00B67424 /* WordListVC.xib in Resources */,
 				6A70A72A2C21C5EA00B2B4AB /* MainVC.xib in Resources */,

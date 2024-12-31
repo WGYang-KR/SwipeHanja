@@ -47,28 +47,13 @@ class CardItemBackContentView: NibUIView {
         }
         .store(in: &cancellables)
     }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        customInit()
-        
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        customInit()
 
-    }
-
-    private func customInit() {
-        if let view = Bundle.main.loadNibNamed("\(CardItemComponentView.self)", owner: self, options: nil)?.first as? UIView {
-            view.frame = self.bounds
-            addSubview(view)
-        }
+    override func initView() {
+        super.initView()
         
         containerView.layer.borderWidth = 2
         containerView.layer.borderColor = UIColor.colorGrey01.cgColor
-
+    
     }
     
     

@@ -12,6 +12,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>KanjiStrokeOrders_v4.004.ttf</string>
+		<string>Songti.ttc</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

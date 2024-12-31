@@ -63,7 +63,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1gd-FD-NGs">
                             <rect key="frame" x="16" y="240.00000000000003" width="361" height="57.333333333333343"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="漢子  한자" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qQ-XL-Vm9">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qQ-XL-Vm9">
                                     <rect key="frame" x="0.0" y="0.0" width="361" height="57.333333333333336"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                     <color key="textColor" name="ColorTossBlack01"/>
