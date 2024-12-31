@@ -77,7 +77,7 @@ class MainVM {
             // YourObject 클래스에 해당하는 객체들을 쿼리하여 결과 확인
             let objects = realm.objects(CardPack.self)
             if objects.count > 0 {
-                shLog("카드데이터 있음")
+                shLog("카드데이터 있음: \(objects.count)개")
                 return true
             } else {
                 shLog("카드데이터 없음")

@@ -27,6 +27,7 @@ final class CardPack: Object, Decodable{
     
     //MARK: - Decodable
     enum CodingKeys: String, CodingKey {
+        case _id
         case index
         case level
         case title
@@ -37,7 +38,7 @@ final class CardPack: Object, Decodable{
         super.init()
         
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        _id = ObjectId.generate()
+        _id = try container.decode(ObjectId.self, forKey: ._id)
         index = try container.decodeIfPresent(Int.self, forKey: .index) ?? 0
         level = try container.decodeIfPresent(Int.self, forKey: .level) ?? 0
         title = try container.decodeIfPresent(String.self, forKey: .title) ?? ""
