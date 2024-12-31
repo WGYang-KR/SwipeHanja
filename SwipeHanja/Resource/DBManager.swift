@@ -34,13 +34,24 @@ class DBManager {
                     
                     if let oldCardItem,
                        let newCardItem,
-                       let character: String = oldCardItem["frontWord"] as? String,
-                       let newData = self.totalCardItems.first(where: { $0.frontWord == character }) {
-                        newCardItem["radical"] = newData.radical
-                        newCardItem["radicalMeaning"] = newData.radicalMeaning
-                        newCardItem["strokeCount"] = newData.strokeCount
-                        newCardItem["backDesc"] = newData.backDesc
-                        successCount += 1
+                       var character: String = oldCardItem["frontWord"] as? String {
+                        
+                        if character == "册" { //책 책 한자 수정
+                            let newChar = "冊"
+                            character = newChar
+                            newCardItem["frontWord"] = newChar
+                        }
+                        
+                        if let newData = self.totalCardItems.first(where: { $0.frontWord == character }) {
+                            newCardItem["radical"] = newData.radical
+                            newCardItem["radicalMeaning"] = newData.radicalMeaning
+                            newCardItem["strokeCount"] = newData.strokeCount
+                            newCardItem["backDesc"] = newData.backDesc
+                            successCount += 1
+                        } else {
+                            shLog("업데이트 오류: oldCardItem: \(String(describing: oldCardItem)), newCardItem: \(String(describing: newCardItem)), character: \(String(describing: oldCardItem["frontWord"]) )")
+                            errorCount += 1
+                        }
                     } else {
                         shLog("업데이트 오류: oldCardItem: \(String(describing: oldCardItem)), newCardItem: \(String(describing: newCardItem)), character: \(String(describing: oldCardItem?["frontWord"]) )")
                         errorCount += 1
