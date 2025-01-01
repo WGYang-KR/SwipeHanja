@@ -175,19 +175,9 @@ extension FavoritesSwipeVC: KolodaViewDataSource {
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         let item = dataSource[index]
         let cardItemView = CardItemView()
-       
-        var font: UIFont?
-        switch cardFontType {
-        case .system:
-            font = .systemFont(ofSize: 56)
-        case .KanjiStrokeOrders:
-            font = .init(name: "KanjiStrokeOrders", size: 80)
-        }
+
         cardItemView.configure(index: index,
-                               frontContent: .init(text: item.cardItem.frontWord,
-                                                   font: font),
-                               backContent: .init(text: item.cardItem.backWord,
-                                                  font: nil),
+                               cardItem: item.cardItem,
                                isFavorite: item.isFavorite,
                                delegate: self,
                                cardSideType: cardDefaultSide)

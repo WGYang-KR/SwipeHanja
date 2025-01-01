@@ -12,8 +12,8 @@ class CardItemBackContentView: NibUIView {
 
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var descLabel: UILabel!
-    @IBOutlet weak var radicalStorkeCountLabel: UILabel!
+    @IBOutlet weak var radicalLabel: UILabel!
+    @IBOutlet weak var strokeCountLabel: UILabel!
     
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
@@ -28,11 +28,10 @@ class CardItemBackContentView: NibUIView {
     let favoriteBtnTapped = PassthroughSubject<Void,Never>()
     let searchBtnTapped = PassthroughSubject<Void,Never>()
     
-    func configure(text: String, font: UIFont?, isFavorite: AnyPublisher<Bool,Never>) {
-        self.label.text = text
-        if let font {
-            self.label.font = font
-        }
+    func configure(cardItem: CardItem, isFavorite: AnyPublisher<Bool,Never>) {
+        self.label.text = cardItem.backWord
+        self.radicalLabel.text = "\(cardItem.radical)(\(cardItem.radicalMeaning))"
+        self.strokeCountLabel.text = "\(cardItem.strokeCount)획"
         
         //isFavorite 변수 변경되면 UI 업데이트되도록 바인드
         isFavorite.sink { [weak self] isFavorite  in

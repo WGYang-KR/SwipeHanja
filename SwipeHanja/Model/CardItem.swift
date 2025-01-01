@@ -16,13 +16,13 @@ final class CardItem: Object, Decodable {
     @Persisted var index: Int
     @Persisted var level: Int
     @Persisted var frontWord: String
+    @Persisted var backWord: String
     /// 부수
     @Persisted var radical: String
     /// 부수 뜻, 음
     @Persisted var radicalMeaning: String
     /// 총획수
     @Persisted var strokeCount: Int
-    @Persisted var backWord: String
     ///한자 뜻 추가 설명
     @Persisted var backDesc: String
     @Persisted var hasShown: Bool
@@ -45,6 +45,10 @@ final class CardItem: Object, Decodable {
         case level
         case frontWord
         case backWord
+        case radical
+        case radicalMeaning
+        case strokeCount
+        case backDesc
         case hasShown
         case hasMemorized
         case isFavorite
@@ -59,22 +63,13 @@ final class CardItem: Object, Decodable {
         level = try container.decodeIfPresent(Int.self, forKey: .level) ?? 0
         frontWord = try container.decodeIfPresent(String.self, forKey: .frontWord) ?? ""
         backWord = try container.decodeIfPresent(String.self, forKey: .backWord) ?? ""
+        radical = try container.decodeIfPresent(String.self, forKey: .radical) ?? ""
+        radicalMeaning = try container.decodeIfPresent(String.self, forKey: .radicalMeaning) ?? ""
+        strokeCount = try container.decodeIfPresent(Int.self, forKey: .strokeCount) ?? 0
+        backDesc = try container.decodeIfPresent(String.self, forKey: .backDesc) ?? ""
         hasShown = try container.decodeIfPresent(Bool.self, forKey: .hasShown) ?? false
         hasMemorized = try container.decodeIfPresent(Bool.self, forKey: .hasMemorized) ?? false
         isFavorite = try container.decodeIfPresent(Bool.self, forKey: .isFavorite) ?? false
     }
     
-    //MARK: -
-    //샘플데이터용
-    internal init(_id: ObjectId, index: Int, level: Int, frontWord: String, backWord: String, hasShown: Bool, hasMemorized: Bool) {
-        super.init()
-        self._id = _id
-        self.index = index
-        self.level = level
-        self.frontWord = frontWord
-        self.backWord = backWord
-        self.hasShown = hasShown
-        self.hasMemorized = hasMemorized
-        self.isFavorite = false
-    }
 }

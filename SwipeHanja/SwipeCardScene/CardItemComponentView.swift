@@ -25,14 +25,11 @@ class CardItemComponentView: UIView {
     let favoriteBtnTapped = PassthroughSubject<Void,Never>()
     let searchBtnTapped = PassthroughSubject<Void,Never>()
     
-    func configure(text: String, font: UIFont?, isFavorite: AnyPublisher<Bool,Never>) {
+    func configure(text: String, isFavorite: AnyPublisher<Bool,Never>) {
         self.label.text = text
-        if let font {
-            self.label.font = font
-        }
         
         // "Songti TC" 폰트를 설정
-        if let songtiFont = UIFont(name: "STSongti-TC-Regular", size: 56) {
+        if let songtiFont = UIFont(name: "STSongti-TC-Regular", size: 64) {
             label.font = songtiFont
         } else {
             print("Songti TC 폰트를 찾을 수 없습니다.")
