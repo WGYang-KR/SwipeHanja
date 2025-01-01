@@ -9,6 +9,7 @@ import UIKit
 import Combine
 class FavoritesItemCell: UITableViewCell {
 
+    @IBOutlet weak var indexLabel: UILabel!
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var firstLabel: UILabel!
@@ -67,7 +68,7 @@ class FavoritesItemCell: UITableViewCell {
     /// - Returns: isFavorite 변경 값 publisher
     func configure(index: Int, favoriteCardItem: FavoriteItem)  {
         
-      
+        indexLabel.text = String(index + 1)
         let cardItem = favoriteCardItem.cardItem
         self.topLabel.text = "\(cardItem.level)급"
         self.firstLabel.text = cardItem.frontWord

@@ -67,7 +67,7 @@
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bux-9h-14S">
                                                         <rect key="frame" x="137" y="3" width="1" height="15"/>
-                                                        <color key="backgroundColor" name="colorTeal01"/>
+                                                        <color key="backgroundColor" name="colorTeal02"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="1" id="NEh-kh-2FT"/>
                                                             <constraint firstAttribute="height" constant="15" id="cb2-hV-6tR"/>
@@ -216,9 +216,6 @@
         </namedColor>
         <namedColor name="ColorTossBlue">
             <color red="0.28235294117647058" green="0.50196078431372548" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="colorTeal01">
-            <color red="0.0" green="0.23529411764705882" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="colorTeal02">
             <color red="0.074509803921568626" green="0.36470588235294116" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
