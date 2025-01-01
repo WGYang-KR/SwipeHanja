@@ -43,6 +43,7 @@ class DBManager {
                         }
                         
                         if let newData = self.totalCardItems.first(where: { $0.frontWord == character }) {
+                            newCardItem["backWord"] = newData.backWord
                             newCardItem["radical"] = newData.radical
                             newCardItem["radicalMeaning"] = newData.radicalMeaning
                             newCardItem["strokeCount"] = newData.strokeCount

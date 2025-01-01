@@ -44,7 +44,7 @@ class FavoritesItemCell: UITableViewCell {
             print("Songti TC 폰트를 찾을 수 없습니다.")
         }
         
-        if let songtiFont = UIFont(name: "STSongti-TC-Regular", size: 16) {
+        if let songtiFont = UIFont(name: "STSongti-TC-Regular", size: 17) {
             radicalLabel.font = songtiFont
         } else {
             print("Songti TC 폰트를 찾을 수 없습니다.")

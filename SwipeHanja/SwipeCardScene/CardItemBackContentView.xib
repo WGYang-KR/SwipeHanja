@@ -75,7 +75,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="a4P-RU-1aQ">
                                     <rect key="frame" x="52.5" y="64" width="238" height="22"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dtZ-aK-UhQ">
+                                        <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dtZ-aK-UhQ">
                                             <rect key="frame" x="0.0" y="0.0" width="136.5" height="22"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="부수" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ur9-oI-1L2">
@@ -88,7 +88,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="부수(부수훈음)" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="K93-gK-2oO">
-                                                    <rect key="frame" x="30" y="0.0" width="106.5" height="21.5"/>
+                                                    <rect key="frame" x="30" y="0.5" width="106.5" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" name="ColorTossBlack01"/>
                                                     <nil key="highlightedColor"/>
