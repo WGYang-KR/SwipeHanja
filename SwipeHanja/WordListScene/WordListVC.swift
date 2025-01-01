@@ -108,7 +108,7 @@ extension WordListVC: UITableViewDataSource {
         let cell = tableView
             .dequeueReusableCell(withIdentifier: "\(WordListItemCell.self)", for: indexPath) as! WordListItemCell
         let item = cardList[indexPath.row]
-        cell.configure(index: indexPath.row + 1, firstText: item.frontWord, secondText: item.backWord, checked: item.hasMemorized, isFavorite: item.isFavorite)
+        cell.configure(index: indexPath.row + 1, cardItem: item)
         
         cell.selectBtnTapped.sink { [weak self] in
             self?.searchBtnTapped(at: indexPath.row)

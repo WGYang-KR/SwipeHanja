@@ -12,6 +12,8 @@ class WordListItemCell: UITableViewCell {
     @IBOutlet weak var indexLabel: UILabel!
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var secondLabel: UILabel!
+    @IBOutlet weak var radicalLabel: UILabel!
+    @IBOutlet weak var strokeCountLabel: UILabel!
     @IBOutlet weak var checkMarkImageView: UIImageView!
     
     @IBOutlet weak var favoriteButton: UIButton!
@@ -25,12 +27,14 @@ class WordListItemCell: UITableViewCell {
     let isFavorite = CurrentValueSubject<Bool,Never>(false)
     let selectBtnTapped = PassthroughSubject<Void,Never>()
     
-    func configure(index: Int, firstText: String, secondText: String, checked: Bool, isFavorite: Bool) {
+    func configure(index: Int, cardItem: CardItem) {
         indexLabel.text = String(index)
-        firstLabel.text = firstText
-        secondLabel.text = secondText
-        checkMarkImageView.image  = checked ? checkMarkImage : nil
-        self.isFavorite.send(isFavorite)
+        firstLabel.text = cardItem.frontWord
+        secondLabel.text = cardItem.backWord
+        self.radicalLabel.text = "\(cardItem.radical)(\(cardItem.radicalMeaning))"
+        self.strokeCountLabel.text = "\(cardItem.strokeCount)획"
+        checkMarkImageView.image  = cardItem.hasMemorized ? checkMarkImage : nil
+        self.isFavorite.send(cardItem.isFavorite)
         
         //isFavorite 변수 변경되면 UI 업데이트되도록 바인드
         self.isFavorite.sink { [weak self] isFavorite  in
@@ -52,6 +56,20 @@ class WordListItemCell: UITableViewCell {
         super.awakeFromNib()
         selectionStyle = .none
         self.backgroundColor = .clear
+        
+        // "Songti TC" 폰트를 설정
+        if let songtiFont = UIFont(name: "STSongti-TC-Regular", size: 40) {
+            firstLabel.font = songtiFont
+        } else {
+            print("Songti TC 폰트를 찾을 수 없습니다.")
+        }
+        
+        if let songtiFont = UIFont(name: "STSongti-TC-Regular", size: 16) {
+            radicalLabel.font = songtiFont
+        } else {
+            print("Songti TC 폰트를 찾을 수 없습니다.")
+        }
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
