@@ -73,7 +73,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="a4P-RU-1aQ">
-                                    <rect key="frame" x="52" y="64" width="239" height="22"/>
+                                    <rect key="frame" x="52.5" y="64" width="238" height="22"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dtZ-aK-UhQ">
                                             <rect key="frame" x="0.0" y="0.0" width="136.5" height="22"/>
@@ -96,15 +96,15 @@
                                             </subviews>
                                         </stackView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dOf-0l-p2a">
-                                            <rect key="frame" x="144.5" y="2" width="2" height="18"/>
+                                            <rect key="frame" x="144.5" y="4" width="1" height="14"/>
                                             <color key="backgroundColor" name="colorTeal02"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="18" id="oaV-Lo-kOQ"/>
-                                                <constraint firstAttribute="width" constant="2" id="rNe-FE-Q6Q"/>
+                                                <constraint firstAttribute="height" constant="14" id="oaV-Lo-kOQ"/>
+                                                <constraint firstAttribute="width" constant="1" id="rNe-FE-Q6Q"/>
                                             </constraints>
                                         </view>
                                         <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="bc5-Wt-nte">
-                                            <rect key="frame" x="154.5" y="0.5" width="84.5" height="21.5"/>
+                                            <rect key="frame" x="153.5" y="0.5" width="84.5" height="21.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="총 획수" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iMq-eF-W2V">
                                                     <rect key="frame" x="0.0" y="0.0" width="43" height="21.5"/>
