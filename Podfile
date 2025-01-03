@@ -1,7 +1,9 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '15.0'
+platform :ios, '15.0'
 
-target 'SwipeHanja' do
+use_modular_headers!
+
+def base
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
@@ -16,6 +18,15 @@ target 'SwipeHanja' do
   pod 'RxSwift', '~> 6.7.1'
   pod 'RxCocoa', '~> 6.7.1'
   pod "RxGesture"
+end
+
+target 'SwipeHanja' do
+  base
+end
+
+target 'SwipeHanjaAD' do
+  base
+  pod 'Google-Mobile-Ads-SDK'
 end
 
 post_install do |installer|
