@@ -23,7 +23,7 @@ class CardItemView: UIView {
     var disposeBag = DisposeBag()
     
     var frontView: CardItemComponentView!
-    var backView: CardItemComponentView!
+    var backView: CardItemBackContentView!
 
     var index: Int = 0
     
@@ -34,24 +34,16 @@ class CardItemView: UIView {
     
     weak var delegate: CardItemViewDelegate?
     
-    struct ContentConfigure {
-        let text: String
-        let font: UIFont?
-    }
-    
     func configure(index: Int,
-                   frontContent: ContentConfigure,
-                   backContent: ContentConfigure,
+                   cardItem: CardItem,
                    isFavorite: Bool,
                    delegate: CardItemViewDelegate,
                    cardSideType: CardSideType) {
         self.index = index
         self.isFavorite.send(isFavorite)
-        self.frontView.configure(text: frontContent.text,
-                                 font: frontContent.font,
+        self.frontView.configure(text: cardItem.frontWord,
                                  isFavorite: self.isFavorite.eraseToAnyPublisher())
-        self.backView.configure(text: backContent.text,
-                                 font: backContent.font,
+        self.backView.configure(cardItem: cardItem,
                                 isFavorite: self.isFavorite.eraseToAnyPublisher())
         bindViews()
         self.cardSideType = cardSideType
@@ -108,7 +100,7 @@ class CardItemView: UIView {
         
         
         self.frontView = CardItemComponentView()
-        self.backView = CardItemComponentView()
+        self.backView = CardItemBackContentView()
     
         ///UI 레이아웃
         view.addSubview(self.frontView)

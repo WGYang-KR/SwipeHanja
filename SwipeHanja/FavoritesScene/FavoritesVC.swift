@@ -103,9 +103,7 @@ extension FavoritesVC: UITableViewDataSource {
                 .dequeueReusableCell(withIdentifier: "\(FavoritesItemCell.self)", for: indexPath) as? FavoritesItemCell
             else { return UITableViewCell() }
             let item = vm.favoriteItems.value[indexPath.row]
-            cell.configure(firstText: item.cardItem.frontWord,
-                           secondText: item.cardItem.backWord,
-                           isFavorite: item.isFavorite)
+            cell.configure(index: indexPath.row, favoriteCardItem: item)
             cell.isFavorite.dropFirst().sink { [weak self] newValue in
                 //DB 값 갱신
                 item.updateFavorite(newValue)

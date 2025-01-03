@@ -28,7 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Analytics.setAnalyticsCollectionEnabled(true)
         #endif
         
-        initRealm()
         return true
     }
 
@@ -46,16 +45,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
 }
-
-extension AppDelegate {
-    func initRealm() {
-        let config = Realm.Configuration(
-            schemaVersion: 1)
-        // Use this configuration when opening realms
-        Realm.Configuration.defaultConfiguration = config
-        shLog("realm 위치: \(Realm.Configuration.defaultConfiguration.fileURL?.absoluteString ?? "")")
-    }
-}
-

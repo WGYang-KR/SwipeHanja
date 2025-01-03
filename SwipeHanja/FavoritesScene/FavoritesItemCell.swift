@@ -9,10 +9,13 @@ import UIKit
 import Combine
 class FavoritesItemCell: UITableViewCell {
 
-    
+    @IBOutlet weak var indexLabel: UILabel!
+    @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var secondLabel: UILabel!
+    @IBOutlet weak var radicalLabel: UILabel!
+    @IBOutlet weak var strokeCountLabel: UILabel!
     @IBOutlet weak var searchButton: UIButton!
     
     let linedStarImage: UIImage? = .init(systemName: "star")
@@ -33,6 +36,20 @@ class FavoritesItemCell: UITableViewCell {
             //favorite 여부 바뀌먄 UI 갱신
             self?.setFavoriteButtonUI(value)
         }.store(in: &cancellables)
+        
+        // "Songti TC" 폰트를 설정
+        if let songtiFont = UIFont(name: "STSongti-TC-Regular", size: 40) {
+            firstLabel.font = songtiFont
+        } else {
+            print("Songti TC 폰트를 찾을 수 없습니다.")
+        }
+        
+        if let songtiFont = UIFont(name: "STSongti-TC-Regular", size: 17) {
+            radicalLabel.font = songtiFont
+        } else {
+            print("Songti TC 폰트를 찾을 수 없습니다.")
+        }
+        
     }
     override func prepareForReuse() {
         self.reusableCancellables = Set<AnyCancellable>()
@@ -49,10 +66,16 @@ class FavoritesItemCell: UITableViewCell {
     ///   - secondText: 뜻 텍스트
     ///   - isFavorite: Favorite 여부
     /// - Returns: isFavorite 변경 값 publisher
-    func configure(firstText: String, secondText: String, isFavorite: Bool)  {
-        self.firstLabel.text = firstText
-        self.secondLabel.text = secondText
-        self.isFavorite.send(isFavorite)
+    func configure(index: Int, favoriteCardItem: FavoriteItem)  {
+        
+        indexLabel.text = String(index + 1)
+        let cardItem = favoriteCardItem.cardItem
+        self.topLabel.text = "\(cardItem.level)급"
+        self.firstLabel.text = cardItem.frontWord
+        self.secondLabel.text = cardItem.backWord
+        self.radicalLabel.text = "\(cardItem.radical)(\(cardItem.radicalMeaning))"
+        self.strokeCountLabel.text = "\(cardItem.strokeCount)획"
+        self.isFavorite.send(favoriteCardItem.isFavorite)
     }
 
     ///favorite 아이콘 UI를 갱신한다.

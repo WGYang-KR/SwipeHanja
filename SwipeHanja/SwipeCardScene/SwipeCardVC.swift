@@ -23,7 +23,8 @@ class SwipeCardVC: UIViewController {
     @IBOutlet weak var countRightLabel: UILabel!
     @IBOutlet weak var remainCountLabel: UILabel!
     @IBOutlet weak var totalCountLabel: UILabel!
-
+    @IBOutlet weak var fontBtn: UIButton!
+    
     var cardDefaultSide: CardSideType = .front
     var cardFontType: FontType = .system
     
@@ -106,6 +107,11 @@ class SwipeCardVC: UIViewController {
     
     @IBAction func topBackBtnTapped(_ sender: Any) {
         self.moveBackVC(animated: true)
+    }
+    
+    
+    @IBAction func fontBtnTapped(_ sender: Any) {
+        
     }
     
     @IBAction func toggleCardDefaultSideBtnTapped(_ sender: Any) {
@@ -225,19 +231,9 @@ extension SwipeCardVC: KolodaViewDataSource {
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         let item = dataSource[index]
         let cardItemView = CardItemView()
-       
-        var font: UIFont?
-        switch cardFontType {
-        case .system:
-            font = .systemFont(ofSize: 56)
-        case .KanjiStrokeOrders:
-            font = .init(name: "KanjiStrokeOrders", size: 80)
-        }
+
         cardItemView.configure(index: index,
-                               frontContent: .init(text: item.frontWord,
-                                                   font: font),
-                               backContent: .init(text: item.backWord,
-                                                  font: nil),
+                               cardItem: item,
                                isFavorite: item.isFavorite,
                                delegate: self,
                                cardSideType: cardDefaultSide)
