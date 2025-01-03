@@ -57,6 +57,7 @@
 		6AA3321A2BD14F8C00996EC5 /* SwipeCardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AA332182BD14F8C00996EC5 /* SwipeCardVC.xib */; };
 		6AA3321D2BD1532000996EC5 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA3321C2BD1532000996EC5 /* CardItem.swift */; };
 		6AA332202BD1579B00996EC5 /* CommonUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA3321F2BD1579B00996EC5 /* CommonUtility.swift */; };
+		6AA509B92D283D3300ABED4B /* AdMobManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA509B72D283D0B00ABED4B /* AdMobManager.swift */; };
 		6AB977922D28359200497D96 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0A8E542D18090E00E3F993 /* DBManager.swift */; };
 		6AB977932D28359200497D96 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A788E882BD7EA6500B7ABDA /* OverlayView.swift */; };
 		6AB977942D28359200497D96 /* KolodaViewAnimatior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A788E8D2BD7EA6500B7ABDA /* KolodaViewAnimatior.swift */; };
@@ -206,6 +207,7 @@
 		6AA332182BD14F8C00996EC5 /* SwipeCardVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwipeCardVC.xib; sourceTree = "<group>"; };
 		6AA3321C2BD1532000996EC5 /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
 		6AA3321F2BD1579B00996EC5 /* CommonUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtility.swift; sourceTree = "<group>"; };
+		6AA509B72D283D0B00ABED4B /* AdMobManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobManager.swift; sourceTree = "<group>"; };
 		6AB977E02D28359200497D96 /* SwipeHanjaAD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeHanjaAD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB977E32D2835E700497D96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AC284072C3AE47E007BEFD1 /* SearchWebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWebVC.swift; sourceTree = "<group>"; };
@@ -456,6 +458,7 @@
 		6AB977E22D2835BA00497D96 /* SwipeHanjaAD */ = {
 			isa = PBXGroup;
 			children = (
+				6AA509B72D283D0B00ABED4B /* AdMobManager.swift */,
 				6AB977E32D2835E700497D96 /* Info.plist */,
 			);
 			path = SwipeHanjaAD;
@@ -856,6 +859,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AB977922D28359200497D96 /* DBManager.swift in Sources */,
+				6AA509B92D283D3300ABED4B /* AdMobManager.swift in Sources */,
 				6AB977932D28359200497D96 /* OverlayView.swift in Sources */,
 				6AB977942D28359200497D96 /* KolodaViewAnimatior.swift in Sources */,
 				6AB977952D28359200497D96 /* MainTabBarController.swift in Sources */,
@@ -1139,6 +1143,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[arch=*]" = "SwipeHanjaAD $(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1174,6 +1179,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[arch=*]" = SwipeHanjaAD;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

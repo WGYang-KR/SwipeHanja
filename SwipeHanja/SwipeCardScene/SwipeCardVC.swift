@@ -199,6 +199,11 @@ extension SwipeCardVC: KolodaViewDelegate {
                 }
             }
             presentOverFull(vc, animated: false)
+        } else {
+            //광고 표시
+            #if SwipeHanjaAD
+            AdMobManager.shared.showAD(baseVC: self)
+            #endif
         }
     }
     
