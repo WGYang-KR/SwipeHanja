@@ -25,47 +25,58 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N9I-wb-MQ1">
-                            <rect key="frame" x="32" y="304" width="329" height="151"/>
+                            <rect key="frame" x="24" y="279" width="345" height="201"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5n2-CT-6cP">
-                                    <rect key="frame" x="16" y="16" width="297" height="119"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5n2-CT-6cP">
+                                    <rect key="frame" x="24" y="16" width="297" height="169"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="유료버전을 구매 하시면 " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laB-cq-iM3">
-                                            <rect key="frame" x="0.0" y="0.0" width="297" height="24"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="광고 없는 유료 버전을 구매하세요!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laB-cq-iM3">
+                                            <rect key="frame" x="0.0" y="0.0" width="297" height="23"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="2Im-oa-WRU">
-                                            <rect key="frame" x="0.0" y="31.999999999999996" width="297" height="44.666666666666657"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="2Im-oa-WRU">
+                                            <rect key="frame" x="0.0" y="39" width="297" height="69"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="- 광고 없는 학습이 가능합니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJg-ft-4N5">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="유료 버전 기능" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJg-ft-4N5">
                                                     <rect key="frame" x="0.0" y="0.0" width="297" height="20.333333333333332"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="- 3급 A, B 잠금이 해제됩니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lag-Gu-4mM">
-                                                    <rect key="frame" x="0.0" y="24.333333333333314" width="297" height="20.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="AtZ-U4-pIZ">
+                                                    <rect key="frame" x="0.0" y="26.333333333333311" width="297" height="42.666666666666657"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="・ 광고 제거" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvc-ai-KLo">
+                                                            <rect key="frame" x="0.0" y="0.0" width="297" height="20.333333333333332"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="・ 모든 급수 잠금해제" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lag-Gu-4mM">
+                                                            <rect key="frame" x="0.0" y="22.333333333333371" width="297" height="20.333333333333329"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MHG-u5-TDg">
-                                            <rect key="frame" x="0.0" y="84.666666666666686" width="297" height="34.333333333333343"/>
+                                            <rect key="frame" x="0.0" y="124" width="297" height="45"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdS-Eg-Alg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="144.66666666666666" height="34.333333333333336"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="144.66666666666666" height="45"/>
                                                     <color key="tintColor" name="colorTeal02"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <buttonConfiguration key="configuration" style="tinted" title="광고보기"/>
+                                                    <buttonConfiguration key="configuration" style="gray" title="닫기"/>
                                                     <connections>
-                                                        <action selector="showADSelected:" destination="-1" eventType="touchUpInside" id="P4r-Sp-y4h"/>
+                                                        <action selector="closeSelected:" destination="-1" eventType="touchUpInside" id="h9N-P5-30H"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8d-5I-KGh">
-                                                    <rect key="frame" x="152.66666666666663" y="0.0" width="144.33333333333337" height="34.333333333333336"/>
+                                                    <rect key="frame" x="152.66666666666663" y="0.0" width="144.33333333333337" height="45"/>
                                                     <color key="tintColor" name="ColorTossBlue"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" title="구매하기"/>
@@ -75,23 +86,26 @@
                                                     </connections>
                                                 </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="45" id="kA2-47-jh9"/>
+                                            </constraints>
                                         </stackView>
                                     </subviews>
                                 </stackView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstItem="5n2-CT-6cP" firstAttribute="leading" secondItem="N9I-wb-MQ1" secondAttribute="leading" constant="16" id="Nhh-aS-as0"/>
+                                <constraint firstItem="5n2-CT-6cP" firstAttribute="leading" secondItem="N9I-wb-MQ1" secondAttribute="leading" constant="24" id="Nhh-aS-as0"/>
                                 <constraint firstItem="5n2-CT-6cP" firstAttribute="top" secondItem="N9I-wb-MQ1" secondAttribute="top" constant="16" id="ZI9-AY-y1e"/>
-                                <constraint firstAttribute="trailing" secondItem="5n2-CT-6cP" secondAttribute="trailing" constant="16" id="ZfN-ib-U6T"/>
+                                <constraint firstAttribute="trailing" secondItem="5n2-CT-6cP" secondAttribute="trailing" constant="24" id="ZfN-ib-U6T"/>
                                 <constraint firstAttribute="bottom" secondItem="5n2-CT-6cP" secondAttribute="bottom" constant="16" id="wau-Xq-tLa"/>
                             </constraints>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="N9I-wb-MQ1" secondAttribute="trailing" constant="32" id="9oX-QF-4A9"/>
-                        <constraint firstItem="N9I-wb-MQ1" firstAttribute="leading" secondItem="hNE-Vt-hNX" secondAttribute="leading" constant="32" id="IJk-jU-3BS"/>
+                        <constraint firstAttribute="trailing" secondItem="N9I-wb-MQ1" secondAttribute="trailing" constant="24" id="9oX-QF-4A9"/>
+                        <constraint firstItem="N9I-wb-MQ1" firstAttribute="leading" secondItem="hNE-Vt-hNX" secondAttribute="leading" constant="24" id="IJk-jU-3BS"/>
                         <constraint firstItem="N9I-wb-MQ1" firstAttribute="centerY" secondItem="hNE-Vt-hNX" secondAttribute="centerY" id="ytr-oz-xoM"/>
                     </constraints>
                 </view>
