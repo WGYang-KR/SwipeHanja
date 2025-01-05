@@ -18,6 +18,7 @@ def base
   pod 'RxSwift', '~> 6.7.1'
   pod 'RxCocoa', '~> 6.7.1'
   pod "RxGesture"
+  pod 'Google-Mobile-Ads-SDK'
 end
 
 target 'SwipeHanja' do
@@ -26,7 +27,6 @@ end
 
 target 'SwipeHanjaAD' do
   base
-  pod 'Google-Mobile-Ads-SDK'
 end
 
 post_install do |installer|

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		51F3F07C8C63D1D4A187E758 /* Pods_SwipeHanja.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9E06A94BDEF7FFA7C612A0 /* Pods_SwipeHanja.framework */; };
+		53774FB96A09FE996F81F3AC /* Pods_SwipeHanja.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF8EFC7BD89A7F2941EB01E /* Pods_SwipeHanja.framework */; };
 		6A0A8E552D18091100E3F993 /* DBManager.swift in Resources */ = {isa = PBXBuildFile; fileRef = 6A0A8E542D18090E00E3F993 /* DBManager.swift */; };
 		6A21AD8F2C0215DD004ACBC0 /* copyright.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6A21AD8C2C0215DD004ACBC0 /* copyright.txt */; };
 		6A21AD902C0215DD004ACBC0 /* KanjiStrokeOrders_v4.004.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A21AD8D2C0215DD004ACBC0 /* KanjiStrokeOrders_v4.004.ttf */; };
@@ -153,13 +153,14 @@
 		6AFD0C072BE90AB700F27BBE /* CardSideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0C062BE90AB700F27BBE /* CardSideType.swift */; };
 		6AFD0C0E2BE93BEB00F27BBE /* SHOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0C0C2BE93BEB00F27BBE /* SHOverlayView.swift */; };
 		6AFD0C0F2BE93BEB00F27BBE /* SHOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AFD0C0D2BE93BEB00F27BBE /* SHOverlayView.xib */; };
-		E10D6718359A8D6FC9149433 /* Pods_SwipeHanjaAD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C2A5C5284DBED531E151CD7 /* Pods_SwipeHanjaAD.framework */; };
+		8D9FDD0FF66DE2A57C148566 /* Pods_SwipeHanjaAD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D411B8AF6AE390CBAF025414 /* Pods_SwipeHanjaAD.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		177F576752121AA79CC8BAD1 /* Pods-SwipeHanja.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeHanja.release.xcconfig"; path = "Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja.release.xcconfig"; sourceTree = "<group>"; };
-		3E9E06A94BDEF7FFA7C612A0 /* Pods_SwipeHanja.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeHanja.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		452E9F16CB0580DE5F8F3193 /* Pods-SwipeHanjaAD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeHanjaAD.debug.xcconfig"; path = "Target Support Files/Pods-SwipeHanjaAD/Pods-SwipeHanjaAD.debug.xcconfig"; sourceTree = "<group>"; };
+		296394B1B2FF915B9F18FE34 /* Pods-SwipeHanja.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeHanja.release.xcconfig"; path = "Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja.release.xcconfig"; sourceTree = "<group>"; };
+		4467F4CA9D9347B76AE7D8EC /* Pods-SwipeHanja.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeHanja.debug.xcconfig"; path = "Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja.debug.xcconfig"; sourceTree = "<group>"; };
+		4F17F324A498737D263A7C74 /* Pods-SwipeHanjaAD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeHanjaAD.debug.xcconfig"; path = "Target Support Files/Pods-SwipeHanjaAD/Pods-SwipeHanjaAD.debug.xcconfig"; sourceTree = "<group>"; };
+		5BF8EFC7BD89A7F2941EB01E /* Pods_SwipeHanja.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeHanja.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A0A8E542D18090E00E3F993 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		6A21AD8C2C0215DD004ACBC0 /* copyright.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = copyright.txt; sourceTree = "<group>"; };
 		6A21AD8D2C0215DD004ACBC0 /* KanjiStrokeOrders_v4.004.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KanjiStrokeOrders_v4.004.ttf; sourceTree = "<group>"; };
@@ -237,9 +238,8 @@
 		6AFD0C062BE90AB700F27BBE /* CardSideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSideType.swift; sourceTree = "<group>"; };
 		6AFD0C0C2BE93BEB00F27BBE /* SHOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHOverlayView.swift; sourceTree = "<group>"; };
 		6AFD0C0D2BE93BEB00F27BBE /* SHOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHOverlayView.xib; sourceTree = "<group>"; };
-		80A0397CBFE7BABC9182C1BB /* Pods-SwipeHanjaAD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeHanjaAD.release.xcconfig"; path = "Target Support Files/Pods-SwipeHanjaAD/Pods-SwipeHanjaAD.release.xcconfig"; sourceTree = "<group>"; };
-		9C2A5C5284DBED531E151CD7 /* Pods_SwipeHanjaAD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeHanjaAD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A6D66F69354B267A99C7DA84 /* Pods-SwipeHanja.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeHanja.debug.xcconfig"; path = "Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja.debug.xcconfig"; sourceTree = "<group>"; };
+		D411B8AF6AE390CBAF025414 /* Pods_SwipeHanjaAD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeHanjaAD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD092547C7D444A757F2A055 /* Pods-SwipeHanjaAD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeHanjaAD.release.xcconfig"; path = "Target Support Files/Pods-SwipeHanjaAD/Pods-SwipeHanjaAD.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,7 +247,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51F3F07C8C63D1D4A187E758 /* Pods_SwipeHanja.framework in Frameworks */,
+				53774FB96A09FE996F81F3AC /* Pods_SwipeHanja.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,20 +255,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E10D6718359A8D6FC9149433 /* Pods_SwipeHanjaAD.framework in Frameworks */,
+				8D9FDD0FF66DE2A57C148566 /* Pods_SwipeHanjaAD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2033B6606F99C623BE24DC47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BF8EFC7BD89A7F2941EB01E /* Pods_SwipeHanja.framework */,
+				D411B8AF6AE390CBAF025414 /* Pods_SwipeHanjaAD.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		68CEB7AEF3D59C4AD917EBCE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A6D66F69354B267A99C7DA84 /* Pods-SwipeHanja.debug.xcconfig */,
-				177F576752121AA79CC8BAD1 /* Pods-SwipeHanja.release.xcconfig */,
-				452E9F16CB0580DE5F8F3193 /* Pods-SwipeHanjaAD.debug.xcconfig */,
-				80A0397CBFE7BABC9182C1BB /* Pods-SwipeHanjaAD.release.xcconfig */,
+				4467F4CA9D9347B76AE7D8EC /* Pods-SwipeHanja.debug.xcconfig */,
+				296394B1B2FF915B9F18FE34 /* Pods-SwipeHanja.release.xcconfig */,
+				4F17F324A498737D263A7C74 /* Pods-SwipeHanjaAD.debug.xcconfig */,
+				FD092547C7D444A757F2A055 /* Pods-SwipeHanjaAD.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -374,7 +383,7 @@
 				6AB977E22D2835BA00497D96 /* SwipeHanjaAD */,
 				6AA331FF2BD14E0200996EC5 /* Products */,
 				68CEB7AEF3D59C4AD917EBCE /* Pods */,
-				787033DBA91A59418C631477 /* Frameworks */,
+				2033B6606F99C623BE24DC47 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -517,15 +526,6 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		787033DBA91A59418C631477 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3E9E06A94BDEF7FFA7C612A0 /* Pods_SwipeHanja.framework */,
-				9C2A5C5284DBED531E151CD7 /* Pods_SwipeHanjaAD.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -533,11 +533,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6AA332122BD14E0200996EC5 /* Build configuration list for PBXNativeTarget "SwipeHanja" */;
 			buildPhases = (
-				3652A4FE723FDB349B561677 /* [CP] Check Pods Manifest.lock */,
+				F51F0FD0701A4B9440C7B059 /* [CP] Check Pods Manifest.lock */,
 				6AA331FA2BD14E0200996EC5 /* Sources */,
 				6AA331FB2BD14E0200996EC5 /* Frameworks */,
 				6AA331FC2BD14E0200996EC5 /* Resources */,
-				4C9F02718B4BF86378F88624 /* [CP] Embed Pods Frameworks */,
+				F2DCFEE8D3627A616B0E5377 /* [CP] Embed Pods Frameworks */,
 				6A5C2D292BF8BF2D003E7CF6 /* Firebase crashlytics */,
 			);
 			buildRules = (
@@ -553,12 +553,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6AB977DD2D28359200497D96 /* Build configuration list for PBXNativeTarget "SwipeHanjaAD" */;
 			buildPhases = (
-				5D14BF057B16FFB8D8138C38 /* [CP] Check Pods Manifest.lock */,
+				00B760547D8BC6A16EA7A6AE /* [CP] Check Pods Manifest.lock */,
 				6AB977912D28359200497D96 /* Sources */,
 				6AB977BE2D28359200497D96 /* Frameworks */,
 				6AB977C02D28359200497D96 /* Resources */,
-				5209B58643D0F6311CEDF6D6 /* [CP] Embed Pods Frameworks */,
-				4B462BAEBB7D4740DE8BE2CA /* [CP] Copy Pods Resources */,
+				8AFFAFD99706FCE6F15B8559 /* [CP] Embed Pods Frameworks */,
+				4A39BE854C09159189612715 /* [CP] Copy Pods Resources */,
 				6AB977DC2D28359200497D96 /* Firebase crashlytics */,
 			);
 			buildRules = (
@@ -677,80 +677,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3652A4FE723FDB349B561677 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SwipeHanja-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4B462BAEBB7D4740DE8BE2CA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwipeHanjaAD/Pods-SwipeHanjaAD-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwipeHanjaAD/Pods-SwipeHanjaAD-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwipeHanjaAD/Pods-SwipeHanjaAD-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4C9F02718B4BF86378F88624 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5209B58643D0F6311CEDF6D6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwipeHanjaAD/Pods-SwipeHanjaAD-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwipeHanjaAD/Pods-SwipeHanjaAD-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwipeHanjaAD/Pods-SwipeHanjaAD-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5D14BF057B16FFB8D8138C38 /* [CP] Check Pods Manifest.lock */ = {
+		00B760547D8BC6A16EA7A6AE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -770,6 +697,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A39BE854C09159189612715 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwipeHanjaAD/Pods-SwipeHanjaAD-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwipeHanjaAD/Pods-SwipeHanjaAD-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwipeHanjaAD/Pods-SwipeHanjaAD-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6A5C2D292BF8BF2D003E7CF6 /* Firebase crashlytics */ = {
@@ -817,6 +761,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if [ \"${CONFIGURATION}\" != \"Debug\" ]; then\n    \"${PODS_ROOT}/FirebaseCrashlytics/run\"\nfi\n";
+		};
+		8AFFAFD99706FCE6F15B8559 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwipeHanjaAD/Pods-SwipeHanjaAD-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwipeHanjaAD/Pods-SwipeHanjaAD-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwipeHanjaAD/Pods-SwipeHanjaAD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2DCFEE8D3627A616B0E5377 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F51F0FD0701A4B9440C7B059 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwipeHanja-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1064,7 +1064,7 @@
 		};
 		6AA332132BD14E0200996EC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A6D66F69354B267A99C7DA84 /* Pods-SwipeHanja.debug.xcconfig */;
+			baseConfigurationReference = 4467F4CA9D9347B76AE7D8EC /* Pods-SwipeHanja.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1100,7 +1100,7 @@
 		};
 		6AA332142BD14E0200996EC5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 177F576752121AA79CC8BAD1 /* Pods-SwipeHanja.release.xcconfig */;
+			baseConfigurationReference = 296394B1B2FF915B9F18FE34 /* Pods-SwipeHanja.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1135,7 +1135,7 @@
 		};
 		6AB977DE2D28359200497D96 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 452E9F16CB0580DE5F8F3193 /* Pods-SwipeHanjaAD.debug.xcconfig */;
+			baseConfigurationReference = 4F17F324A498737D263A7C74 /* Pods-SwipeHanjaAD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1172,7 +1172,7 @@
 		};
 		6AB977DF2D28359200497D96 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80A0397CBFE7BABC9182C1BB /* Pods-SwipeHanjaAD.release.xcconfig */;
+			baseConfigurationReference = FD092547C7D444A757F2A055 /* Pods-SwipeHanjaAD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
