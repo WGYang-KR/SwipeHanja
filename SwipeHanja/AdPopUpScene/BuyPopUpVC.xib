@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AdPopUpVCViewController" customModule="SwipeHanja" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BuyPopUpVC" customModule="SwipeHanja" customModuleProvider="target">
             <connections>
                 <outlet property="backBoxView" destination="N9I-wb-MQ1" id="y8b-0K-JJL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -25,10 +25,10 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N9I-wb-MQ1">
-                            <rect key="frame" x="24" y="279" width="345" height="201"/>
+                            <rect key="frame" x="24" y="271" width="345" height="217"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5n2-CT-6cP">
-                                    <rect key="frame" x="24" y="16" width="297" height="169"/>
+                                    <rect key="frame" x="24" y="24" width="297" height="169"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="광고 없는 유료 버전을 구매하세요!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laB-cq-iM3">
                                             <rect key="frame" x="0.0" y="0.0" width="297" height="23"/>
@@ -53,7 +53,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="・ 모든 급수 잠금해제" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lag-Gu-4mM">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="・ 3급 잠금해제" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lag-Gu-4mM">
                                                             <rect key="frame" x="0.0" y="22.333333333333371" width="297" height="20.333333333333329"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -96,9 +96,9 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="5n2-CT-6cP" firstAttribute="leading" secondItem="N9I-wb-MQ1" secondAttribute="leading" constant="24" id="Nhh-aS-as0"/>
-                                <constraint firstItem="5n2-CT-6cP" firstAttribute="top" secondItem="N9I-wb-MQ1" secondAttribute="top" constant="16" id="ZI9-AY-y1e"/>
+                                <constraint firstItem="5n2-CT-6cP" firstAttribute="top" secondItem="N9I-wb-MQ1" secondAttribute="top" constant="24" id="ZI9-AY-y1e"/>
                                 <constraint firstAttribute="trailing" secondItem="5n2-CT-6cP" secondAttribute="trailing" constant="24" id="ZfN-ib-U6T"/>
-                                <constraint firstAttribute="bottom" secondItem="5n2-CT-6cP" secondAttribute="bottom" constant="16" id="wau-Xq-tLa"/>
+                                <constraint firstAttribute="bottom" secondItem="5n2-CT-6cP" secondAttribute="bottom" constant="24" id="wau-Xq-tLa"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -111,7 +111,7 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" name="ColorOverlayBackground"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hNE-Vt-hNX" secondAttribute="bottom" id="GCi-Nm-aMl"/>
                 <constraint firstItem="hNE-Vt-hNX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="YNW-WE-QEx"/>
@@ -122,9 +122,6 @@
         </view>
     </objects>
     <resources>
-        <namedColor name="ColorOverlayBackground">
-            <color red="0.46666666666666667" green="0.69019607843137254" blue="0.66666666666666663" alpha="0.80000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="ColorTossBlue">
             <color red="0.28235294117647058" green="0.50196078431372548" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

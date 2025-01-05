@@ -16,9 +16,8 @@ class AdMobManager: NSObject {
     func configure() {
         GADMobileAds.sharedInstance().start(completionHandler: nil)
     }
-    
-    
-    /// 광고를 표시한다.
+
+    /// 광고를 호출한다.
     /// - Parameters:
     ///   - baseVC: 광고표시할 base VC
     ///   - completion: 광고 후 실행할 동작,  bool값은 광고표시 success 여부.

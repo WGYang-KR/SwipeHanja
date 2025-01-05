@@ -104,8 +104,12 @@ extension MainVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        let index = indexPath.row
         let item = vm.cardPackList[indexPath.row]
-        if item.learningStatus == .completed {
+        
+        if item.level == 3 {
+            presentOverFull(BuyPopUpVC(), animated: true)
+        } else if item.learningStatus == .completed {
             AlertHelper.alertConfirm(baseVC: self, title: "학습이 완료된 챕터예요.\n학습을 다시 진행할까요?", message: "") {[weak self] in
                 self?.vm.resetLearningStatus(at: indexPath.row)
                 moveSwipeCardVC()

@@ -175,6 +175,15 @@ class SwipeCardVC: UIViewController {
     func favoriteDataUpdated() {
         kolodaView.reconfigureCards()
     }
+    
+    ///광고표시 프로세스
+    func doAdProcess() {
+        AdMobManager.shared.showAD(baseVC: self) { [weak self] success in
+            guard let self else { return }
+            presentOverFull(BuyPopUpVC(), animated: true)
+        }
+    }
+    
 }
 
 // MARK: KolodaViewDelegate
@@ -267,30 +276,4 @@ extension SwipeCardVC: CardItemViewDelegate {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-}
-
-extension SwipeCardVC {
-    
-    //광고표시 프로세스
-    func doAdProcess() {
-        AdMobManager.shared.showAD(baseVC: self) { [weak self] success in
-            guard let self else { return }
-            let nextVC = AdPopUpVCViewController()
-            nextVC.goToBuyTapped = { [weak self] in
-                guard let self else { return }
-                let appStoreURL = URL(string: "https://apps.apple.com/app/hashcamera/id6502834553")!
-                if UIApplication.shared.canOpenURL(appStoreURL) {
-                    UIApplication.shared.open(appStoreURL)
-                }
-                dismiss(animated: false)
-            }
-            
-            nextVC.closeTapped = { [weak self] in
-                guard let self else { return }
-                dismiss(animated: false)
-            }
-            
-            presentOverFull(nextVC, animated: false)
-        }
-    }
 }
