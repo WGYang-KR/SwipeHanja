@@ -175,7 +175,6 @@ class SwipeCardVC: UIViewController {
     func favoriteDataUpdated() {
         kolodaView.reconfigureCards()
     }
-
 }
 
 // MARK: KolodaViewDelegate
@@ -201,8 +200,9 @@ extension SwipeCardVC: KolodaViewDelegate {
             presentOverFull(vc, animated: false)
         } else {
             //광고 표시
+            
             #if SwipeHanjaAD
-            AdMobManager.shared.showAD(baseVC: self)
+            doAdProcess()
             #endif
         }
     }
@@ -268,4 +268,58 @@ extension SwipeCardVC: CardItemViewDelegate {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+}
+
+extension SwipeCardVC {
+    //광고표시 프로세스
+    func doAdProcess() {
+        let nextVC = AdPopUpVCViewController()
+        nextVC.goToBuyTapped = { [weak self] in
+            guard let self else { return }
+            
+            //앱스토어 이동했다가 다시 왔을 때 광고 표시될 수 있도록 예약
+            NotificationCenter.default.addObserver(
+                self,
+                selector: #selector(appDidBecomeActive),
+                name: UIApplication.didBecomeActiveNotification,
+                object: nil
+            )
+            AppStatus.isADReserved = true
+            
+            let appStoreURL = URL(string: "https://apps.apple.com/app/hashcamera/id6502834553")!
+            if UIApplication.shared.canOpenURL(appStoreURL) {
+                UIApplication.shared.open(appStoreURL)
+            } else {
+                AppStatus.isADReserved = false
+            }
+            
+            dismiss(animated: false)
+            
+        }
+        
+        nextVC.showADTapped = { [weak self] in
+            guard let self else { return }
+            dismiss(animated: false) {
+                #if SwipeHanjaAD
+                AdMobManager.shared.showAD(baseVC: self)
+                #endif
+            }
+        }
+        
+        presentOverFull(nextVC, animated: false)
+
+    }
+    
+    @objc func appDidBecomeActive() {
+        shLog("ViewController: 앱이 다시 활성화되었습니다.")
+        if AppStatus.isADReserved {
+            AppStatus.isADReserved = false
+            #if SwipeHanjaAD
+            AdMobManager.shared.showAD(baseVC: self)
+            #endif
+        } else {
+            return
+        }
+    }
+
 }

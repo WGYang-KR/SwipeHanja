@@ -47,6 +47,9 @@ class AppStatus {
         return UIDevice.current.systemVersion
     }
 
+    ///앱이 활성화 되었을 때 광고를 표시해야하는지
+    static var isADReserved: Bool = false
+    
     // 디바이스 모델 조회
     static func getModel() -> String {
         var systemInfo = utsname()
