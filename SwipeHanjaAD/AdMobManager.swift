@@ -24,10 +24,16 @@ class AdMobManager: NSObject {
     func showAD(baseVC: UIViewController? = nil, completion: ((Bool) -> Void)? = nil) {
         self.completion = completion
         
+        #if DEBUG
+        let unitID = "ca-app-pub-3940256099942544/4411468910"//테스트용
+        #else
+        let unitID = "ca-app-pub-7765567435748576/2028861607"
+        #endif
+
         Task {
             do {
                 interstitial = try await GADInterstitialAd.load(
-                    withAdUnitID: "ca-app-pub-3940256099942544/4411468910",
+                    withAdUnitID: unitID,
                     request: GADRequest()
                 )
                 interstitial?.fullScreenContentDelegate = self
