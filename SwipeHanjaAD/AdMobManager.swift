@@ -39,13 +39,17 @@ class AdMobManager: NSObject {
                 interstitial?.fullScreenContentDelegate = self
             } catch {
                 shLog("Ad 에러:Failed to load interstitial ad with error: \(error.localizedDescription)")
-                completion?(false) // 광고 로드 실패 시 completion 호출
+                await MainActor.run {
+                    completion?(false) // 광고 로드 실패 시 completion 호출
+                }
                 return
             }
             
             guard let interstitial = interstitial else {
                 shLog("Ad 에러: Ad wasn't ready.")
-                completion?(false) // 광고가 준비되지 않았을 경우 completion 호출
+                await MainActor.run {
+                    completion?(false) // 광고가 준비되지 않았을 경우 completion 호출
+                }
                 return
             }
 

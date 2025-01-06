@@ -27,6 +27,7 @@
 		6A64ABAE2D2A97A400F801F9 /* BuyPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A64ABAA2D2A97A400F801F9 /* BuyPopUpVC.swift */; };
 		6A64ABAF2D2A97A400F801F9 /* BuyPopUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A64ABAB2D2A97A400F801F9 /* BuyPopUpVC.xib */; };
 		6A64ABB02D2ACFB700F801F9 /* AdMobManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA509B72D283D0B00ABED4B /* AdMobManager.swift */; };
+		6A64ABB22D2C16E600F801F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A64ABB12D2C16E600F801F9 /* GoogleService-Info.plist */; };
 		6A70A7272C21C4F100B2B4AB /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70A7252C21C4F100B2B4AB /* MainTabBarController.swift */; };
 		6A70A72A2C21C5EA00B2B4AB /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A70A7292C21C5EA00B2B4AB /* MainVC.xib */; };
 		6A70A72E2C21C78000B2B4AB /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70A72C2C21C78000B2B4AB /* FavoritesVC.swift */; };
@@ -121,7 +122,6 @@
 		6AB977CC2D28359200497D96 /* CardItemComponentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A788E4B2BD17EF800B7ABDA /* CardItemComponentView.xib */; };
 		6AB977CD2D28359200497D96 /* WordListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AA1268B2BF5A15200B67424 /* WordListItemCell.xib */; };
 		6AB977CE2D28359200497D96 /* Songti.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 6A848B5D2D23C94C00CB888D /* Songti.ttc */; };
-		6AB977CF2D28359200497D96 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A5C2D222BF8A553003E7CF6 /* GoogleService-Info.plist */; };
 		6AB977D02D28359200497D96 /* WordListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AA126872BF5A12A00B67424 /* WordListVC.xib */; };
 		6AB977D12D28359200497D96 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A70A7292C21C5EA00B2B4AB /* MainVC.xib */; };
 		6AB977D22D28359200497D96 /* SearchWebVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AC284082C3AE47E007BEFD1 /* SearchWebVC.xib */; };
@@ -179,6 +179,7 @@
 		6A5C2D2B2BFA1E25003E7CF6 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		6A64ABAA2D2A97A400F801F9 /* BuyPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyPopUpVC.swift; sourceTree = "<group>"; };
 		6A64ABAB2D2A97A400F801F9 /* BuyPopUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyPopUpVC.xib; sourceTree = "<group>"; };
+		6A64ABB12D2C16E600F801F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6A70A7252C21C4F100B2B4AB /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		6A70A7292C21C5EA00B2B4AB /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
 		6A70A72C2C21C78000B2B4AB /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
@@ -486,6 +487,7 @@
 			children = (
 				6AA509B72D283D0B00ABED4B /* AdMobManager.swift */,
 				6AB977E32D2835E700497D96 /* Info.plist */,
+				6A64ABB12D2C16E600F801F9 /* GoogleService-Info.plist */,
 			);
 			path = SwipeHanjaAD;
 			sourceTree = "<group>";
@@ -657,9 +659,9 @@
 				6AB977CA2D28359200497D96 /* FavoritesVC.xib in Resources */,
 				6AB977CB2D28359200497D96 /* DBManager.swift in Resources */,
 				6AB977CC2D28359200497D96 /* CardItemComponentView.xib in Resources */,
+				6A64ABB22D2C16E600F801F9 /* GoogleService-Info.plist in Resources */,
 				6AB977CD2D28359200497D96 /* WordListItemCell.xib in Resources */,
 				6AB977CE2D28359200497D96 /* Songti.ttc in Resources */,
-				6AB977CF2D28359200497D96 /* GoogleService-Info.plist in Resources */,
 				6AB977D02D28359200497D96 /* WordListVC.xib in Resources */,
 				6AB977D12D28359200497D96 /* MainVC.xib in Resources */,
 				6AB977D22D28359200497D96 /* SearchWebVC.xib in Resources */,
@@ -1142,7 +1144,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = WRMZ68J9BN;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -1179,7 +1181,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = WRMZ68J9BN;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
