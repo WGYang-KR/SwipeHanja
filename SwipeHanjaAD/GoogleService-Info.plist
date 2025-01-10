@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyD45xVvIWHSxTuSeyeI3D0WAvHgjuGWBPE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>165114558429</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.wgyang.swipeSangGongHanjaAD</string>
+	<key>PROJECT_ID</key>
+	<string>swipe-sanggong-hanja</string>
+	<key>STORAGE_BUCKET</key>
+	<string>swipe-sanggong-hanja.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:165114558429:ios:03f14db0bf1b8b8d0e6834</string>
+</dict>
+</plist>

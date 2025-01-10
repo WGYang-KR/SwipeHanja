@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53774FB96A09FE996F81F3AC /* Pods_SwipeHanja.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF8EFC7BD89A7F2941EB01E /* Pods_SwipeHanja.framework */; };
 		6A0A8E552D18091100E3F993 /* DBManager.swift in Resources */ = {isa = PBXBuildFile; fileRef = 6A0A8E542D18090E00E3F993 /* DBManager.swift */; };
 		6A21AD8F2C0215DD004ACBC0 /* copyright.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6A21AD8C2C0215DD004ACBC0 /* copyright.txt */; };
 		6A21AD902C0215DD004ACBC0 /* KanjiStrokeOrders_v4.004.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A21AD8D2C0215DD004ACBC0 /* KanjiStrokeOrders_v4.004.ttf */; };
@@ -21,6 +22,12 @@
 		6A23F4CC2D22F5010001362B /* CardPacks_20241231.json in Resources */ = {isa = PBXBuildFile; fileRef = 6A23F4CB2D22F5010001362B /* CardPacks_20241231.json */; };
 		6A5C2D232BF8A553003E7CF6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A5C2D222BF8A553003E7CF6 /* GoogleService-Info.plist */; };
 		6A5C2D2C2BFA1E25003E7CF6 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 6A5C2D2B2BFA1E25003E7CF6 /* PrivacyInfo.xcprivacy */; };
+		6A64ABAC2D2A97A400F801F9 /* BuyPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A64ABAA2D2A97A400F801F9 /* BuyPopUpVC.swift */; };
+		6A64ABAD2D2A97A400F801F9 /* BuyPopUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A64ABAB2D2A97A400F801F9 /* BuyPopUpVC.xib */; };
+		6A64ABAE2D2A97A400F801F9 /* BuyPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A64ABAA2D2A97A400F801F9 /* BuyPopUpVC.swift */; };
+		6A64ABAF2D2A97A400F801F9 /* BuyPopUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A64ABAB2D2A97A400F801F9 /* BuyPopUpVC.xib */; };
+		6A64ABB02D2ACFB700F801F9 /* AdMobManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA509B72D283D0B00ABED4B /* AdMobManager.swift */; };
+		6A64ABB22D2C16E600F801F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A64ABB12D2C16E600F801F9 /* GoogleService-Info.plist */; };
 		6A70A7272C21C4F100B2B4AB /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70A7252C21C4F100B2B4AB /* MainTabBarController.swift */; };
 		6A70A72A2C21C5EA00B2B4AB /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A70A7292C21C5EA00B2B4AB /* MainVC.xib */; };
 		6A70A72E2C21C78000B2B4AB /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70A72C2C21C78000B2B4AB /* FavoritesVC.swift */; };
@@ -56,6 +63,76 @@
 		6AA3321A2BD14F8C00996EC5 /* SwipeCardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AA332182BD14F8C00996EC5 /* SwipeCardVC.xib */; };
 		6AA3321D2BD1532000996EC5 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA3321C2BD1532000996EC5 /* CardItem.swift */; };
 		6AA332202BD1579B00996EC5 /* CommonUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA3321F2BD1579B00996EC5 /* CommonUtility.swift */; };
+		6AA509B92D283D3300ABED4B /* AdMobManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA509B72D283D0B00ABED4B /* AdMobManager.swift */; };
+		6AB977922D28359200497D96 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0A8E542D18090E00E3F993 /* DBManager.swift */; };
+		6AB977932D28359200497D96 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A788E882BD7EA6500B7ABDA /* OverlayView.swift */; };
+		6AB977942D28359200497D96 /* KolodaViewAnimatior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A788E8D2BD7EA6500B7ABDA /* KolodaViewAnimatior.swift */; };
+		6AB977952D28359200497D96 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70A7252C21C4F100B2B4AB /* MainTabBarController.swift */; };
+		6AB977962D28359200497D96 /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0BFA2BE5963000F27BBE /* AppSetting.swift */; };
+		6AB977972D28359200497D96 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0C042BE8F80E00F27BBE /* AlertHelper.swift */; };
+		6AB977982D28359200497D96 /* CardItemBackContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A848B552D23C68400CB888D /* CardItemBackContentView.swift */; };
+		6AB977992D28359200497D96 /* CardPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0BE42BDA855400F27BBE /* CardPack.swift */; };
+		6AB9779A2D28359200497D96 /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70A72C2C21C78000B2B4AB /* FavoritesVC.swift */; };
+		6AB9779B2D28359200497D96 /* FavoritesSwipeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2310EF2C38248F008BFCBC /* FavoritesSwipeVM.swift */; };
+		6AB9779C2D28359200497D96 /* DraggableCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A788E862BD7EA6500B7ABDA /* DraggableCardView.swift */; };
+		6AB9779D2D28359200497D96 /* CardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A928E802C173A2D00894FD4 /* CardItemView.swift */; };
+		6AB9779E2D28359200497D96 /* FavoriteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2310DA2C2B0D2A008BFCBC /* FavoriteData.swift */; };
+		6AB9779F2D28359200497D96 /* SwipeResultDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A788E8E2BD7EA6500B7ABDA /* SwipeResultDirection.swift */; };
+		6AB977A02D28359200497D96 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0BF72BE5937E00F27BBE /* SettingsView.swift */; };
+		6AB977A12D28359200497D96 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA332052BD14E0200996EC5 /* MainVC.swift */; };
+		6AB977A22D28359200497D96 /* FavoritesItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE23B5E2C29A35F009E8978 /* FavoritesItemCell.swift */; };
+		6AB977A32D28359200497D96 /* SwipeCardCompletionPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7E78AF2BF33FD40081F561 /* SwipeCardCompletionPopUpVC.swift */; };
+		6AB977A42D28359200497D96 /* WordListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA1268A2BF5A15200B67424 /* WordListItemCell.swift */; };
+		6AB977A52D28359200497D96 /* CardItemComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A788E4A2BD17EF800B7ABDA /* CardItemComponentView.swift */; };
+		6AB977A62D28359200497D96 /* SwipeCardVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0BE62BDA89CD00F27BBE /* SwipeCardVM.swift */; };
+		6AB977A72D28359200497D96 /* SearchWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC284072C3AE47E007BEFD1 /* SearchWebVC.swift */; };
+		6AB977A82D28359200497D96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA332012BD14E0200996EC5 /* AppDelegate.swift */; };
+		6AB977A92D28359200497D96 /* SHOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0C0C2BE93BEB00F27BBE /* SHOverlayView.swift */; };
+		6AB977AA2D28359200497D96 /* LearningStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0C022BE7698C00F27BBE /* LearningStatus.swift */; };
+		6AB977AB2D28359200497D96 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA3321C2BD1532000996EC5 /* CardItem.swift */; };
+		6AB977AC2D28359200497D96 /* CommonUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA3321F2BD1579B00996EC5 /* CommonUtility.swift */; };
+		6AB977AD2D28359200497D96 /* FontType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A21AD922C021AB8004ACBC0 /* FontType.swift */; };
+		6AB977AE2D28359200497D96 /* FavoritesSwipeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2310EB2C382488008BFCBC /* FavoritesSwipeVC.swift */; };
+		6AB977AF2D28359200497D96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA332032BD14E0200996EC5 /* SceneDelegate.swift */; };
+		6AB977B02D28359200497D96 /* FavoritesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2310E22C2C5C26008BFCBC /* FavoritesVM.swift */; };
+		6AB977B12D28359200497D96 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0BE92BE24EA300F27BBE /* MainVM.swift */; };
+		6AB977B22D28359200497D96 /* KolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A788E8C2BD7EA6500B7ABDA /* KolodaView.swift */; };
+		6AB977B32D28359200497D96 /* WordListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA126862BF5A12A00B67424 /* WordListVC.swift */; };
+		6AB977B42D28359200497D96 /* FavoritesStartLearningCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE23B622C29A634009E8978 /* FavoritesStartLearningCell.swift */; };
+		6AB977B52D28359200497D96 /* AppStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0BFC2BE5974F00F27BBE /* AppStatus.swift */; };
+		6AB977B62D28359200497D96 /* NibUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A848B5B2D23C6CB00CB888D /* NibUIView.swift */; };
+		6AB977B72D28359200497D96 /* KolodaCardStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A788E8B2BD7EA6500B7ABDA /* KolodaCardStorage.swift */; };
+		6AB977B82D28359200497D96 /* SwipeCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA332172BD14F8C00996EC5 /* SwipeCardVC.swift */; };
+		6AB977B92D28359200497D96 /* CardSideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0C062BE90AB700F27BBE /* CardSideType.swift */; };
+		6AB977BA2D28359200497D96 /* EmailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0BFE2BE5979200F27BBE /* EmailHelper.swift */; };
+		6AB977BB2D28359200497D96 /* CardPackItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0BF22BE51BD800F27BBE /* CardPackItemCell.swift */; };
+		6AB977BC2D28359200497D96 /* FavoriteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2310E52C2C6448008BFCBC /* FavoriteItem.swift */; };
+		6AB977BD2D28359200497D96 /* KolodaAnimationSemaphore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A788E8A2BD7EA6500B7ABDA /* KolodaAnimationSemaphore.swift */; };
+		6AB977C12D28359200497D96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AA3320A2BD14E0200996EC5 /* Assets.xcassets */; };
+		6AB977C22D28359200497D96 /* CardPacks_20241231.json in Resources */ = {isa = PBXBuildFile; fileRef = 6A23F4CB2D22F5010001362B /* CardPacks_20241231.json */; };
+		6AB977C32D28359200497D96 /* FavoritesItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AE23B5F2C29A35F009E8978 /* FavoritesItemCell.xib */; };
+		6AB977C42D28359200497D96 /* copyright.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6A21AD8C2C0215DD004ACBC0 /* copyright.txt */; };
+		6AB977C52D28359200497D96 /* remote_config_defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AC2840B2C3D6BA6007BEFD1 /* remote_config_defaults.plist */; };
+		6AB977C62D28359200497D96 /* FavoritesStartLearningCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AE23B632C29A634009E8978 /* FavoritesStartLearningCell.xib */; };
+		6AB977C72D28359200497D96 /* CardItemBackContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A848B592D23C69800CB888D /* CardItemBackContentView.xib */; };
+		6AB977C82D28359200497D96 /* SwipeCardCompletionPopUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A7E78B02BF33FD40081F561 /* SwipeCardCompletionPopUpVC.xib */; };
+		6AB977C92D28359200497D96 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 6A5C2D2B2BFA1E25003E7CF6 /* PrivacyInfo.xcprivacy */; };
+		6AB977CA2D28359200497D96 /* FavoritesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A70A72D2C21C78000B2B4AB /* FavoritesVC.xib */; };
+		6AB977CB2D28359200497D96 /* DBManager.swift in Resources */ = {isa = PBXBuildFile; fileRef = 6A0A8E542D18090E00E3F993 /* DBManager.swift */; };
+		6AB977CC2D28359200497D96 /* CardItemComponentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A788E4B2BD17EF800B7ABDA /* CardItemComponentView.xib */; };
+		6AB977CD2D28359200497D96 /* WordListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AA1268B2BF5A15200B67424 /* WordListItemCell.xib */; };
+		6AB977CE2D28359200497D96 /* Songti.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 6A848B5D2D23C94C00CB888D /* Songti.ttc */; };
+		6AB977D02D28359200497D96 /* WordListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AA126872BF5A12A00B67424 /* WordListVC.xib */; };
+		6AB977D12D28359200497D96 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A70A7292C21C5EA00B2B4AB /* MainVC.xib */; };
+		6AB977D22D28359200497D96 /* SearchWebVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AC284082C3AE47E007BEFD1 /* SearchWebVC.xib */; };
+		6AB977D32D28359200497D96 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6AA3320D2BD14E0200996EC5 /* Base */; };
+		6AB977D42D28359200497D96 /* CardItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A928E822C173A3C00894FD4 /* CardItemView.xib */; };
+		6AB977D52D28359200497D96 /* CardPackItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AFD0BF32BE51BD800F27BBE /* CardPackItemCell.xib */; };
+		6AB977D62D28359200497D96 /* SHOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AFD0C0D2BE93BEB00F27BBE /* SHOverlayView.xib */; };
+		6AB977D72D28359200497D96 /* FavoritesSwipeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A2310EC2C382488008BFCBC /* FavoritesSwipeVC.xib */; };
+		6AB977D82D28359200497D96 /* KanjiStrokeOrders_v4.004.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A21AD8D2C0215DD004ACBC0 /* KanjiStrokeOrders_v4.004.ttf */; };
+		6AB977D92D28359200497D96 /* readme_en_v4.004.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6A21AD8E2C0215DD004ACBC0 /* readme_en_v4.004.txt */; };
+		6AB977DA2D28359200497D96 /* SwipeCardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AA332182BD14F8C00996EC5 /* SwipeCardVC.xib */; };
 		6AC284092C3AE47E007BEFD1 /* SearchWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC284072C3AE47E007BEFD1 /* SearchWebVC.swift */; };
 		6AC2840A2C3AE47E007BEFD1 /* SearchWebVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AC284082C3AE47E007BEFD1 /* SearchWebVC.xib */; };
 		6AC2840C2C3D6BA6007BEFD1 /* remote_config_defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AC2840B2C3D6BA6007BEFD1 /* remote_config_defaults.plist */; };
@@ -77,12 +154,14 @@
 		6AFD0C072BE90AB700F27BBE /* CardSideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0C062BE90AB700F27BBE /* CardSideType.swift */; };
 		6AFD0C0E2BE93BEB00F27BBE /* SHOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD0C0C2BE93BEB00F27BBE /* SHOverlayView.swift */; };
 		6AFD0C0F2BE93BEB00F27BBE /* SHOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AFD0C0D2BE93BEB00F27BBE /* SHOverlayView.xib */; };
-		9114C6749677CE4FDE17A75F /* Pods_SwipeHanja.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E043EBE98ECE749CC710537 /* Pods_SwipeHanja.framework */; };
+		8D9FDD0FF66DE2A57C148566 /* Pods_SwipeHanjaAD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D411B8AF6AE390CBAF025414 /* Pods_SwipeHanjaAD.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2E043EBE98ECE749CC710537 /* Pods_SwipeHanja.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeHanja.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		51C1AE3546CA790C8CA26438 /* Pods-SwipeHanja.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeHanja.debug.xcconfig"; path = "Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja.debug.xcconfig"; sourceTree = "<group>"; };
+		296394B1B2FF915B9F18FE34 /* Pods-SwipeHanja.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeHanja.release.xcconfig"; path = "Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja.release.xcconfig"; sourceTree = "<group>"; };
+		4467F4CA9D9347B76AE7D8EC /* Pods-SwipeHanja.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeHanja.debug.xcconfig"; path = "Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja.debug.xcconfig"; sourceTree = "<group>"; };
+		4F17F324A498737D263A7C74 /* Pods-SwipeHanjaAD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeHanjaAD.debug.xcconfig"; path = "Target Support Files/Pods-SwipeHanjaAD/Pods-SwipeHanjaAD.debug.xcconfig"; sourceTree = "<group>"; };
+		5BF8EFC7BD89A7F2941EB01E /* Pods_SwipeHanja.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeHanja.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A0A8E542D18090E00E3F993 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		6A21AD8C2C0215DD004ACBC0 /* copyright.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = copyright.txt; sourceTree = "<group>"; };
 		6A21AD8D2C0215DD004ACBC0 /* KanjiStrokeOrders_v4.004.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KanjiStrokeOrders_v4.004.ttf; sourceTree = "<group>"; };
@@ -98,6 +177,9 @@
 		6A5C2D212BF8A2C1003E7CF6 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		6A5C2D222BF8A553003E7CF6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6A5C2D2B2BFA1E25003E7CF6 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		6A64ABAA2D2A97A400F801F9 /* BuyPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyPopUpVC.swift; sourceTree = "<group>"; };
+		6A64ABAB2D2A97A400F801F9 /* BuyPopUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyPopUpVC.xib; sourceTree = "<group>"; };
+		6A64ABB12D2C16E600F801F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6A70A7252C21C4F100B2B4AB /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		6A70A7292C21C5EA00B2B4AB /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
 		6A70A72C2C21C78000B2B4AB /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
@@ -134,6 +216,9 @@
 		6AA332182BD14F8C00996EC5 /* SwipeCardVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwipeCardVC.xib; sourceTree = "<group>"; };
 		6AA3321C2BD1532000996EC5 /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
 		6AA3321F2BD1579B00996EC5 /* CommonUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtility.swift; sourceTree = "<group>"; };
+		6AA509B72D283D0B00ABED4B /* AdMobManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobManager.swift; sourceTree = "<group>"; };
+		6AB977E02D28359200497D96 /* SwipeHanjaAD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeHanjaAD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AB977E32D2835E700497D96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AC284072C3AE47E007BEFD1 /* SearchWebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWebVC.swift; sourceTree = "<group>"; };
 		6AC284082C3AE47E007BEFD1 /* SearchWebVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchWebVC.xib; sourceTree = "<group>"; };
 		6AC2840B2C3D6BA6007BEFD1 /* remote_config_defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = remote_config_defaults.plist; sourceTree = "<group>"; };
@@ -155,7 +240,8 @@
 		6AFD0C062BE90AB700F27BBE /* CardSideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSideType.swift; sourceTree = "<group>"; };
 		6AFD0C0C2BE93BEB00F27BBE /* SHOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHOverlayView.swift; sourceTree = "<group>"; };
 		6AFD0C0D2BE93BEB00F27BBE /* SHOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHOverlayView.xib; sourceTree = "<group>"; };
-		F08B7299C4A081E29039B2B9 /* Pods-SwipeHanja.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeHanja.release.xcconfig"; path = "Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja.release.xcconfig"; sourceTree = "<group>"; };
+		D411B8AF6AE390CBAF025414 /* Pods_SwipeHanjaAD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeHanjaAD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD092547C7D444A757F2A055 /* Pods-SwipeHanjaAD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeHanjaAD.release.xcconfig"; path = "Target Support Files/Pods-SwipeHanjaAD/Pods-SwipeHanjaAD.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,18 +249,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9114C6749677CE4FDE17A75F /* Pods_SwipeHanja.framework in Frameworks */,
+				53774FB96A09FE996F81F3AC /* Pods_SwipeHanja.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AB977BE2D28359200497D96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D9FDD0FF66DE2A57C148566 /* Pods_SwipeHanjaAD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2033B6606F99C623BE24DC47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BF8EFC7BD89A7F2941EB01E /* Pods_SwipeHanja.framework */,
+				D411B8AF6AE390CBAF025414 /* Pods_SwipeHanjaAD.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		68CEB7AEF3D59C4AD917EBCE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				51C1AE3546CA790C8CA26438 /* Pods-SwipeHanja.debug.xcconfig */,
-				F08B7299C4A081E29039B2B9 /* Pods-SwipeHanja.release.xcconfig */,
+				4467F4CA9D9347B76AE7D8EC /* Pods-SwipeHanja.debug.xcconfig */,
+				296394B1B2FF915B9F18FE34 /* Pods-SwipeHanja.release.xcconfig */,
+				4F17F324A498737D263A7C74 /* Pods-SwipeHanjaAD.debug.xcconfig */,
+				FD092547C7D444A757F2A055 /* Pods-SwipeHanjaAD.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -195,6 +300,15 @@
 				6A2310E52C2C6448008BFCBC /* FavoriteItem.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		6A64ABA92D2A974E00F801F9 /* AdPopUpScene */ = {
+			isa = PBXGroup;
+			children = (
+				6A64ABAA2D2A97A400F801F9 /* BuyPopUpVC.swift */,
+				6A64ABAB2D2A97A400F801F9 /* BuyPopUpVC.xib */,
+			);
+			path = AdPopUpScene;
 			sourceTree = "<group>";
 		};
 		6A70A71E2C21C36800B2B4AB /* TabBar */ = {
@@ -268,9 +382,10 @@
 			isa = PBXGroup;
 			children = (
 				6AA332002BD14E0200996EC5 /* SwipeHanja */,
+				6AB977E22D2835BA00497D96 /* SwipeHanjaAD */,
 				6AA331FF2BD14E0200996EC5 /* Products */,
 				68CEB7AEF3D59C4AD917EBCE /* Pods */,
-				81ED5F353FD6330ECA590612 /* Frameworks */,
+				2033B6606F99C623BE24DC47 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -278,6 +393,7 @@
 			isa = PBXGroup;
 			children = (
 				6AA331FE2BD14E0200996EC5 /* SwipeHanja.app */,
+				6AB977E02D28359200497D96 /* SwipeHanjaAD.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -294,6 +410,7 @@
 				6AA126852BF5A10300B67424 /* WordListScene */,
 				6AC284062C3AE43E007BEFD1 /* SearchScene */,
 				6AFD0BF62BE5927700F27BBE /* SettingsScene */,
+				6A64ABA92D2A974E00F801F9 /* AdPopUpScene */,
 				6AA3321E2BD1573800996EC5 /* Utility */,
 				6AFD0BED2BE3DF5D00F27BBE /* Resource */,
 				6AA332012BD14E0200996EC5 /* AppDelegate.swift */,
@@ -365,6 +482,16 @@
 			path = MainScene;
 			sourceTree = "<group>";
 		};
+		6AB977E22D2835BA00497D96 /* SwipeHanjaAD */ = {
+			isa = PBXGroup;
+			children = (
+				6AA509B72D283D0B00ABED4B /* AdMobManager.swift */,
+				6AB977E32D2835E700497D96 /* Info.plist */,
+				6A64ABB12D2C16E600F801F9 /* GoogleService-Info.plist */,
+			);
+			path = SwipeHanjaAD;
+			sourceTree = "<group>";
+		};
 		6AC284062C3AE43E007BEFD1 /* SearchScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,14 +529,6 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		81ED5F353FD6330ECA590612 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2E043EBE98ECE749CC710537 /* Pods_SwipeHanja.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -417,11 +536,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6AA332122BD14E0200996EC5 /* Build configuration list for PBXNativeTarget "SwipeHanja" */;
 			buildPhases = (
-				BC99947E097C01E5B20F419E /* [CP] Check Pods Manifest.lock */,
+				F51F0FD0701A4B9440C7B059 /* [CP] Check Pods Manifest.lock */,
 				6AA331FA2BD14E0200996EC5 /* Sources */,
 				6AA331FB2BD14E0200996EC5 /* Frameworks */,
 				6AA331FC2BD14E0200996EC5 /* Resources */,
-				70C847D62644595FAC090413 /* [CP] Embed Pods Frameworks */,
+				F2DCFEE8D3627A616B0E5377 /* [CP] Embed Pods Frameworks */,
 				6A5C2D292BF8BF2D003E7CF6 /* Firebase crashlytics */,
 			);
 			buildRules = (
@@ -431,6 +550,27 @@
 			name = SwipeHanja;
 			productName = SwipeHanja;
 			productReference = 6AA331FE2BD14E0200996EC5 /* SwipeHanja.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6AB9778F2D28359200497D96 /* SwipeHanjaAD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AB977DD2D28359200497D96 /* Build configuration list for PBXNativeTarget "SwipeHanjaAD" */;
+			buildPhases = (
+				00B760547D8BC6A16EA7A6AE /* [CP] Check Pods Manifest.lock */,
+				6AB977912D28359200497D96 /* Sources */,
+				6AB977BE2D28359200497D96 /* Frameworks */,
+				6AB977C02D28359200497D96 /* Resources */,
+				8AFFAFD99706FCE6F15B8559 /* [CP] Embed Pods Frameworks */,
+				4A39BE854C09159189612715 /* [CP] Copy Pods Resources */,
+				6AB977DC2D28359200497D96 /* Firebase crashlytics */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwipeHanjaAD;
+			productName = SwipeHanja;
+			productReference = 6AB977E02D28359200497D96 /* SwipeHanjaAD.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -463,6 +603,7 @@
 			projectRoot = "";
 			targets = (
 				6AA331FD2BD14E0200996EC5 /* SwipeHanja */,
+				6AB9778F2D28359200497D96 /* SwipeHanjaAD */,
 			);
 		};
 /* End PBXProject section */
@@ -492,6 +633,7 @@
 				6AC2840A2C3AE47E007BEFD1 /* SearchWebVC.xib in Resources */,
 				6AA3320E2BD14E0200996EC5 /* Base in Resources */,
 				6A928E832C173A3C00894FD4 /* CardItemView.xib in Resources */,
+				6A64ABAF2D2A97A400F801F9 /* BuyPopUpVC.xib in Resources */,
 				6AFD0BF52BE51BD800F27BBE /* CardPackItemCell.xib in Resources */,
 				6AFD0C0F2BE93BEB00F27BBE /* SHOverlayView.xib in Resources */,
 				6A2310EE2C382488008BFCBC /* FavoritesSwipeVC.xib in Resources */,
@@ -501,9 +643,82 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6AB977C02D28359200497D96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AB977C12D28359200497D96 /* Assets.xcassets in Resources */,
+				6AB977C22D28359200497D96 /* CardPacks_20241231.json in Resources */,
+				6AB977C32D28359200497D96 /* FavoritesItemCell.xib in Resources */,
+				6AB977C42D28359200497D96 /* copyright.txt in Resources */,
+				6AB977C52D28359200497D96 /* remote_config_defaults.plist in Resources */,
+				6AB977C62D28359200497D96 /* FavoritesStartLearningCell.xib in Resources */,
+				6AB977C72D28359200497D96 /* CardItemBackContentView.xib in Resources */,
+				6AB977C82D28359200497D96 /* SwipeCardCompletionPopUpVC.xib in Resources */,
+				6AB977C92D28359200497D96 /* PrivacyInfo.xcprivacy in Resources */,
+				6AB977CA2D28359200497D96 /* FavoritesVC.xib in Resources */,
+				6AB977CB2D28359200497D96 /* DBManager.swift in Resources */,
+				6AB977CC2D28359200497D96 /* CardItemComponentView.xib in Resources */,
+				6A64ABB22D2C16E600F801F9 /* GoogleService-Info.plist in Resources */,
+				6AB977CD2D28359200497D96 /* WordListItemCell.xib in Resources */,
+				6AB977CE2D28359200497D96 /* Songti.ttc in Resources */,
+				6AB977D02D28359200497D96 /* WordListVC.xib in Resources */,
+				6AB977D12D28359200497D96 /* MainVC.xib in Resources */,
+				6AB977D22D28359200497D96 /* SearchWebVC.xib in Resources */,
+				6AB977D32D28359200497D96 /* Base in Resources */,
+				6AB977D42D28359200497D96 /* CardItemView.xib in Resources */,
+				6A64ABAD2D2A97A400F801F9 /* BuyPopUpVC.xib in Resources */,
+				6AB977D52D28359200497D96 /* CardPackItemCell.xib in Resources */,
+				6AB977D62D28359200497D96 /* SHOverlayView.xib in Resources */,
+				6AB977D72D28359200497D96 /* FavoritesSwipeVC.xib in Resources */,
+				6AB977D82D28359200497D96 /* KanjiStrokeOrders_v4.004.ttf in Resources */,
+				6AB977D92D28359200497D96 /* readme_en_v4.004.txt in Resources */,
+				6AB977DA2D28359200497D96 /* SwipeCardVC.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		00B760547D8BC6A16EA7A6AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwipeHanjaAD-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A39BE854C09159189612715 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwipeHanjaAD/Pods-SwipeHanjaAD-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwipeHanjaAD/Pods-SwipeHanjaAD-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwipeHanjaAD/Pods-SwipeHanjaAD-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6A5C2D292BF8BF2D003E7CF6 /* Firebase crashlytics */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -527,7 +742,47 @@
 			shellPath = /bin/sh;
 			shellScript = "if [ \"${CONFIGURATION}\" != \"Debug\" ]; then\n    \"${PODS_ROOT}/FirebaseCrashlytics/run\"\nfi\n";
 		};
-		70C847D62644595FAC090413 /* [CP] Embed Pods Frameworks */ = {
+		6AB977DC2D28359200497D96 /* Firebase crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
+			);
+			name = "Firebase crashlytics";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${CONFIGURATION}\" != \"Debug\" ]; then\n    \"${PODS_ROOT}/FirebaseCrashlytics/run\"\nfi\n";
+		};
+		8AFFAFD99706FCE6F15B8559 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwipeHanjaAD/Pods-SwipeHanjaAD-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwipeHanjaAD/Pods-SwipeHanjaAD-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwipeHanjaAD/Pods-SwipeHanjaAD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2DCFEE8D3627A616B0E5377 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -544,7 +799,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwipeHanja/Pods-SwipeHanja-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BC99947E097C01E5B20F419E /* [CP] Check Pods Manifest.lock */ = {
+		F51F0FD0701A4B9440C7B059 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -609,14 +864,69 @@
 				6AA126882BF5A12A00B67424 /* WordListVC.swift in Sources */,
 				6AE23B642C29A634009E8978 /* FavoritesStartLearningCell.swift in Sources */,
 				6AFD0BFD2BE5974F00F27BBE /* AppStatus.swift in Sources */,
+				6A64ABAE2D2A97A400F801F9 /* BuyPopUpVC.swift in Sources */,
 				6A848B5C2D23C6D000CB888D /* NibUIView.swift in Sources */,
 				6A788E932BD7EA6500B7ABDA /* KolodaCardStorage.swift in Sources */,
 				6AA332192BD14F8C00996EC5 /* SwipeCardVC.swift in Sources */,
 				6AFD0C072BE90AB700F27BBE /* CardSideType.swift in Sources */,
 				6AFD0BFF2BE5979200F27BBE /* EmailHelper.swift in Sources */,
 				6AFD0BF42BE51BD800F27BBE /* CardPackItemCell.swift in Sources */,
+				6A64ABB02D2ACFB700F801F9 /* AdMobManager.swift in Sources */,
 				6A2310E62C2C6448008BFCBC /* FavoriteItem.swift in Sources */,
 				6A788E922BD7EA6500B7ABDA /* KolodaAnimationSemaphore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AB977912D28359200497D96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AB977922D28359200497D96 /* DBManager.swift in Sources */,
+				6AA509B92D283D3300ABED4B /* AdMobManager.swift in Sources */,
+				6AB977932D28359200497D96 /* OverlayView.swift in Sources */,
+				6AB977942D28359200497D96 /* KolodaViewAnimatior.swift in Sources */,
+				6AB977952D28359200497D96 /* MainTabBarController.swift in Sources */,
+				6AB977962D28359200497D96 /* AppSetting.swift in Sources */,
+				6AB977972D28359200497D96 /* AlertHelper.swift in Sources */,
+				6AB977982D28359200497D96 /* CardItemBackContentView.swift in Sources */,
+				6AB977992D28359200497D96 /* CardPack.swift in Sources */,
+				6AB9779A2D28359200497D96 /* FavoritesVC.swift in Sources */,
+				6AB9779B2D28359200497D96 /* FavoritesSwipeVM.swift in Sources */,
+				6AB9779C2D28359200497D96 /* DraggableCardView.swift in Sources */,
+				6AB9779D2D28359200497D96 /* CardItemView.swift in Sources */,
+				6A64ABAC2D2A97A400F801F9 /* BuyPopUpVC.swift in Sources */,
+				6AB9779E2D28359200497D96 /* FavoriteData.swift in Sources */,
+				6AB9779F2D28359200497D96 /* SwipeResultDirection.swift in Sources */,
+				6AB977A02D28359200497D96 /* SettingsView.swift in Sources */,
+				6AB977A12D28359200497D96 /* MainVC.swift in Sources */,
+				6AB977A22D28359200497D96 /* FavoritesItemCell.swift in Sources */,
+				6AB977A32D28359200497D96 /* SwipeCardCompletionPopUpVC.swift in Sources */,
+				6AB977A42D28359200497D96 /* WordListItemCell.swift in Sources */,
+				6AB977A52D28359200497D96 /* CardItemComponentView.swift in Sources */,
+				6AB977A62D28359200497D96 /* SwipeCardVM.swift in Sources */,
+				6AB977A72D28359200497D96 /* SearchWebVC.swift in Sources */,
+				6AB977A82D28359200497D96 /* AppDelegate.swift in Sources */,
+				6AB977A92D28359200497D96 /* SHOverlayView.swift in Sources */,
+				6AB977AA2D28359200497D96 /* LearningStatus.swift in Sources */,
+				6AB977AB2D28359200497D96 /* CardItem.swift in Sources */,
+				6AB977AC2D28359200497D96 /* CommonUtility.swift in Sources */,
+				6AB977AD2D28359200497D96 /* FontType.swift in Sources */,
+				6AB977AE2D28359200497D96 /* FavoritesSwipeVC.swift in Sources */,
+				6AB977AF2D28359200497D96 /* SceneDelegate.swift in Sources */,
+				6AB977B02D28359200497D96 /* FavoritesVM.swift in Sources */,
+				6AB977B12D28359200497D96 /* MainVM.swift in Sources */,
+				6AB977B22D28359200497D96 /* KolodaView.swift in Sources */,
+				6AB977B32D28359200497D96 /* WordListVC.swift in Sources */,
+				6AB977B42D28359200497D96 /* FavoritesStartLearningCell.swift in Sources */,
+				6AB977B52D28359200497D96 /* AppStatus.swift in Sources */,
+				6AB977B62D28359200497D96 /* NibUIView.swift in Sources */,
+				6AB977B72D28359200497D96 /* KolodaCardStorage.swift in Sources */,
+				6AB977B82D28359200497D96 /* SwipeCardVC.swift in Sources */,
+				6AB977B92D28359200497D96 /* CardSideType.swift in Sources */,
+				6AB977BA2D28359200497D96 /* EmailHelper.swift in Sources */,
+				6AB977BB2D28359200497D96 /* CardPackItemCell.swift in Sources */,
+				6AB977BC2D28359200497D96 /* FavoriteItem.swift in Sources */,
+				6AB977BD2D28359200497D96 /* KolodaAnimationSemaphore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -758,7 +1068,7 @@
 		};
 		6AA332132BD14E0200996EC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 51C1AE3546CA790C8CA26438 /* Pods-SwipeHanja.debug.xcconfig */;
+			baseConfigurationReference = 4467F4CA9D9347B76AE7D8EC /* Pods-SwipeHanja.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -769,7 +1079,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwipeHanja/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Swipe! 상공한자";
+				INFOPLIST_KEY_CFBundleDisplayName = "상공한자";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -779,7 +1089,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.0;
+				MARKETING_VERSION = 1.5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wgyang.swipeSangGongHanja;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -794,7 +1104,7 @@
 		};
 		6AA332142BD14E0200996EC5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F08B7299C4A081E29039B2B9 /* Pods-SwipeHanja.release.xcconfig */;
+			baseConfigurationReference = 296394B1B2FF915B9F18FE34 /* Pods-SwipeHanja.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -804,7 +1114,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwipeHanja/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Swipe! 상공한자";
+				INFOPLIST_KEY_CFBundleDisplayName = "상공한자";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -814,13 +1124,86 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.0;
+				MARKETING_VERSION = 1.5.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wgyang.swipeSangGongHanja;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		6AB977DE2D28359200497D96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F17F324A498737D263A7C74 /* Pods-SwipeHanjaAD.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconLite;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = WRMZ68J9BN;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwipeHanjaAD/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "상공한자 Lite";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wgyang.swipeSangGongHanjaAD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[arch=*]" = "SwipeHanjaAD $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		6AB977DF2D28359200497D96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD092547C7D444A757F2A055 /* Pods-SwipeHanjaAD.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconLite;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WRMZ68J9BN;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwipeHanjaAD/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "상공한자 Lite";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wgyang.swipeSangGongHanjaAD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[arch=*]" = SwipeHanjaAD;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -844,6 +1227,15 @@
 			buildConfigurations = (
 				6AA332132BD14E0200996EC5 /* Debug */,
 				6AA332142BD14E0200996EC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AB977DD2D28359200497D96 /* Build configuration list for PBXNativeTarget "SwipeHanjaAD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AB977DE2D28359200497D96 /* Debug */,
+				6AB977DF2D28359200497D96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

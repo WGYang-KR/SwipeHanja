@@ -19,10 +19,11 @@ class MainVC: UIViewController {
         super.viewDidLoad()
         initVM()
         initTableView()
-        titleLabel.text = "Swipe! 한자"
+        titleLabel.text = AppStatus.isADVersionApp ? "Swipe! 상공한자 Lite" : "Swipe! 상공한자"
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         tableView.reloadData()
     }
 
@@ -102,9 +103,12 @@ extension MainVC: UITableViewDataSource {
 extension MainVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+
         let item = vm.cardPackList[indexPath.row]
-        if item.learningStatus == .completed {
+        
+        if AppStatus.isADVersionApp, item.level <= 6 {
+            presentOverFull(BuyPopUpVC(), animated: true)
+        } else if item.learningStatus == .completed {
             AlertHelper.alertConfirm(baseVC: self, title: "학습이 완료된 챕터예요.\n학습을 다시 진행할까요?", message: "") {[weak self] in
                 self?.vm.resetLearningStatus(at: indexPath.row)
                 moveSwipeCardVC()

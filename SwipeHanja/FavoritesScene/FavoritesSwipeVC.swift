@@ -125,6 +125,15 @@ class FavoritesSwipeVC: UIViewController {
         kolodaView.reconfigureCards()
         
     }
+    
+    //광고표시 프로세스
+    func doAdProcess() {
+        AdMobManager.shared.showAD(baseVC: self) { [weak self] success in
+            guard let self else { return }
+            presentOverFull(BuyPopUpVC(), animated: true)
+        }
+    }
+    
 }
 
 
@@ -143,6 +152,11 @@ extension FavoritesSwipeVC: KolodaViewDelegate {
                 self?.moveBackVC(animated: true)
             }
             presentOverFull(vc, animated: false)
+        } else {
+            //광고 표시
+            if AppStatus.isADVersionApp {
+                doAdProcess()
+            }
         }
     }
     

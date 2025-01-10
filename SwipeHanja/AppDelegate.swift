@@ -28,6 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Analytics.setAnalyticsCollectionEnabled(true)
         #endif
         
+        #if SwipeHanjaAD
+        AdMobManager.shared.configure()
+        #endif
         return true
     }
 

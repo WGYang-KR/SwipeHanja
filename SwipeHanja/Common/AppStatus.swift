@@ -47,6 +47,15 @@ class AppStatus {
         return UIDevice.current.systemVersion
     }
 
+    ///무료 버전 앱인지
+    static var isADVersionApp: Bool {
+        #if SwipeHanjaAD
+        return true
+        #else
+        return false
+        #endif
+    }
+
     // 디바이스 모델 조회
     static func getModel() -> String {
         var systemInfo = utsname()
