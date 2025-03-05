@@ -27,7 +27,6 @@
 		6A64ABAE2D2A97A400F801F9 /* BuyPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A64ABAA2D2A97A400F801F9 /* BuyPopUpVC.swift */; };
 		6A64ABAF2D2A97A400F801F9 /* BuyPopUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A64ABAB2D2A97A400F801F9 /* BuyPopUpVC.xib */; };
 		6A64ABB02D2ACFB700F801F9 /* AdMobManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA509B72D283D0B00ABED4B /* AdMobManager.swift */; };
-		6A64ABB22D2C16E600F801F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A64ABB12D2C16E600F801F9 /* GoogleService-Info.plist */; };
 		6A70A7272C21C4F100B2B4AB /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70A7252C21C4F100B2B4AB /* MainTabBarController.swift */; };
 		6A70A72A2C21C5EA00B2B4AB /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A70A7292C21C5EA00B2B4AB /* MainVC.xib */; };
 		6A70A72E2C21C78000B2B4AB /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70A72C2C21C78000B2B4AB /* FavoritesVC.swift */; };
@@ -50,6 +49,7 @@
 		6A848B5E2D23C94C00CB888D /* Songti.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 6A848B5D2D23C94C00CB888D /* Songti.ttc */; };
 		6A928E812C173A2D00894FD4 /* CardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A928E802C173A2D00894FD4 /* CardItemView.swift */; };
 		6A928E832C173A3C00894FD4 /* CardItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A928E822C173A3C00894FD4 /* CardItemView.xib */; };
+		6A99C55C2D78F8680090B3BD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A99C55B2D78F8680090B3BD /* GoogleService-Info.plist */; };
 		6AA126882BF5A12A00B67424 /* WordListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA126862BF5A12A00B67424 /* WordListVC.swift */; };
 		6AA126892BF5A12A00B67424 /* WordListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AA126872BF5A12A00B67424 /* WordListVC.xib */; };
 		6AA1268C2BF5A15200B67424 /* WordListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA1268A2BF5A15200B67424 /* WordListItemCell.swift */; };
@@ -179,7 +179,6 @@
 		6A5C2D2B2BFA1E25003E7CF6 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		6A64ABAA2D2A97A400F801F9 /* BuyPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyPopUpVC.swift; sourceTree = "<group>"; };
 		6A64ABAB2D2A97A400F801F9 /* BuyPopUpVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyPopUpVC.xib; sourceTree = "<group>"; };
-		6A64ABB12D2C16E600F801F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6A70A7252C21C4F100B2B4AB /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		6A70A7292C21C5EA00B2B4AB /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
 		6A70A72C2C21C78000B2B4AB /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
@@ -201,6 +200,7 @@
 		6A848B5D2D23C94C00CB888D /* Songti.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Songti.ttc; sourceTree = "<group>"; };
 		6A928E802C173A2D00894FD4 /* CardItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItemView.swift; sourceTree = "<group>"; };
 		6A928E822C173A3C00894FD4 /* CardItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardItemView.xib; sourceTree = "<group>"; };
+		6A99C55B2D78F8680090B3BD /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6AA126862BF5A12A00B67424 /* WordListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListVC.swift; sourceTree = "<group>"; };
 		6AA126872BF5A12A00B67424 /* WordListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordListVC.xib; sourceTree = "<group>"; };
 		6AA1268A2BF5A15200B67424 /* WordListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListItemCell.swift; sourceTree = "<group>"; };
@@ -487,7 +487,7 @@
 			children = (
 				6AA509B72D283D0B00ABED4B /* AdMobManager.swift */,
 				6AB977E32D2835E700497D96 /* Info.plist */,
-				6A64ABB12D2C16E600F801F9 /* GoogleService-Info.plist */,
+				6A99C55B2D78F8680090B3BD /* GoogleService-Info.plist */,
 			);
 			path = SwipeHanjaAD;
 			sourceTree = "<group>";
@@ -652,6 +652,7 @@
 				6AB977C32D28359200497D96 /* FavoritesItemCell.xib in Resources */,
 				6AB977C42D28359200497D96 /* copyright.txt in Resources */,
 				6AB977C52D28359200497D96 /* remote_config_defaults.plist in Resources */,
+				6A99C55C2D78F8680090B3BD /* GoogleService-Info.plist in Resources */,
 				6AB977C62D28359200497D96 /* FavoritesStartLearningCell.xib in Resources */,
 				6AB977C72D28359200497D96 /* CardItemBackContentView.xib in Resources */,
 				6AB977C82D28359200497D96 /* SwipeCardCompletionPopUpVC.xib in Resources */,
@@ -659,7 +660,6 @@
 				6AB977CA2D28359200497D96 /* FavoritesVC.xib in Resources */,
 				6AB977CB2D28359200497D96 /* DBManager.swift in Resources */,
 				6AB977CC2D28359200497D96 /* CardItemComponentView.xib in Resources */,
-				6A64ABB22D2C16E600F801F9 /* GoogleService-Info.plist in Resources */,
 				6AB977CD2D28359200497D96 /* WordListItemCell.xib in Resources */,
 				6AB977CE2D28359200497D96 /* Songti.ttc in Resources */,
 				6AB977D02D28359200497D96 /* WordListVC.xib in Resources */,
@@ -1079,7 +1079,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwipeHanja/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "상공한자";
+				INFOPLIST_KEY_CFBundleDisplayName = "암카 상공한자";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -1089,7 +1089,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.1;
+				MARKETING_VERSION = 1.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wgyang.swipeSangGongHanja;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1114,7 +1114,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwipeHanja/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "상공한자";
+				INFOPLIST_KEY_CFBundleDisplayName = "암카 상공한자";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -1124,7 +1124,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.1;
+				MARKETING_VERSION = 1.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wgyang.swipeSangGongHanja;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1150,7 +1150,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwipeHanjaAD/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "상공한자 Lite";
+				INFOPLIST_KEY_CFBundleDisplayName = "암카 한자 Lite";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -1160,7 +1160,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wgyang.swipeSangGongHanjaAD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1186,7 +1186,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwipeHanjaAD/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "상공한자 Lite";
+				INFOPLIST_KEY_CFBundleDisplayName = "암카 한자 Lite";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -1196,7 +1196,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wgyang.swipeSangGongHanjaAD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

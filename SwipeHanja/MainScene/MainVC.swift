@@ -19,7 +19,7 @@ class MainVC: UIViewController {
         super.viewDidLoad()
         initVM()
         initTableView()
-        titleLabel.text = AppStatus.isADVersionApp ? "Swipe! 상공한자 Lite" : "Swipe! 상공한자"
+        titleLabel.text = AppStatus.isADVersionApp ? "암카 상공한자 Lite" : "암카 상공한자"
     }
 
     override func viewWillAppear(_ animated: Bool) {
