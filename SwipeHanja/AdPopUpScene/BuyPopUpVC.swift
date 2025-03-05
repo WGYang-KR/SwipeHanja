@@ -27,7 +27,7 @@ class BuyPopUpVC: UIViewController {
     }
     
     @IBAction func goToBuySelected(_ sender: Any) {
-        let appStoreURL = URL(string: "https://apps.apple.com/app/hashcamera/id6502834553")!
+        let appStoreURL = URL(string: "https://apps.apple.com/app/id6502834553")!
         if UIApplication.shared.canOpenURL(appStoreURL) {
             UIApplication.shared.open(appStoreURL)
         }
